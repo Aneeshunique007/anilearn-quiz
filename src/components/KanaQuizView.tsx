@@ -478,9 +478,11 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
             </p>
             <div className="inline-flex flex-col items-center justify-center gap-3">
               <div
-                className={`w-32 h-32 sm:w-36 sm:h-36 rounded-3xl border-2 flex items-center justify-center select-none ${
+                className={`min-w-32 sm:min-w-36 h-32 sm:h-36 px-5 rounded-3xl border-2 flex items-center justify-center select-none whitespace-nowrap leading-none ${
                   currentQuestion.mode === 'kana-to-romaji'
-                    ? 'text-6xl sm:text-7xl font-black font-jp'
+                    ? currentQuestion.char.length > 1
+                      ? 'text-5xl sm:text-6xl font-black font-jp'
+                      : 'text-6xl sm:text-7xl font-black font-jp'
                     : 'text-4xl sm:text-5xl font-extrabold font-heading'
                 } ${
                   theme === 'dark'

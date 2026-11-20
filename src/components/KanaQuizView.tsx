@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import {
+  ArrowLeft,
   ArrowRight,
   FileText,
   Check,
@@ -21,7 +22,6 @@ interface KanaQuizViewProps {
 }
 
 type CategoryFilter = 'all' | 'basic' | 'dakuten' | 'yoon';
-type PoolSize = 10 | 20 | 30 | 'all';
 type QuizDirection = 'kana-to-romaji' | 'romaji-to-kana' | 'mixed';
 
 interface CategorizedKana extends KanaChar {
@@ -41,15 +41,14 @@ interface QuestionItem {
 
 export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => {
   const [category, setCategory] = useState<CategoryFilter>('all');
-  const [poolSize, setPoolSize] = useState<PoolSize>(10);
   const [direction, setDirection] = useState<QuizDirection>('kana-to-romaji');
   const [autoPlayAudio, setAutoPlayAudio] = useState<boolean>(false);
   const [filtersOpen, setFiltersOpen] = useState<boolean>(false);
 
   const [questions, setQuestions] = useState<QuestionItem[]>([]);
-  const [initialTotal, setInitialTotal] = useState<number>(10);
-  const [masteredCount, setMasteredCount] = useState<number>(0);
-  const [repeatCount, setRepeatCount] = useState<number>(0);
+  const [initialTotal, setInitialTotal] = useState<number>(0);
+  const [masteredKeys, setMasteredKeys] = useState<string[]>([]);
+  const [repeatCounts, setRepeatCounts] = useState<Record<string, number>>({});
   const [missedItems, setMissedItems] = useState<CategorizedKana[]>([]);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
@@ -78,15 +77,10 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
   }, [categorizedPool, category]);
 
   const buildQuestions = useCallback(
-    (itemsPool: CategorizedKana[], limitToPoolSize: boolean) => {
+    (itemsPool: CategorizedKana[]) => {
       const shuffled = [...itemsPool].sort(() => 0.5 - Math.random());
-      const count =
-        !limitToPoolSize || poolSize === 'all'
-          ? shuffled.length
-          : Math.min(poolSize, shuffled.length);
-      const chosen = shuffled.slice(0, count);
 
-      const items: QuestionItem[] = chosen.map((item) => {
+      const items: QuestionItem[] = shuffled.map((item) => {
         const mode: 'kana-to-romaji' | 'romaji-to-kana' =
           direction === 'mixed'
             ? Math.random() < 0.5
@@ -94,7 +88,6 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
               : 'romaji-to-kana'
             : direction;
 
-        // Smart distractors: prefer same category first
         const sameCatPool = categorizedPool[item.cat].filter(
           (k) => k.char !== item.char && k.romaji !== item.romaji
         );
@@ -129,19 +122,19 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
 
       setQuestions(items);
       setInitialTotal(items.length);
-      setMasteredCount(0);
-      setRepeatCount(0);
+      setMasteredKeys([]);
+      setRepeatCounts({});
       setMissedItems([]);
       setCurrentIndex(0);
       setSelectedOption(null);
       setIsAnswered(false);
       setQuizFinished(false);
     },
-    [categorizedPool, sourcePool, poolSize, direction, script]
+    [categorizedPool, sourcePool, direction, script]
   );
 
   const generateQuestions = useCallback(() => {
-    buildQuestions(sourcePool, true);
+    buildQuestions(sourcePool);
   }, [buildQuestions, sourcePool]);
 
   useEffect(() => {
@@ -150,6 +143,7 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
 
   const currentQuestion = questions[currentIndex];
   const isCorrect = isAnswered && selectedOption === currentQuestion?.correctAnswer;
+  const masteredCount = masteredKeys.length;
   const progressPercent = initialTotal > 0 ? Math.round((masteredCount / initialTotal) * 100) : 0;
 
   // Auto-play audio when a new question loads
@@ -158,6 +152,32 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
       audio.speak(currentQuestion.char);
     }
   }, [autoPlayAudio, currentQuestion, quizFinished, isAnswered]);
+
+  const scheduleRepeat = useCallback(
+    (q: QuestionItem, queue: QuestionItem[], fromIndex: number) => {
+      const remaining = queue.length - (fromIndex + 1);
+      const offset = remaining >= 5 ? 6 : queue.length - fromIndex;
+      const clone = [...queue];
+      clone.splice(fromIndex + offset, 0, {
+        ...q,
+        options: [...q.options].sort(() => 0.5 - Math.random()),
+      });
+      return clone;
+    },
+    []
+  );
+
+  const advanceOrFinish = useCallback((nextLen: number, idx: number) => {
+    if (idx + 1 >= nextLen) {
+      setQuizFinished(true);
+      audio.playFanfare();
+      confetti({ particleCount: 70, spread: 70, origin: { y: 0.65 } });
+    } else {
+      setCurrentIndex(idx + 1);
+      setSelectedOption(null);
+      setIsAnswered(false);
+    }
+  }, []);
 
   const handleSelectOption = useCallback(
     (option: string) => {
@@ -168,10 +188,9 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
       const correct = option === currentQuestion.correctAnswer;
       if (correct) {
         audio.playCorrect();
-        setMasteredCount((prev) => prev + 1);
       } else {
         audio.playWrong();
-        setRepeatCount((prev) => prev + 1);
+        setRepeatCounts((prev) => ({ ...prev, [currentQuestion.char]: 3 }));
         setMissedItems((prev) => {
           if (prev.some((m) => m.char === currentQuestion.char)) return prev;
           return [
@@ -184,34 +203,73 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
             },
           ];
         });
-
-        // Spaced repeat: re-insert missed character later in queue
-        const insertOffset = Math.min(3, questions.length - currentIndex);
-        const clone = [...questions];
-        clone.splice(currentIndex + insertOffset, 0, {
-          ...currentQuestion,
-          options: [...currentQuestion.options].sort(() => 0.5 - Math.random()),
-        });
-        setQuestions(clone);
+        setQuestions((prev) => scheduleRepeat(currentQuestion, prev, currentIndex));
       }
     },
-    [isAnswered, currentQuestion, questions, currentIndex]
+    [isAnswered, currentQuestion, currentIndex, scheduleRepeat]
   );
 
-  const handleNext = useCallback(() => {
+  const handleNextAfterWrong = useCallback(() => {
     audio.playClick();
-    if (currentIndex + 1 >= questions.length) {
-      setQuizFinished(true);
-      audio.playFanfare();
-      confetti({ particleCount: 70, spread: 70, origin: { y: 0.65 } });
-    } else {
-      setCurrentIndex((prev) => prev + 1);
-      setSelectedOption(null);
-      setIsAnswered(false);
-    }
-  }, [currentIndex, questions.length]);
+    advanceOrFinish(questions.length, currentIndex);
+  }, [questions.length, currentIndex, advanceOrFinish]);
 
-  // Keyboard shortcuts: 1-4 to pick option, Enter/Space for Next
+  const handleRateHard = useCallback(() => {
+    if (!currentQuestion) return;
+    audio.playClick();
+    setRepeatCounts((prev) => ({ ...prev, [currentQuestion.char]: 3 }));
+    setMissedItems((prev) => {
+      if (prev.some((m) => m.char === currentQuestion.char)) return prev;
+      return [
+        ...prev,
+        {
+          char: currentQuestion.char,
+          romaji: currentQuestion.romaji,
+          example: currentQuestion.example,
+          cat: currentQuestion.cat,
+        },
+      ];
+    });
+    const updated = scheduleRepeat(currentQuestion, questions, currentIndex);
+    setQuestions(updated);
+    advanceOrFinish(updated.length, currentIndex);
+  }, [currentQuestion, questions, currentIndex, scheduleRepeat, advanceOrFinish]);
+
+  const handleRateEasy = useCallback(() => {
+    if (!currentQuestion) return;
+    audio.playClick();
+    const remainingRepeats = repeatCounts[currentQuestion.char] || 0;
+
+    if (remainingRepeats > 1) {
+      setRepeatCounts((prev) => ({
+        ...prev,
+        [currentQuestion.char]: remainingRepeats - 1,
+      }));
+      const updated = scheduleRepeat(currentQuestion, questions, currentIndex);
+      setQuestions(updated);
+      advanceOrFinish(updated.length, currentIndex);
+    } else {
+      setRepeatCounts((prev) => {
+        const next = { ...prev };
+        delete next[currentQuestion.char];
+        return next;
+      });
+      setMasteredKeys((prev) =>
+        prev.includes(currentQuestion.char) ? prev : [...prev, currentQuestion.char]
+      );
+      advanceOrFinish(questions.length, currentIndex);
+    }
+  }, [currentQuestion, repeatCounts, questions, currentIndex, scheduleRepeat, advanceOrFinish]);
+
+  const handlePrevious = useCallback(() => {
+    if (currentIndex <= 0) return;
+    audio.playClick();
+    setCurrentIndex((prev) => prev - 1);
+    setSelectedOption(null);
+    setIsAnswered(false);
+  }, [currentIndex]);
+
+  // Keyboard shortcuts
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (detailModalOpen || quizFinished || !currentQuestion) return;
@@ -221,14 +279,34 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
           e.preventDefault();
           handleSelectOption(currentQuestion.options[idx]);
         }
-      } else if (isAnswered && (e.key === 'Enter' || e.key === ' ')) {
-        e.preventDefault();
-        handleNext();
+      } else if (isAnswered) {
+        if (!isCorrect && (e.key === 'Enter' || e.key === ' ')) {
+          e.preventDefault();
+          handleNextAfterWrong();
+        } else if (isCorrect) {
+          if (e.key === 'Enter' || e.key === ' ' || e.key.toLowerCase() === 'e') {
+            e.preventDefault();
+            handleRateEasy();
+          } else if (e.key.toLowerCase() === 'h') {
+            e.preventDefault();
+            handleRateHard();
+          }
+        }
       }
     };
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
-  }, [detailModalOpen, quizFinished, currentQuestion, isAnswered, handleSelectOption, handleNext]);
+  }, [
+    detailModalOpen,
+    quizFinished,
+    currentQuestion,
+    isAnswered,
+    isCorrect,
+    handleSelectOption,
+    handleNextAfterWrong,
+    handleRateEasy,
+    handleRateHard,
+  ]);
 
   const handleOpenDetails = (char?: string, romaji?: string) => {
     const targetChar = char || currentQuestion?.char;
@@ -253,6 +331,8 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
     theme === 'dark'
       ? 'bg-[#0E0E12] text-slate-300 border-slate-800 hover:border-slate-700'
       : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300';
+
+  const currentRepeatsLeft = currentQuestion ? repeatCounts[currentQuestion.char] || 0 : 0;
 
   return (
     <div className="space-y-4 sm:space-y-6">
@@ -313,7 +393,7 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
               title="Restart Quiz"
             >
               <RotateCcw className="w-3.5 h-3.5" />
-              <span className="hidden xs:inline sm:inline">Restart</span>
+              <span className="hidden sm:inline">Restart</span>
             </button>
           </div>
         </div>
@@ -341,31 +421,7 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
                       : pillInactive
                   }`}
                 >
-                  {cat === 'all' ? 'All Kana' : cat}
-                </button>
-              ))}
-            </div>
-
-            {/* Pool Size */}
-            <div className="flex items-center gap-1">
-              <span className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium mr-1">
-                Questions:
-              </span>
-              {([10, 20, 30, 'all'] as PoolSize[]).map((size) => (
-                <button
-                  key={String(size)}
-                  type="button"
-                  onClick={() => {
-                    audio.playClick();
-                    setPoolSize(size);
-                  }}
-                  className={`px-2 sm:px-2.5 py-1 rounded-lg text-[11px] sm:text-xs font-bold border transition cursor-pointer ${
-                    poolSize === size
-                      ? 'bg-[#FF5E3A] text-white border-[#FF5E3A]'
-                      : pillInactive
-                  }`}
-                >
-                  {size === 'all' ? `All (${sourcePool.length})` : size}
+                  {cat === 'all' ? `All (${categorizedPool.basic.length + categorizedPool.dakuten.length + categorizedPool.yoon.length})` : cat}
                 </button>
               ))}
             </div>
@@ -414,8 +470,7 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
               {scriptTitle} Quiz Complete!
             </h2>
             <p className="text-sm text-slate-500 dark:text-slate-400">
-              You mastered all {initialTotal} {scriptTitle.toLowerCase()} characters
-              {repeatCount > 0 ? ` (${repeatCount} repeated for review)` : ' with zero mistakes!'}.
+              You mastered all {initialTotal} {scriptTitle.toLowerCase()} characters!
             </p>
           </div>
 
@@ -425,11 +480,10 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
             </div>
           </div>
 
-          {/* Mistake Review List */}
           {missedItems.length > 0 && (
             <div className="max-w-md mx-auto pt-2 space-y-2.5">
               <p className="text-xs font-bold uppercase tracking-wider text-slate-400">
-                Characters to Review ({missedItems.length})
+                Marked Hard / Missed ({missedItems.length})
               </p>
               <div className="flex flex-wrap justify-center gap-2">
                 {missedItems.map((m) => (
@@ -454,7 +508,7 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
                 type="button"
                 onClick={() => {
                   audio.playClick();
-                  buildQuestions(missedItems, false);
+                  buildQuestions(missedItems);
                 }}
                 className={`inline-flex items-center gap-2 px-5 py-3 rounded-xl border font-bold text-sm transition cursor-pointer ${pillInactive}`}
               >
@@ -482,7 +536,14 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
               <span>
                 Mastered {masteredCount} of {initialTotal}
               </span>
-              <span>{progressPercent}%</span>
+              <div className="flex items-center gap-3">
+                {currentRepeatsLeft > 0 && (
+                  <span className="text-purple-500 dark:text-purple-400 font-bold">
+                    {currentRepeatsLeft} repeat{currentRepeatsLeft > 1 ? 's' : ''} left
+                  </span>
+                )}
+                <span>{progressPercent}%</span>
+              </div>
             </div>
             <div className="w-full h-2.5 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
               <div
@@ -493,7 +554,7 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
           </div>
 
           {/* Prompt */}
-          <div className="text-center py-4 space-y-3">
+          <div className="text-center py-2 sm:py-4 space-y-3">
             <p className="text-xs font-bold uppercase tracking-widest text-slate-400">
               {currentQuestion.mode === 'kana-to-romaji'
                 ? 'Select the matching Romaji'
@@ -517,14 +578,26 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
                   ? currentQuestion.char
                   : currentQuestion.romaji}
               </div>
-              <button
-                type="button"
-                onClick={() => audio.speak(currentQuestion.char)}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-[#FF5E3A]/10 text-[#FF5E3A] hover:bg-[#FF5E3A]/20 transition cursor-pointer"
-              >
-                <Volume2 className="w-3.5 h-3.5" />
-                Listen
-              </button>
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => audio.speak(currentQuestion.char)}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-[#FF5E3A]/10 text-[#FF5E3A] hover:bg-[#FF5E3A]/20 transition cursor-pointer"
+                >
+                  <Volume2 className="w-3.5 h-3.5" />
+                  Listen
+                </button>
+                {isAnswered && (
+                  <button
+                    type="button"
+                    onClick={() => handleOpenDetails()}
+                    className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold border transition cursor-pointer ${pillInactive}`}
+                  >
+                    <FileText className="w-3.5 h-3.5" />
+                    Details
+                  </button>
+                )}
+              </div>
             </div>
           </div>
 
@@ -559,7 +632,7 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
                   type="button"
                   disabled={isAnswered}
                   onClick={() => handleSelectOption(option)}
-                  className={`relative py-4 px-5 rounded-2xl border-2 font-extrabold tracking-wide transition cursor-pointer disabled:cursor-default ${
+                  className={`relative py-3.5 sm:py-4 px-4 sm:px-5 rounded-2xl border-2 font-extrabold tracking-wide transition cursor-pointer disabled:cursor-default ${
                     currentQuestion.mode === 'romaji-to-kana'
                       ? 'text-2xl sm:text-3xl font-jp'
                       : 'text-lg'
@@ -574,46 +647,85 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
             })}
           </div>
 
-          {/* Feedback & Actions */}
+          {/* Feedback / Recall Flow */}
           {isAnswered && (
-            <div className="pt-4 border-t border-slate-200/70 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
-              <div className="flex flex-col">
-                <span
-                  className={`text-sm font-bold ${
-                    isCorrect
-                      ? 'text-emerald-600 dark:text-emerald-400'
-                      : 'text-rose-600 dark:text-rose-400'
-                  }`}
-                >
-                  {isCorrect
-                    ? 'Correct! Nice work.'
-                    : `Not quite — "${currentQuestion.char}" is "${currentQuestion.romaji}". We'll review it again soon.`}
-                </span>
-                {currentQuestion.example && (
-                  <span className="text-xs text-slate-500 dark:text-slate-400 mt-0.5 font-jp">
-                    Example: {currentQuestion.example}
-                  </span>
-                )}
-              </div>
+            <div className="pt-4 border-t border-slate-200/70 dark:border-slate-800 space-y-3">
+              {isCorrect ? (
+                <>
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-xs sm:text-sm font-bold">
+                      Rate recall to continue:
+                    </span>
+                    {currentIndex > 0 && (
+                      <button
+                        type="button"
+                        onClick={handlePrevious}
+                        className="inline-flex items-center gap-1 text-xs font-semibold text-slate-500 dark:text-slate-400 hover:text-[#FF5E3A] transition cursor-pointer"
+                      >
+                        <ArrowLeft className="w-3.5 h-3.5" />
+                        Previous Question
+                      </button>
+                    )}
+                  </div>
+                  <div className="grid grid-cols-2 gap-3">
+                    <button
+                      type="button"
+                      onClick={handleRateHard}
+                      className="flex items-center gap-3 p-3.5 rounded-2xl border-2 border-rose-500/40 bg-rose-500/10 hover:bg-rose-500/20 text-left transition cursor-pointer"
+                    >
+                      <span className="w-2.5 h-2.5 rounded-full bg-rose-500 shrink-0" />
+                      <div>
+                        <div className="text-sm font-extrabold text-rose-600 dark:text-rose-400">
+                          Hard
+                        </div>
+                        <div className="text-[11px] text-rose-500/80 dark:text-rose-300/80">
+                          Repeats 3 times
+                        </div>
+                      </div>
+                    </button>
 
-              <div className="flex items-center gap-2.5 w-full sm:w-auto shrink-0">
-                <button
-                  type="button"
-                  onClick={() => handleOpenDetails()}
-                  className={`inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl text-xs font-bold border transition cursor-pointer shrink-0 ${pillInactive}`}
-                >
-                  <FileText className="w-3.5 h-3.5" />
-                  Details
-                </button>
-                <button
-                  type="button"
-                  onClick={handleNext}
-                  className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl bg-[#FF5E3A] hover:bg-[#E84E29] text-white text-sm font-bold shadow-md shadow-orange-500/20 transition cursor-pointer"
-                >
-                  Next
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              </div>
+                    <button
+                      type="button"
+                      onClick={handleRateEasy}
+                      className="flex items-center gap-3 p-3.5 rounded-2xl border-2 border-emerald-500/40 bg-emerald-500/10 hover:bg-emerald-500/20 text-left transition cursor-pointer"
+                    >
+                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0" />
+                      <div>
+                        <div className="text-sm font-extrabold text-emerald-600 dark:text-emerald-400">
+                          Easy
+                        </div>
+                        <div className="text-[11px] text-emerald-600/80 dark:text-emerald-300/80">
+                          {currentRepeatsLeft > 1
+                            ? `${currentRepeatsLeft - 1} repeat${currentRepeatsLeft - 1 > 1 ? 's' : ''} left`
+                            : 'Mark as Learned'}
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="flex items-center gap-3 p-3.5 rounded-2xl border border-purple-500/40 bg-purple-500/10">
+                    <RotateCcw className="w-4 h-4 text-purple-500 dark:text-purple-400 shrink-0" />
+                    <div className="text-left">
+                      <div className="text-xs sm:text-sm font-bold text-purple-600 dark:text-purple-300">
+                        Repeat counter reset — 3 more correct repeats needed
+                      </div>
+                      <div className="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5">
+                        Will reappear after at least 5 questions · &ldquo;{currentQuestion.char}&rdquo; is &ldquo;{currentQuestion.romaji}&rdquo;
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={handleNextAfterWrong}
+                    className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full bg-[#FF5E3A] hover:bg-[#E84E29] text-white text-sm font-bold shadow-md shadow-orange-500/20 transition cursor-pointer"
+                  >
+                    Next Question
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </>
+              )}
             </div>
           )}
         </div>

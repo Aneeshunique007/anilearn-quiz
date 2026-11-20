@@ -7,6 +7,7 @@ import {
   Sparkles,
   Volume2,
   VolumeX,
+  SlidersHorizontal,
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { HIRAGANA_DATA, KATAKANA_DATA, KanaChar } from '../data/kanaData';
@@ -43,6 +44,7 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
   const [poolSize, setPoolSize] = useState<PoolSize>(10);
   const [direction, setDirection] = useState<QuizDirection>('kana-to-romaji');
   const [autoPlayAudio, setAutoPlayAudio] = useState<boolean>(false);
+  const [filtersOpen, setFiltersOpen] = useState<boolean>(false);
 
   const [questions, setQuestions] = useState<QuestionItem[]>([]);
   const [initialTotal, setInitialTotal] = useState<number>(10);
@@ -255,26 +257,26 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
   return (
     <div className="space-y-4 sm:space-y-6">
       {/* Header & Filters */}
-      <div className={`rounded-2xl border p-4 sm:p-6 ${surfaceClass}`}>
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div>
-            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF5E3A] mb-1">
+      <div className={`rounded-2xl border p-3.5 sm:p-5 ${surfaceClass}`}>
+        <div className="flex items-center justify-between gap-2">
+          <div className="min-w-0">
+            <span className="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF5E3A] mb-0.5">
               <Sparkles className="w-3.5 h-3.5" />
               {scriptTitle} Recognition Drill ({sourcePool.length} Characters)
             </span>
-            <h1 className="text-2xl sm:text-3xl font-extrabold font-heading tracking-tight">
+            <h1 className="text-lg sm:text-2xl font-extrabold font-heading tracking-tight truncate">
               {scriptTitle} Quiz
             </h1>
           </div>
 
-          <div className="flex items-center gap-2 self-start sm:self-auto">
+          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
             <button
               type="button"
               onClick={() => {
                 audio.playClick();
                 setAutoPlayAudio((prev) => !prev);
               }}
-              className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold border transition cursor-pointer ${
+              className={`inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl text-xs font-bold border transition cursor-pointer ${
                 autoPlayAudio
                   ? 'bg-[#FF5E3A]/15 text-[#FF5E3A] border-[#FF5E3A]/40'
                   : pillInactive
@@ -282,7 +284,23 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
               title="Automatically pronounce each character"
             >
               {autoPlayAudio ? <Volume2 className="w-3.5 h-3.5" /> : <VolumeX className="w-3.5 h-3.5" />}
-              Auto Audio
+              <span className="hidden sm:inline">Auto Audio</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => {
+                audio.playClick();
+                setFiltersOpen((prev) => !prev);
+              }}
+              className={`sm:hidden inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl text-xs font-bold border transition cursor-pointer ${
+                filtersOpen
+                  ? 'bg-[#FF5E3A]/15 text-[#FF5E3A] border-[#FF5E3A]/40'
+                  : pillInactive
+              }`}
+            >
+              <SlidersHorizontal className="w-3.5 h-3.5" />
+              <span>Filters</span>
             </button>
 
             <button
@@ -291,17 +309,22 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
                 audio.playClick();
                 generateQuestions();
               }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-[#FF5E3A]/10 text-[#FF5E3A] hover:bg-[#FF5E3A] hover:text-white transition cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs font-bold bg-[#FF5E3A]/10 text-[#FF5E3A] hover:bg-[#FF5E3A] hover:text-white transition cursor-pointer"
+              title="Restart Quiz"
             >
               <RotateCcw className="w-3.5 h-3.5" />
-              Restart Quiz
+              <span className="hidden xs:inline sm:inline">Restart</span>
             </button>
           </div>
         </div>
 
         {/* Filter Rows */}
-        <div className="mt-4 pt-4 border-t border-slate-200/70 dark:border-slate-800 flex flex-col gap-3">
-          <div className="flex flex-wrap items-center justify-between gap-3">
+        <div
+          className={`mt-3 pt-3 border-t border-slate-200/70 dark:border-slate-800 flex-col gap-2.5 ${
+            filtersOpen ? 'flex' : 'hidden sm:flex'
+          }`}
+        >
+          <div className="flex flex-wrap items-center justify-between gap-2">
             {/* Category Filters */}
             <div className="flex flex-wrap items-center gap-1.5">
               {(['all', 'basic', 'dakuten', 'yoon'] as CategoryFilter[]).map((cat) => (
@@ -312,7 +335,7 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
                     audio.playClick();
                     setCategory(cat);
                   }}
-                  className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition cursor-pointer capitalize ${
+                  className={`px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-semibold border transition cursor-pointer capitalize ${
                     category === cat
                       ? 'bg-[#FF5E3A] text-white border-[#FF5E3A]'
                       : pillInactive
@@ -324,8 +347,8 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
             </div>
 
             {/* Pool Size */}
-            <div className="flex items-center gap-1.5">
-              <span className="text-xs text-slate-500 dark:text-slate-400 font-medium mr-1">
+            <div className="flex items-center gap-1">
+              <span className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium mr-1">
                 Questions:
               </span>
               {([10, 20, 30, 'all'] as PoolSize[]).map((size) => (
@@ -336,7 +359,7 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
                     audio.playClick();
                     setPoolSize(size);
                   }}
-                  className={`px-2.5 py-1 rounded-lg text-xs font-bold border transition cursor-pointer ${
+                  className={`px-2 sm:px-2.5 py-1 rounded-lg text-[11px] sm:text-xs font-bold border transition cursor-pointer ${
                     poolSize === size
                       ? 'bg-[#FF5E3A] text-white border-[#FF5E3A]'
                       : pillInactive
@@ -349,14 +372,14 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
           </div>
 
           {/* Direction Toggle */}
-          <div className="flex flex-wrap items-center gap-1.5">
-            <span className="text-xs text-slate-500 dark:text-slate-400 font-medium mr-1">
+          <div className="flex items-center gap-1.5 flex-wrap">
+            <span className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium mr-0.5">
               Mode:
             </span>
             {(
               [
-                { id: 'kana-to-romaji', label: `${scriptTitle} → Romaji` },
-                { id: 'romaji-to-kana', label: `Romaji → ${scriptTitle}` },
+                { id: 'kana-to-romaji', label: 'Kana → Romaji' },
+                { id: 'romaji-to-kana', label: 'Romaji → Kana' },
                 { id: 'mixed', label: 'Mixed' },
               ] as Array<{ id: QuizDirection; label: string }>
             ).map((opt) => (
@@ -367,7 +390,7 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
                   audio.playClick();
                   setDirection(opt.id);
                 }}
-                className={`px-3 py-1 rounded-lg text-xs font-semibold border transition cursor-pointer ${
+                className={`px-2.5 sm:px-3 py-1 rounded-lg text-[11px] sm:text-xs font-semibold border whitespace-nowrap transition cursor-pointer ${
                   direction === opt.id
                     ? 'bg-[#FF5E3A] text-white border-[#FF5E3A]'
                     : pillInactive

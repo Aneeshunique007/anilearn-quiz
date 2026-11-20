@@ -18,7 +18,7 @@ interface WordsQuizViewProps {
   theme: 'dark' | 'light';
 }
 
-type LevelFilter = 'ALL' | 'N5' | 'N4';
+type LevelFilter = 'ALL' | 'N5' | 'N4' | 'N3';
 type PoolSize = 10 | 20 | 30 | 'all';
 type QuizDirection = 'word-to-meaning' | 'meaning-to-word' | 'mixed';
 
@@ -61,6 +61,7 @@ export const WordsQuizView: React.FC<WordsQuizViewProps> = ({ theme }) => {
     return {
       N5: ALL_JLPT_WORDS_DATABASE.filter((w) => w.jlpt === 'N5'),
       N4: ALL_JLPT_WORDS_DATABASE.filter((w) => w.jlpt === 'N4'),
+      N3: ALL_JLPT_WORDS_DATABASE.filter((w) => w.jlpt === 'N3'),
     };
   }, []);
 
@@ -294,7 +295,7 @@ export const WordsQuizView: React.FC<WordsQuizViewProps> = ({ theme }) => {
           <div className="flex flex-wrap items-center justify-between gap-3">
             {/* JLPT Level */}
             <div className="flex flex-wrap items-center gap-1.5">
-              {(['ALL', 'N5', 'N4'] as LevelFilter[]).map((lvl) => (
+              {(['ALL', 'N5', 'N4', 'N3'] as LevelFilter[]).map((lvl) => (
                 <button
                   key={lvl}
                   type="button"

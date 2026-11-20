@@ -18,7 +18,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-1",
     "char": "合",
-    "meaning": "fit or match",
+    "meaning": "fit",
     "onyomi": [
       "あう"
     ],
@@ -51,7 +51,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-2",
     "char": "部",
-    "meaning": "part or section",
+    "meaning": "part",
     "onyomi": [
       "ぶぶん"
     ],
@@ -84,7 +84,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-3",
     "char": "彼",
-    "meaning": "he or boyfriend",
+    "meaning": "he",
     "onyomi": [
       "かれ"
     ],
@@ -183,7 +183,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-6",
     "char": "当",
-    "meaning": "truth or really",
+    "meaning": "truth",
     "onyomi": [
       "ほんとう"
     ],
@@ -282,7 +282,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-9",
     "char": "対",
-    "meaning": "opposition or opposite",
+    "meaning": "opposition",
     "onyomi": [
       "はんたい"
     ],
@@ -381,7 +381,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-12",
     "char": "定",
-    "meaning": "plan or schedule",
+    "meaning": "plan",
     "onyomi": [
       "よてい"
     ],
@@ -1239,7 +1239,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-38",
     "char": "表",
-    "meaning": "presentation or announcement",
+    "meaning": "presentation",
     "onyomi": [
       "はっぴょう"
     ],
@@ -1371,7 +1371,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-42",
     "char": "変",
-    "meaning": "change or alteration",
+    "meaning": "change",
     "onyomi": [
       "へんこう"
     ],
@@ -1536,7 +1536,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-47",
     "char": "治",
-    "meaning": "recover or heal",
+    "meaning": "recover",
     "onyomi": [
       "なおる"
     ],
@@ -1635,7 +1635,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-50",
     "char": "込",
-    "meaning": "apply or register",
+    "meaning": "apply",
     "onyomi": [
       "もうしこむ"
     ],
@@ -1668,7 +1668,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-51",
     "char": "受",
-    "meaning": "receive or take an exam",
+    "meaning": "receive",
     "onyomi": [
       "うける"
     ],
@@ -1800,7 +1800,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-55",
     "char": "様",
-    "meaning": "state or appearance",
+    "meaning": "state",
     "onyomi": [
       "ようす"
     ],
@@ -2031,7 +2031,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-62",
     "char": "葉",
-    "meaning": "word or language",
+    "meaning": "word",
     "onyomi": [
       "ことば"
     ],
@@ -2097,7 +2097,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-64",
     "char": "然",
-    "meaning": "nature or natural",
+    "meaning": "nature",
     "onyomi": [
       "しぜん"
     ],
@@ -2196,7 +2196,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-67",
     "char": "調",
-    "meaning": "investigate or look up",
+    "meaning": "investigate",
     "onyomi": [
       "しらべる"
     ],
@@ -2229,7 +2229,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-68",
     "char": "笑",
-    "meaning": "laugh or smile",
+    "meaning": "laugh",
     "onyomi": [
       "わらう"
     ],
@@ -2295,7 +2295,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-70",
     "char": "直",
-    "meaning": "correct or repair",
+    "meaning": "correct",
     "onyomi": [
       "なおす"
     ],
@@ -2394,7 +2394,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-73",
     "char": "権",
-    "meaning": "right or entitlement",
+    "meaning": "right",
     "onyomi": [
       "けんり"
     ],
@@ -2460,7 +2460,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-75",
     "char": "制",
-    "meaning": "system or institution",
+    "meaning": "system",
     "onyomi": [
       "せいど"
     ],
@@ -2856,7 +2856,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-87",
     "char": "番",
-    "meaning": "order or turn",
+    "meaning": "order",
     "onyomi": [
       "じゅんばん"
     ],
@@ -3021,7 +3021,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-92",
     "char": "違",
-    "meaning": "differ or be wrong",
+    "meaning": "differ",
     "onyomi": [
       "ちがう"
     ],
@@ -3087,7 +3087,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-94",
     "char": "置",
-    "meaning": "put or place",
+    "meaning": "put",
     "onyomi": [
       "おく"
     ],
@@ -3153,7 +3153,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-96",
     "char": "論",
-    "meaning": "discussion or debate",
+    "meaning": "discussion",
     "onyomi": [
       "ぎろん"
     ],
@@ -3186,7 +3186,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-97",
     "char": "際",
-    "meaning": "actually or in practice",
+    "meaning": "actually",
     "onyomi": [
       "じっさい"
     ],
@@ -3549,7 +3549,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-108",
     "char": "都",
-    "meaning": "city or urban area",
+    "meaning": "city",
     "onyomi": [
       "とかい"
     ],
@@ -3648,7 +3648,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-111",
     "char": "過",
-    "meaning": "pass or exceed",
+    "meaning": "pass",
     "onyomi": [
       "すぎる"
     ],
@@ -3681,7 +3681,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-112",
     "char": "約",
-    "meaning": "promise or appointment",
+    "meaning": "promise",
     "onyomi": [
       "やくそく"
     ],
@@ -3846,7 +3846,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-117",
     "char": "交",
-    "meaning": "traffic or transport",
+    "meaning": "traffic",
     "onyomi": [
       "こうつう"
     ],
@@ -3978,7 +3978,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-121",
     "char": "資",
-    "meaning": "materials or documents",
+    "meaning": "materials",
     "onyomi": [
       "しりょう"
     ],
@@ -4110,7 +4110,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-125",
     "char": "共",
-    "meaning": "shared or common",
+    "meaning": "shared",
     "onyomi": [
       "きょうつう"
     ],
@@ -4374,7 +4374,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-133",
     "char": "乗",
-    "meaning": "board or ride",
+    "meaning": "board",
     "onyomi": [
       "のる"
     ],
@@ -4506,7 +4506,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-137",
     "char": "打",
-    "meaning": "hit or type",
+    "meaning": "hit",
     "onyomi": [
       "うつ"
     ],
@@ -4539,7 +4539,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-138",
     "char": "御",
-    "meaning": "thanks or gratitude",
+    "meaning": "thanks",
     "onyomi": [
       "おれい"
     ],
@@ -4605,7 +4605,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-140",
     "char": "式",
-    "meaning": "ceremony or formula",
+    "meaning": "ceremony",
     "onyomi": [
       "しき"
     ],
@@ -4737,7 +4737,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-144",
     "char": "存",
-    "meaning": "preservation or saving data",
+    "meaning": "preservation",
     "onyomi": [
       "ほぞん"
     ],
@@ -4770,7 +4770,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-145",
     "char": "争",
-    "meaning": "compete or dispute",
+    "meaning": "compete",
     "onyomi": [
       "あらそう"
     ],
@@ -4902,7 +4902,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-149",
     "char": "参",
-    "meaning": "go or come humbly",
+    "meaning": "go",
     "onyomi": [
       "まいる"
     ],
@@ -5001,7 +5001,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-152",
     "char": "育",
-    "meaning": "raise or grow something",
+    "meaning": "raise",
     "onyomi": [
       "そだてる"
     ],
@@ -5034,7 +5034,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-153",
     "char": "構",
-    "meaning": "mind or care about",
+    "meaning": "mind",
     "onyomi": [
       "かまう"
     ],
@@ -5067,7 +5067,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-154",
     "char": "認",
-    "meaning": "recognise or admit",
+    "meaning": "recognise",
     "onyomi": [
       "みとめる"
     ],
@@ -5166,7 +5166,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-157",
     "char": "守",
-    "meaning": "protect or obey",
+    "meaning": "protect",
     "onyomi": [
       "まもる"
     ],
@@ -5232,7 +5232,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-159",
     "char": "消",
-    "meaning": "erase or switch off",
+    "meaning": "erase",
     "onyomi": [
       "けす"
     ],
@@ -5430,7 +5430,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-165",
     "char": "客",
-    "meaning": "customer or guest",
+    "meaning": "customer",
     "onyomi": [
       "おきゃくさん"
     ],
@@ -5463,7 +5463,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-166",
     "char": "船",
-    "meaning": "ship or boat",
+    "meaning": "ship",
     "onyomi": [
       "ふね"
     ],
@@ -5661,7 +5661,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-172",
     "char": "失",
-    "meaning": "failure or mistake",
+    "meaning": "failure",
     "onyomi": [
       "しっぱい"
     ],
@@ -5760,7 +5760,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-175",
     "char": "示",
-    "meaning": "show or indicate",
+    "meaning": "show",
     "onyomi": [
       "しめす"
     ],
@@ -5958,7 +5958,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-181",
     "char": "優",
-    "meaning": "kind or gentle",
+    "meaning": "kind",
     "onyomi": [
       "やさしい"
     ],
@@ -6090,7 +6090,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-185",
     "char": "種",
-    "meaning": "type or variety",
+    "meaning": "type",
     "onyomi": [
       "しゅるい"
     ],
@@ -6123,7 +6123,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-186",
     "char": "念",
-    "meaning": "disappointing or unfortunate",
+    "meaning": "disappointing",
     "onyomi": [
       "ざんねん"
     ],
@@ -6288,7 +6288,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-191",
     "char": "横",
-    "meaning": "side or horizontal",
+    "meaning": "side",
     "onyomi": [
       "よこ"
     ],
@@ -6552,7 +6552,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-199",
     "char": "与",
-    "meaning": "give or provide",
+    "meaning": "give",
     "onyomi": [
       "あたえる"
     ],
@@ -7080,7 +7080,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-215",
     "char": "望",
-    "meaning": "hope or wish",
+    "meaning": "hope",
     "onyomi": [
       "きぼう"
     ],
@@ -7212,7 +7212,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-219",
     "char": "割",
-    "meaning": "ratio or proportion",
+    "meaning": "ratio",
     "onyomi": [
       "わりあい"
     ],
@@ -7344,7 +7344,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-223",
     "char": "求",
-    "meaning": "seek or request",
+    "meaning": "seek",
     "onyomi": [
       "もとめる"
     ],
@@ -7377,7 +7377,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-224",
     "char": "談",
-    "meaning": "interview or consultation",
+    "meaning": "interview",
     "onyomi": [
       "めんだん"
     ],
@@ -7410,7 +7410,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-225",
     "char": "降",
-    "meaning": "get off or descend",
+    "meaning": "get off",
     "onyomi": [
       "おりる"
     ],
@@ -7509,7 +7509,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-228",
     "char": "熱",
-    "meaning": "fever or heat",
+    "meaning": "fever",
     "onyomi": [
       "ねつ"
     ],
@@ -7872,7 +7872,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-239",
     "char": "精",
-    "meaning": "mind or spirit",
+    "meaning": "mind",
     "onyomi": [
       "せいしん"
     ],
@@ -7971,7 +7971,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-242",
     "char": "処",
-    "meaning": "processing or handling",
+    "meaning": "processing",
     "onyomi": [
       "しょり"
     ],
@@ -8334,7 +8334,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-253",
     "char": "疑",
-    "meaning": "doubt or suspect",
+    "meaning": "doubt",
     "onyomi": [
       "うたがう"
     ],
@@ -8598,7 +8598,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-261",
     "char": "程",
-    "meaning": "degree or extent",
+    "meaning": "degree",
     "onyomi": [
       "ていど"
     ],
@@ -8631,7 +8631,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-262",
     "char": "倒",
-    "meaning": "fall over or collapse",
+    "meaning": "fall over",
     "onyomi": [
       "たおれる"
     ],
@@ -8730,7 +8730,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-265",
     "char": "絵",
-    "meaning": "picture or painting",
+    "meaning": "picture",
     "onyomi": [
       "え"
     ],
@@ -8763,7 +8763,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-266",
     "char": "破",
-    "meaning": "tear or break a rule",
+    "meaning": "tear",
     "onyomi": [
       "やぶる"
     ],
@@ -8961,7 +8961,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-272",
     "char": "暮",
-    "meaning": "live or make a living",
+    "meaning": "live",
     "onyomi": [
       "くらす"
     ],
@@ -9060,7 +9060,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-275",
     "char": "許",
-    "meaning": "permit or forgive",
+    "meaning": "permit",
     "onyomi": [
       "ゆるす"
     ],
@@ -9522,7 +9522,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-289",
     "char": "鳴",
-    "meaning": "ring or sound",
+    "meaning": "ring",
     "onyomi": [
       "なる"
     ],
@@ -9621,7 +9621,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-292",
     "char": "曲",
-    "meaning": "turn or bend",
+    "meaning": "turn",
     "onyomi": [
       "まがる"
     ],
@@ -9720,7 +9720,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-295",
     "char": "願",
-    "meaning": "wish or request",
+    "meaning": "wish",
     "onyomi": [
       "ねがう"
     ],
@@ -9852,7 +9852,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-299",
     "char": "散",
-    "meaning": "walk or stroll",
+    "meaning": "walk",
     "onyomi": [
       "さんぽ"
     ],
@@ -9885,7 +9885,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-300",
     "char": "掛",
-    "meaning": "hang or put on",
+    "meaning": "hang",
     "onyomi": [
       "かける"
     ],
@@ -10017,7 +10017,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-304",
     "char": "礼",
-    "meaning": "rudeness or excuse me",
+    "meaning": "rudeness",
     "onyomi": [
       "しつれい"
     ],
@@ -10050,7 +10050,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-305",
     "char": "列",
-    "meaning": "queue or row",
+    "meaning": "queue",
     "onyomi": [
       "れつ"
     ],
@@ -10314,7 +10314,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-313",
     "char": "因",
-    "meaning": "factor or cause",
+    "meaning": "factor",
     "onyomi": [
       "よういん"
     ],
@@ -10347,7 +10347,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-314",
     "char": "折",
-    "meaning": "fold or break",
+    "meaning": "fold",
     "onyomi": [
       "おる"
     ],
@@ -10380,7 +10380,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-315",
     "char": "迎",
-    "meaning": "welcome or go to meet",
+    "meaning": "welcome",
     "onyomi": [
       "むかえる"
     ],
@@ -10611,7 +10611,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-322",
     "char": "吸",
-    "meaning": "breathe in or smoke",
+    "meaning": "breathe in",
     "onyomi": [
       "すう"
     ],
@@ -10743,7 +10743,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-326",
     "char": "易",
-    "meaning": "easy or simple",
+    "meaning": "easy",
     "onyomi": [
       "ようい"
     ],
@@ -10941,7 +10941,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-332",
     "char": "適",
-    "meaning": "suitable or careless depending on context",
+    "meaning": "suitable",
     "onyomi": [
       "てきとう"
     ],
@@ -11106,7 +11106,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-337",
     "char": "否",
-    "meaning": "denial or negation",
+    "meaning": "denial",
     "onyomi": [
       "ひてい"
     ],
@@ -11139,7 +11139,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-338",
     "char": "遅",
-    "meaning": "late or slow",
+    "meaning": "late",
     "onyomi": [
       "おそい"
     ],
@@ -11271,7 +11271,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-342",
     "char": "迷",
-    "meaning": "be lost or hesitate",
+    "meaning": "be lost",
     "onyomi": [
       "まよう"
     ],
@@ -11403,7 +11403,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-346",
     "char": "更",
-    "meaning": "change or alteration",
+    "meaning": "change",
     "onyomi": [
       "へんこう"
     ],
@@ -11634,7 +11634,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-353",
     "char": "頂",
-    "meaning": "receive or eat humbly",
+    "meaning": "receive",
     "onyomi": [
       "いただく"
     ],
@@ -11667,7 +11667,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-354",
     "char": "杯",
-    "meaning": "one cup or full",
+    "meaning": "one cup",
     "onyomi": [
       "いっぱい"
     ],
@@ -11997,7 +11997,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-364",
     "char": "幾",
-    "meaning": "how many or how old",
+    "meaning": "how many",
     "onyomi": [
       "いくつ"
     ],
@@ -12195,7 +12195,7 @@ export const KANJI_N3_LIST: KanjiDetailItemN3[] = [
   {
     "id": "k-n3-370",
     "char": "偉",
-    "meaning": "admirable or important",
+    "meaning": "admirable",
     "onyomi": [
       "えらい"
     ],

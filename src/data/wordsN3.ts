@@ -6,14 +6,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "合う",
     "reading": "あう",
     "romaji": "au",
-    "meaning": "Fit or match",
+    "meaning": "Fit",
     "pos": "verb",
     "posLabel": "Verb",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "合",
-        "meaning": "fit or match"
+        "meaning": "fit"
       }
     ],
     "sentences": [
@@ -31,14 +31,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "部分",
     "reading": "ぶぶん",
     "romaji": "bubun",
-    "meaning": "Part or section",
+    "meaning": "Part",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "部",
-        "meaning": "part or section"
+        "meaning": "part"
       }
     ],
     "sentences": [
@@ -81,14 +81,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "本当",
     "reading": "ほんとう",
     "romaji": "hontou",
-    "meaning": "Truth or really",
+    "meaning": "Truth",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "当",
-        "meaning": "truth or really"
+        "meaning": "truth"
       }
     ],
     "sentences": [
@@ -481,14 +481,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "変更",
     "reading": "へんこう",
     "romaji": "henkou",
-    "meaning": "Change or alteration",
+    "meaning": "Change",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "変",
-        "meaning": "change or alteration"
+        "meaning": "change"
       }
     ],
     "sentences": [
@@ -531,14 +531,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "申し込む",
     "reading": "もうしこむ",
     "romaji": "moushikomu",
-    "meaning": "Apply or register",
+    "meaning": "Apply",
     "pos": "verb",
     "posLabel": "Verb",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "込",
-        "meaning": "apply or register"
+        "meaning": "apply"
       }
     ],
     "sentences": [
@@ -631,14 +631,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "様子",
     "reading": "ようす",
     "romaji": "yousu",
-    "meaning": "State or appearance",
+    "meaning": "State",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "様",
-        "meaning": "state or appearance"
+        "meaning": "state"
       }
     ],
     "sentences": [
@@ -731,14 +731,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "言葉",
     "reading": "ことば",
     "romaji": "kotoba",
-    "meaning": "Word or language",
+    "meaning": "Word",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "葉",
-        "meaning": "word or language"
+        "meaning": "word"
       }
     ],
     "sentences": [
@@ -781,14 +781,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "自然",
     "reading": "しぜん",
     "romaji": "shizen",
-    "meaning": "Nature or natural",
+    "meaning": "Nature",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "然",
-        "meaning": "nature or natural"
+        "meaning": "nature"
       }
     ],
     "sentences": [
@@ -831,14 +831,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "権利",
     "reading": "けんり",
     "romaji": "kenri",
-    "meaning": "Right or entitlement",
+    "meaning": "Right",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "権",
-        "meaning": "right or entitlement"
+        "meaning": "right"
       }
     ],
     "sentences": [
@@ -856,14 +856,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "制度",
     "reading": "せいど",
     "romaji": "seido",
-    "meaning": "System or institution",
+    "meaning": "System",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "制",
-        "meaning": "system or institution"
+        "meaning": "system"
       }
     ],
     "sentences": [
@@ -1081,14 +1081,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "順番",
     "reading": "じゅんばん",
     "romaji": "junban",
-    "meaning": "Order or turn",
+    "meaning": "Order",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "番",
-        "meaning": "order or turn"
+        "meaning": "order"
       }
     ],
     "sentences": [
@@ -1181,14 +1181,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "違う",
     "reading": "ちがう",
     "romaji": "chigau",
-    "meaning": "Differ or be wrong",
+    "meaning": "Differ",
     "pos": "verb",
     "posLabel": "Verb",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "違",
-        "meaning": "differ or be wrong"
+        "meaning": "differ"
       }
     ],
     "sentences": [
@@ -1256,14 +1256,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "議論",
     "reading": "ぎろん",
     "romaji": "giron",
-    "meaning": "Discussion or debate",
+    "meaning": "Discussion",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "論",
-        "meaning": "discussion or debate"
+        "meaning": "discussion"
       }
     ],
     "sentences": [
@@ -1281,14 +1281,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "実際",
     "reading": "じっさい",
     "romaji": "jissai",
-    "meaning": "Actually or in practice",
+    "meaning": "Actually",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "際",
-        "meaning": "actually or in practice"
+        "meaning": "actually"
       }
     ],
     "sentences": [
@@ -1456,14 +1456,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "過ぎる",
     "reading": "すぎる",
     "romaji": "sugiru",
-    "meaning": "Pass or exceed",
+    "meaning": "Pass",
     "pos": "verb",
     "posLabel": "Verb",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "過",
-        "meaning": "pass or exceed"
+        "meaning": "pass"
       }
     ],
     "sentences": [
@@ -1631,14 +1631,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "共通",
     "reading": "きょうつう",
     "romaji": "kyoutsuu",
-    "meaning": "Shared or common",
+    "meaning": "Shared",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "共",
-        "meaning": "shared or common"
+        "meaning": "shared"
       }
     ],
     "sentences": [
@@ -1781,14 +1781,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "打つ",
     "reading": "うつ",
     "romaji": "utsu",
-    "meaning": "Hit or type",
+    "meaning": "Hit",
     "pos": "verb",
     "posLabel": "Verb",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "打",
-        "meaning": "hit or type"
+        "meaning": "hit"
       }
     ],
     "sentences": [
@@ -1806,14 +1806,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "御礼",
     "reading": "おれい",
     "romaji": "orei",
-    "meaning": "Thanks or gratitude",
+    "meaning": "Thanks",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "御",
-        "meaning": "thanks or gratitude"
+        "meaning": "thanks"
       }
     ],
     "sentences": [
@@ -1856,14 +1856,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "式",
     "reading": "しき",
     "romaji": "shiki",
-    "meaning": "Ceremony or formula",
+    "meaning": "Ceremony",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "式",
-        "meaning": "ceremony or formula"
+        "meaning": "ceremony"
       }
     ],
     "sentences": [
@@ -1906,14 +1906,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "保存",
     "reading": "ほぞん",
     "romaji": "hozon",
-    "meaning": "Preservation or saving data",
+    "meaning": "Preservation",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "存",
-        "meaning": "preservation or saving data"
+        "meaning": "preservation"
       }
     ],
     "sentences": [
@@ -1931,14 +1931,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "争う",
     "reading": "あらそう",
     "romaji": "arasou",
-    "meaning": "Compete or dispute",
+    "meaning": "Compete",
     "pos": "verb",
     "posLabel": "Verb",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "争",
-        "meaning": "compete or dispute"
+        "meaning": "compete"
       }
     ],
     "sentences": [
@@ -2006,14 +2006,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "参る",
     "reading": "まいる",
     "romaji": "mairu",
-    "meaning": "Go or come humbly",
+    "meaning": "Go",
     "pos": "verb",
     "posLabel": "Verb",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "参",
-        "meaning": "go or come humbly"
+        "meaning": "go"
       }
     ],
     "sentences": [
@@ -2081,14 +2081,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "構う",
     "reading": "かまう",
     "romaji": "kamau",
-    "meaning": "Mind or care about",
+    "meaning": "Mind",
     "pos": "verb",
     "posLabel": "Verb",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "構",
-        "meaning": "mind or care about"
+        "meaning": "mind"
       }
     ],
     "sentences": [
@@ -2106,14 +2106,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "認める",
     "reading": "みとめる",
     "romaji": "mitomeru",
-    "meaning": "Recognise or admit",
+    "meaning": "Recognise",
     "pos": "verb",
     "posLabel": "Verb",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "認",
-        "meaning": "recognise or admit"
+        "meaning": "recognise"
       }
     ],
     "sentences": [
@@ -2256,14 +2256,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "お客さん",
     "reading": "おきゃくさん",
     "romaji": "okyakusan",
-    "meaning": "Customer or guest",
+    "meaning": "Customer",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "客",
-        "meaning": "customer or guest"
+        "meaning": "customer"
       }
     ],
     "sentences": [
@@ -2331,14 +2331,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "示す",
     "reading": "しめす",
     "romaji": "shimesu",
-    "meaning": "Show or indicate",
+    "meaning": "Show",
     "pos": "verb",
     "posLabel": "Verb",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "示",
-        "meaning": "show or indicate"
+        "meaning": "show"
       }
     ],
     "sentences": [
@@ -2456,14 +2456,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "種類",
     "reading": "しゅるい",
     "romaji": "shurui",
-    "meaning": "Type or variety",
+    "meaning": "Type",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "種",
-        "meaning": "type or variety"
+        "meaning": "type"
       }
     ],
     "sentences": [
@@ -2606,14 +2606,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "与える",
     "reading": "あたえる",
     "romaji": "ataeru",
-    "meaning": "Give or provide",
+    "meaning": "Give",
     "pos": "verb",
     "posLabel": "Verb",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "与",
-        "meaning": "give or provide"
+        "meaning": "give"
       }
     ],
     "sentences": [
@@ -2906,14 +2906,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "求める",
     "reading": "もとめる",
     "romaji": "motomeru",
-    "meaning": "Seek or request",
+    "meaning": "Seek",
     "pos": "verb",
     "posLabel": "Verb",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "求",
-        "meaning": "seek or request"
+        "meaning": "seek"
       }
     ],
     "sentences": [
@@ -2931,14 +2931,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "面談",
     "reading": "めんだん",
     "romaji": "mendan",
-    "meaning": "Interview or consultation",
+    "meaning": "Interview",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "談",
-        "meaning": "interview or consultation"
+        "meaning": "interview"
       }
     ],
     "sentences": [
@@ -3156,14 +3156,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "精神",
     "reading": "せいしん",
     "romaji": "seishin",
-    "meaning": "Mind or spirit",
+    "meaning": "Mind",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "精",
-        "meaning": "mind or spirit"
+        "meaning": "mind"
       }
     ],
     "sentences": [
@@ -3231,14 +3231,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "処理",
     "reading": "しょり",
     "romaji": "shori",
-    "meaning": "Processing or handling",
+    "meaning": "Processing",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "処",
-        "meaning": "processing or handling"
+        "meaning": "processing"
       }
     ],
     "sentences": [
@@ -3356,14 +3356,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "疑う",
     "reading": "うたがう",
     "romaji": "utagau",
-    "meaning": "Doubt or suspect",
+    "meaning": "Doubt",
     "pos": "verb",
     "posLabel": "Verb",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "疑",
-        "meaning": "doubt or suspect"
+        "meaning": "doubt"
       }
     ],
     "sentences": [
@@ -3431,14 +3431,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "程度",
     "reading": "ていど",
     "romaji": "teido",
-    "meaning": "Degree or extent",
+    "meaning": "Degree",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "程",
-        "meaning": "degree or extent"
+        "meaning": "degree"
       }
     ],
     "sentences": [
@@ -3481,14 +3481,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "破る",
     "reading": "やぶる",
     "romaji": "yaburu",
-    "meaning": "Tear or break a rule",
+    "meaning": "Tear",
     "pos": "verb",
     "posLabel": "Verb",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "破",
-        "meaning": "tear or break a rule"
+        "meaning": "tear"
       }
     ],
     "sentences": [
@@ -3656,14 +3656,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "鳴る",
     "reading": "なる",
     "romaji": "naru",
-    "meaning": "Ring or sound",
+    "meaning": "Ring",
     "pos": "verb",
     "posLabel": "Verb",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "鳴",
-        "meaning": "ring or sound"
+        "meaning": "ring"
       }
     ],
     "sentences": [
@@ -3706,14 +3706,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "願う",
     "reading": "ねがう",
     "romaji": "negau",
-    "meaning": "Wish or request",
+    "meaning": "Wish",
     "pos": "verb",
     "posLabel": "Verb",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "願",
-        "meaning": "wish or request"
+        "meaning": "wish"
       }
     ],
     "sentences": [
@@ -3781,14 +3781,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "散歩",
     "reading": "さんぽ",
     "romaji": "sanpo",
-    "meaning": "Walk or stroll",
+    "meaning": "Walk",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "散",
-        "meaning": "walk or stroll"
+        "meaning": "walk"
       }
     ],
     "sentences": [
@@ -3806,14 +3806,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "掛ける",
     "reading": "かける",
     "romaji": "kakeru",
-    "meaning": "Hang or put on",
+    "meaning": "Hang",
     "pos": "verb",
     "posLabel": "Verb",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "掛",
-        "meaning": "hang or put on"
+        "meaning": "hang"
       }
     ],
     "sentences": [
@@ -3856,14 +3856,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "列",
     "reading": "れつ",
     "romaji": "retsu",
-    "meaning": "Queue or row",
+    "meaning": "Queue",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "列",
-        "meaning": "queue or row"
+        "meaning": "queue"
       }
     ],
     "sentences": [
@@ -3906,14 +3906,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "要因",
     "reading": "よういん",
     "romaji": "youin",
-    "meaning": "Factor or cause",
+    "meaning": "Factor",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "因",
-        "meaning": "factor or cause"
+        "meaning": "factor"
       }
     ],
     "sentences": [
@@ -3981,14 +3981,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "吸う",
     "reading": "すう",
     "romaji": "suu",
-    "meaning": "Breathe in or smoke",
+    "meaning": "Breathe in",
     "pos": "verb",
     "posLabel": "Verb",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "吸",
-        "meaning": "breathe in or smoke"
+        "meaning": "breathe in"
       }
     ],
     "sentences": [
@@ -4031,14 +4031,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "容易",
     "reading": "ようい",
     "romaji": "youi",
-    "meaning": "Easy or simple",
+    "meaning": "Easy",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "易",
-        "meaning": "easy or simple"
+        "meaning": "easy"
       }
     ],
     "sentences": [
@@ -4181,14 +4181,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "否定",
     "reading": "ひてい",
     "romaji": "hitei",
-    "meaning": "Denial or negation",
+    "meaning": "Denial",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "否",
-        "meaning": "denial or negation"
+        "meaning": "denial"
       }
     ],
     "sentences": [
@@ -4256,14 +4256,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "迷う",
     "reading": "まよう",
     "romaji": "mayou",
-    "meaning": "Be lost or hesitate",
+    "meaning": "Be lost",
     "pos": "verb",
     "posLabel": "Verb",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "迷",
-        "meaning": "be lost or hesitate"
+        "meaning": "be lost"
       }
     ],
     "sentences": [
@@ -4331,14 +4331,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "頂く",
     "reading": "いただく",
     "romaji": "itadaku",
-    "meaning": "Receive or eat humbly",
+    "meaning": "Receive",
     "pos": "verb",
     "posLabel": "Verb",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "頂",
-        "meaning": "receive or eat humbly"
+        "meaning": "receive"
       }
     ],
     "sentences": [
@@ -4356,14 +4356,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "一杯",
     "reading": "いっぱい",
     "romaji": "ippai",
-    "meaning": "One cup or full",
+    "meaning": "One cup",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "杯",
-        "meaning": "one cup or full"
+        "meaning": "one cup"
       }
     ],
     "sentences": [
@@ -4481,14 +4481,14 @@ export const WORDS_N3_LIST: WordItem[] = [
     "word": "幾つ",
     "reading": "いくつ",
     "romaji": "ikutsu",
-    "meaning": "How many or how old",
+    "meaning": "How many",
     "pos": "verb",
     "posLabel": "Verb",
     "jlpt": "N3",
     "kanjiBreakdown": [
       {
         "char": "幾",
-        "meaning": "how many or how old"
+        "meaning": "how many"
       }
     ],
     "sentences": [

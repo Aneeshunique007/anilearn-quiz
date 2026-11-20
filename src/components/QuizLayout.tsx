@@ -131,6 +131,36 @@ export const QuizLayout: React.FC<QuizLayoutProps> = ({
           </div>
         </div>
 
+        {/* Mobile Horizontal Pill Bar (always visible below header on < md) */}
+        <nav
+          aria-label="Mobile Quiz Navigation"
+          className={`md:hidden border-t px-3 py-2 flex items-center gap-1.5 overflow-x-auto scrollbar-thin ${
+            theme === 'dark'
+              ? 'bg-[#0E0E12]/95 border-slate-800'
+              : 'bg-[#FAF7F5]/95 border-slate-200/80'
+          }`}
+        >
+          {NAV_ITEMS.map((item) => {
+            const isActive = activeTab === item.id;
+            return (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => handleTabClick(item.id)}
+                className={`px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition cursor-pointer shrink-0 ${
+                  isActive
+                    ? 'bg-[#FF5E3A] text-white font-bold shadow-xs'
+                    : theme === 'dark'
+                      ? 'bg-[#17171C] text-slate-300 border border-slate-800'
+                      : 'bg-white text-slate-600 border border-slate-200'
+                }`}
+              >
+                {item.label}
+              </button>
+            );
+          })}
+        </nav>
+
         {/* Mobile Dropdown Menu (4 Quiz Headings Only) */}
         {mobileMenuOpen && (
           <div
@@ -162,7 +192,7 @@ export const QuizLayout: React.FC<QuizLayoutProps> = ({
       </header>
 
       {/* MAIN CONTENT */}
-      <main className="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+      <main className="flex-1 w-full max-w-4xl mx-auto px-3 sm:px-6 py-4 sm:py-8">
         {children}
       </main>
     </div>

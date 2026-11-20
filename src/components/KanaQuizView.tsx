@@ -253,9 +253,9 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
       : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300';
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6">
       {/* Header & Filters */}
-      <div className={`rounded-2xl border p-5 sm:p-6 ${surfaceClass}`}>
+      <div className={`rounded-2xl border p-4 sm:p-6 ${surfaceClass}`}>
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF5E3A] mb-1">
@@ -452,7 +452,7 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
           </div>
         </div>
       ) : currentQuestion ? (
-        <div className={`rounded-3xl border p-6 sm:p-8 space-y-6 ${surfaceClass}`}>
+        <div className={`rounded-2xl sm:rounded-3xl border p-4 sm:p-8 space-y-5 sm:space-y-6 ${surfaceClass}`}>
           {/* Progress Bar */}
           <div className="space-y-2">
             <div className="flex items-center justify-between text-xs font-semibold text-slate-500 dark:text-slate-400">
@@ -573,11 +573,11 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
                 )}
               </div>
 
-              <div className="flex items-center gap-2.5 w-full sm:w-auto justify-end shrink-0">
+              <div className="flex items-center gap-2.5 w-full sm:w-auto shrink-0">
                 <button
                   type="button"
                   onClick={() => handleOpenDetails()}
-                  className={`inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl text-xs font-bold border transition cursor-pointer ${pillInactive}`}
+                  className={`inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl text-xs font-bold border transition cursor-pointer shrink-0 ${pillInactive}`}
                 >
                   <FileText className="w-3.5 h-3.5" />
                   Details
@@ -585,7 +585,7 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
                 <button
                   type="button"
                   onClick={handleNext}
-                  className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-[#FF5E3A] hover:bg-[#E84E29] text-white text-sm font-bold shadow-md shadow-orange-500/20 transition cursor-pointer"
+                  className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl bg-[#FF5E3A] hover:bg-[#E84E29] text-white text-sm font-bold shadow-md shadow-orange-500/20 transition cursor-pointer"
                 >
                   Next
                   <ArrowRight className="w-4 h-4" />

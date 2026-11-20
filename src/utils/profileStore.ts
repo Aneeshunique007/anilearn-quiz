@@ -23,13 +23,13 @@ const PROFILES_KEY = 'anilearn_quiz_profiles';
 const ACTIVE_PROFILE_KEY = 'anilearn_quiz_active_profile_id';
 const PROGRESS_PREFIX = 'anilearn_quiz_progress_';
 
-export const AVATAR_OPTIONS = ['🌸', '🦊', '🐱', '🍡', '⛩️', '🗾', '🔥', '⭐'];
+export const AVATAR_OPTIONS = ['あ', 'カ', '漢', '語', '学', '道', '力', '光'];
 
 function createDefaultProfile(): QuizProfile {
   return {
     id: 'profile-default',
     name: 'Learner',
-    avatar: '🌸',
+    avatar: 'あ',
     targetLevel: 'N5',
     xp: 0,
     createdAt: new Date().toISOString(),
@@ -81,7 +81,7 @@ export const profileStore = {
     const newProfile: QuizProfile = {
       id: `profile-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
       name: name.trim() || 'Learner',
-      avatar: avatar || '🌸',
+      avatar: avatar || 'あ',
       targetLevel,
       xp: 0,
       createdAt: new Date().toISOString(),

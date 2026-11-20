@@ -104,7 +104,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
                   }`}
                 >
                   <div className="flex items-center gap-3 min-w-0">
-                    <div className="w-10 h-10 rounded-xl bg-[#FF5E3A]/15 flex items-center justify-center text-xl shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-[#FF5E3A]/15 text-[#FF5E3A] flex items-center justify-center text-lg font-black font-jp shrink-0">
                       {p.avatar}
                     </div>
                     <div className="min-w-0">
@@ -178,12 +178,12 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
                   key={av}
                   type="button"
                   onClick={() => setAvatar(av)}
-                  className={`w-8 h-8 rounded-lg text-base flex items-center justify-center border transition cursor-pointer ${
+                  className={`w-8 h-8 rounded-lg text-sm font-black font-jp flex items-center justify-center border transition cursor-pointer ${
                     avatar === av
-                      ? 'border-[#FF5E3A] bg-[#FF5E3A]/15 scale-105'
+                      ? 'border-[#FF5E3A] bg-[#FF5E3A]/15 text-[#FF5E3A] scale-105'
                       : theme === 'dark'
-                        ? 'border-slate-800 bg-[#0E0E12]'
-                        : 'border-slate-200 bg-[#FAF7F5]'
+                        ? 'border-slate-800 bg-[#0E0E12] text-slate-300'
+                        : 'border-slate-200 bg-[#FAF7F5] text-slate-700'
                   }`}
                 >
                   {av}

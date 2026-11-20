@@ -11,7 +11,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'verb',
     posLabel: 'Ichidan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{ char: '食', meaning: 'Eat / Food' }],
+    kanjiBreakdown: [{ char: '食', meaning: 'Eat' }],
     sentences: [
       { id: 'ws-n5-1-1', sentence: '毎日、パンを食べます。', furigana: 'まいにち、パン を たべます。', romaji: 'Mainichi, pan o tabemasu.', english: 'I eat bread every day.' },
       { id: 'ws-n5-1-2', sentence: '昼ごはんに魚を食べました。', furigana: 'ひるごはん に さかな を たべました。', romaji: 'Hirugohan ni sakana o tabemashita.', english: 'I ate fish for lunch.' }
@@ -41,7 +41,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{ char: '行', meaning: 'Go / Conduct' }],
+    kanjiBreakdown: [{ char: '行', meaning: 'Go' }],
     sentences: [
       { id: 'ws-n5-3-1', sentence: '明日、学校へ行きます。', furigana: 'あした、がっこう へ いきます。', romaji: 'Ashita, gakkou e ikimasu.', english: 'Tomorrow I will go to school.' },
       { id: 'ws-n5-3-2', sentence: '昨日、スーパーへ行きました。', furigana: 'きのう、スーパー へ いきました。', romaji: 'Kinou, suupaa e ikimashita.', english: 'Yesterday I went to the supermarket.' }
@@ -56,7 +56,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'verb',
     posLabel: 'Irregular Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{ char: '来', meaning: 'Come / Next' }],
+    kanjiBreakdown: [{ char: '来', meaning: 'Come' }],
     sentences: [
       { id: 'ws-n5-4-1', sentence: '友達が私の家に来ます。', furigana: 'ともだち が わたし の いえ に きます。', romaji: 'Tomodachi ga watashi no ie ni kimasu.', english: 'A friend is coming to my house.' },
       { id: 'ws-n5-4-2', sentence: '先生が教室に来ました。', furigana: 'せんせい が きょうしつ に きました。', romaji: 'Sensei ga kyoushitsu ni kimashita.', english: 'The teacher came to the classroom.' }
@@ -67,7 +67,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '帰る',
     reading: 'かえる',
     romaji: 'kaeru',
-    meaning: 'To return / Go home',
+    meaning: 'To return',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
@@ -82,11 +82,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '見る',
     reading: 'みる',
     romaji: 'miru',
-    meaning: 'To see / To watch',
+    meaning: 'To see',
     pos: 'verb',
     posLabel: 'Ichidan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{ char: '見', meaning: 'See / Look' }],
+    kanjiBreakdown: [{ char: '見', meaning: 'See' }],
     sentences: [
       { id: 'ws-n5-6-1', sentence: '部屋でテレビを見ます。', furigana: 'へや で テレビ を みます。', romaji: 'Heya de terebi o mimasu.', english: 'I watch TV in my room.' },
       { id: 'ws-n5-6-2', sentence: '昨日、面白い映画を見ました。', furigana: 'きのう、おもしろい えいが を みました。', romaji: 'Kinou, omoshiroi eiga o mimashita.', english: 'Yesterday I watched an interesting movie.' }
@@ -97,11 +97,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '聞く',
     reading: 'きく',
     romaji: 'kiku',
-    meaning: 'To listen / To hear / To ask',
+    meaning: 'To listen',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{ char: '聞', meaning: 'Hear / Listen' }],
+    kanjiBreakdown: [{ char: '聞', meaning: 'Hear' }],
     sentences: [
       { id: 'ws-n5-7-1', sentence: '毎日、日本の音楽を聞きます。', furigana: 'まいにち、にほん の おんがく を ききます。', romaji: 'Mainichi, Nihon no ongaku o kikimasu.', english: 'I listen to Japanese music every day.' },
       { id: 'ws-n5-7-2', sentence: '先生に質問を聞きました。', furigana: 'せんせい に しつもん を ききました。', romaji: 'Sensei ni shitsumon o kikimashita.', english: 'I asked the teacher a question.' }
@@ -142,11 +142,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '話す',
     reading: 'はなす',
     romaji: 'hanasu',
-    meaning: 'To speak / To talk',
+    meaning: 'To speak',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{ char: '話', meaning: 'Talk / Speak' }],
+    kanjiBreakdown: [{ char: '話', meaning: 'Talk' }],
     sentences: [
       { id: 'ws-n5-10-1', sentence: '先生と日本語で話します。', furigana: 'せんせい と にほんご で はなします。', romaji: 'Sensei to nihongo de hanashimasu.', english: 'I speak in Japanese with the teacher.' },
       { id: 'ws-n5-10-2', sentence: '友達と楽しく話しました。', furigana: 'ともだち と たのしく はなしました。', romaji: 'Tomodachi to tanoshiku hanashimashita.', english: 'I talked happily with my friend.' }
@@ -176,7 +176,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{ char: '会', meaning: 'Meet / Society' }],
+    kanjiBreakdown: [{ char: '会', meaning: 'Meet' }],
     sentences: [
       { id: 'ws-n5-12-1', sentence: '駅の前で友達と会います。', furigana: 'えき の まえ で ともだち と あいます。', romaji: 'Eki no mae de tomodachi to aimasu.', english: 'I will meet my friend in front of the station.' },
       { id: 'ws-n5-12-2', sentence: '昨日、田中先生と会いました。', furigana: 'きのう、たなか せんせい と あいました。', romaji: 'Kinou, Tanaka-sensei to aimashita.', english: 'Yesterday I met with Teacher Tanaka.' }
@@ -202,11 +202,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '起きる',
     reading: 'おきる',
     romaji: 'okiru',
-    meaning: 'To wake up / To get up',
+    meaning: 'To wake up',
     pos: 'verb',
     posLabel: 'Ichidan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{ char: '起', meaning: 'Rouse / Wake' }],
+    kanjiBreakdown: [{ char: '起', meaning: 'Rouse' }],
     sentences: [
       { id: 'ws-n5-14-1', sentence: '毎朝、七時に起きます。', furigana: 'まいあさ、しちじ に おきます。', romaji: 'Maiasa, shichiji ni okimasu.', english: 'I wake up at 7:00 every morning.' },
       { id: 'ws-n5-14-2', sentence: '今日は朝早く起きました。', furigana: 'きょう は あさ はやく おきました。', romaji: 'Kyou wa asa hayaku okimashita.', english: 'Today I woke up early in the morning.' }
@@ -217,7 +217,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '寝る',
     reading: 'ねる',
     romaji: 'neru',
-    meaning: 'To sleep / To go to bed',
+    meaning: 'To sleep',
     pos: 'verb',
     posLabel: 'Ichidan Verb',
     jlpt: 'N5',
@@ -239,8 +239,8 @@ export const WORDS_N5_LIST: WordItem[] = [
     posLabel: 'Noun',
     jlpt: 'N5',
     kanjiBreakdown: [
-      { char: '学', meaning: 'Study / Learn' },
-      { char: '生', meaning: 'Life / Birth' }
+      { char: '学', meaning: 'Study' },
+      { char: '生', meaning: 'Life' }
     ],
     sentences: [
       { id: 'ws-n5-16-1', sentence: '私は日本語学校の学生です。', furigana: 'わたし は にほんご がっこう の がくせい です。', romaji: 'Watashi wa nihongo gakkou no gakusei desu.', english: 'I am a student at a Japanese language school.' },
@@ -252,13 +252,13 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '先生',
     reading: 'せんせい',
     romaji: 'sensei',
-    meaning: 'Teacher / Instructor',
+    meaning: 'Teacher',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
     kanjiBreakdown: [
-      { char: '先', meaning: 'Previous / Ahead' },
-      { char: '生', meaning: 'Life / Birth' }
+      { char: '先', meaning: 'Previous' },
+      { char: '生', meaning: 'Life' }
     ],
     sentences: [
       { id: 'ws-n5-17-1', sentence: '田中先生はとても優しいです。', furigana: 'たなか せんせい は とても やさしい です。', romaji: 'Tanaka-sensei wa totemo yasashii desu.', english: 'Teacher Tanaka is very kind.' },
@@ -276,7 +276,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     jlpt: 'N5',
     kanjiBreakdown: [
       { char: '友', meaning: 'Friend' },
-      { char: '達', meaning: 'Plural / Reach' }
+      { char: '達', meaning: 'Plural' }
     ],
     sentences: [
       { id: 'ws-n5-18-1', sentence: '公園で友達と遊びます。', furigana: 'こうえん で ともだち と あそびます。', romaji: 'Kouen de tomodachi to asobimasu.', english: 'I play with my friend in the park.' },
@@ -306,13 +306,13 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '時間',
     reading: 'じかん',
     romaji: 'jikan',
-    meaning: 'Time / Hours',
+    meaning: 'Time',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
     kanjiBreakdown: [
-      { char: '時', meaning: 'Time / Hour' },
-      { char: '間', meaning: 'Interval / Space' }
+      { char: '時', meaning: 'Time' },
+      { char: '間', meaning: 'Interval' }
     ],
     sentences: [
       { id: 'ws-n5-20-1', sentence: '今、時間を教えてください。', furigana: 'いま、じかん を おしえて ください。', romaji: 'Ima, jikan o oshiete kudasai.', english: 'Please tell me the time now.' },
@@ -330,7 +330,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     jlpt: 'N5',
     kanjiBreakdown: [
       { char: '電', meaning: 'Electricity' },
-      { char: '車', meaning: 'Car / Vehicle' }
+      { char: '車', meaning: 'Car' }
     ],
     sentences: [
       { id: 'ws-n5-21-1', sentence: '毎朝、電車で学校へ行きます。', furigana: 'まいあさ、でんしゃ で がっこう へ いきます。', romaji: 'Maiasa, densha de gakkou e ikimasu.', english: 'Every morning I go to school by train.' },
@@ -347,8 +347,8 @@ export const WORDS_N5_LIST: WordItem[] = [
     posLabel: 'Noun',
     jlpt: 'N5',
     kanjiBreakdown: [
-      { char: '部', meaning: 'Part / Section' },
-      { char: '屋', meaning: 'Roof / Room / Shop' }
+      { char: '部', meaning: 'Part' },
+      { char: '屋', meaning: 'Roof' }
     ],
     sentences: [
       { id: 'ws-n5-22-1', sentence: '私の部屋はとてもきれいです。', furigana: 'わたし の へや は とても きれい です。', romaji: 'Watashi no heya wa totemo kirei desu.', english: 'My room is very clean.' },
@@ -362,7 +362,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '大きい',
     reading: 'おおきい',
     romaji: 'ookii',
-    meaning: 'Big / Large',
+    meaning: 'Big',
     pos: 'adjective',
     posLabel: 'i-Adjective',
     jlpt: 'N5',
@@ -377,7 +377,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '小さい',
     reading: 'ちいさい',
     romaji: 'chiisai',
-    meaning: 'Small / Little',
+    meaning: 'Small',
     pos: 'adjective',
     posLabel: 'i-Adjective',
     jlpt: 'N5',
@@ -392,7 +392,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '新しい',
     reading: 'あたらしい',
     romaji: 'atarashii',
-    meaning: 'New / Fresh',
+    meaning: 'New',
     pos: 'adjective',
     posLabel: 'i-Adjective',
     jlpt: 'N5',
@@ -422,11 +422,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '高い',
     reading: 'たかい',
     romaji: 'takai',
-    meaning: 'Expensive / High / Tall',
+    meaning: 'Expensive',
     pos: 'adjective',
     posLabel: 'i-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{ char: '高', meaning: 'High / Expensive' }],
+    kanjiBreakdown: [{ char: '高', meaning: 'High' }],
     sentences: [
       { id: 'ws-n5-27-1', sentence: 'この本は少し高いです。', furigana: 'この ほん は すこし たかい です。', romaji: 'Kono hon wa sukoshi takai desu.', english: 'This book is a little expensive.' },
       { id: 'ws-n5-27-2', sentence: 'あの山はとても高いです。', furigana: 'あの やま は とても たかい です。', romaji: 'Ano yama wa totemo takai desu.', english: 'That mountain is very high.' }
@@ -437,11 +437,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '安い',
     reading: 'やすい',
     romaji: 'yasui',
-    meaning: 'Cheap / Inexpensive',
+    meaning: 'Cheap',
     pos: 'adjective',
     posLabel: 'i-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{ char: '安', meaning: 'Cheap / Peaceful' }],
+    kanjiBreakdown: [{ char: '安', meaning: 'Cheap' }],
     sentences: [
       { id: 'ws-n5-28-1', sentence: 'このりんごはとても安いです。', furigana: 'この りんご は とても やすい です。', romaji: 'Kono ringo wa totemo yasui desu.', english: 'This apple is very cheap.' },
       { id: 'ws-n5-28-2', sentence: 'あの店で安い服を買いました。', furigana: 'あの みせ で やすい ふく を かいました。', romaji: 'Ano mise de yasui fuku o kaimashita.', english: 'I bought cheap clothes at that store.' }
@@ -452,7 +452,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '静か',
     reading: 'しずか',
     romaji: 'shizuka',
-    meaning: 'Quiet / Peaceful',
+    meaning: 'Quiet',
     pos: 'adjective',
     posLabel: 'na-Adjective',
     jlpt: 'N5',
@@ -472,7 +472,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     posLabel: 'na-Adjective',
     jlpt: 'N5',
     kanjiBreakdown: [
-      { char: '有', meaning: 'Have / Exist' },
+      { char: '有', meaning: 'Have' },
       { char: '名', meaning: 'Name' }
     ],
     sentences: [
@@ -487,7 +487,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'とても',
     reading: 'とても',
     romaji: 'totemo',
-    meaning: 'Very / Extremely',
+    meaning: 'Very',
     pos: 'adverb',
     posLabel: 'Adverb',
     jlpt: 'N5',
@@ -501,7 +501,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'いつも',
     reading: 'いつも',
     romaji: 'itsumo',
-    meaning: 'Always / Usually',
+    meaning: 'Always',
     pos: 'adverb',
     posLabel: 'Adverb',
     jlpt: 'N5',
@@ -529,7 +529,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'すみません',
     reading: 'すみません',
     romaji: 'sumimasen',
-    meaning: 'Excuse me / I am sorry',
+    meaning: 'Excuse me',
     pos: 'expression',
     posLabel: 'Expression',
     jlpt: 'N5',
@@ -596,7 +596,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"座","meaning":"Sit / Seat"}],
+    kanjiBreakdown: [{"char":"座","meaning":"Sit"}],
     sentences: [
       { id: 'ws-n5-38-1', sentence: 'どうぞ、この椅子に座ってください。', furigana: 'どうぞ、この いす に すわって ください。', romaji: 'Douzo, kono isu ni suwatte kudasai.', english: 'Please sit on this chair.' },
       { id: 'ws-n5-38-2', sentence: 'ベンチに座って休みました。', furigana: 'ベンチ に すわって やすみました。', romaji: 'Benchi ni suwatte yasumimashita.', english: 'I sat on the bench and rested.' }
@@ -622,7 +622,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '入る',
     reading: 'はいる',
     romaji: 'hairu',
-    meaning: 'To enter / Go in',
+    meaning: 'To enter',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
@@ -637,11 +637,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '出る',
     reading: 'でる',
     romaji: 'deru',
-    meaning: 'To leave / Go out / Exit',
+    meaning: 'To leave',
     pos: 'verb',
     posLabel: 'Ichidan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"出","meaning":"Exit / Leave"}],
+    kanjiBreakdown: [{"char":"出","meaning":"Exit"}],
     sentences: [
       { id: 'ws-n5-41-1', sentence: '毎朝、八時に家を出ます。', furigana: 'まいあさ、はちじ に いえ を でます。', romaji: 'Maiasa, hachiji ni ie o demasu.', english: 'Every morning, I leave home at 8 o\'clock.' },
       { id: 'ws-n5-41-2', sentence: '教室から出てください。', furigana: 'きょうしつ から でて ください。', romaji: 'Kyoushitsu kara dete kudasai.', english: 'Please leave the classroom.' }
@@ -682,7 +682,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'つける',
     reading: 'つける',
     romaji: 'tsukeru',
-    meaning: 'To turn on / Switch on',
+    meaning: 'To turn on',
     pos: 'verb',
     posLabel: 'Ichidan Verb',
     jlpt: 'N5',
@@ -696,7 +696,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '消す',
     reading: 'けす',
     romaji: 'kesu',
-    meaning: 'To turn off / Erase',
+    meaning: 'To turn off',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
@@ -711,7 +711,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '教える',
     reading: 'おしえる',
     romaji: 'oshieru',
-    meaning: 'To teach / To tell',
+    meaning: 'To teach',
     pos: 'verb',
     posLabel: 'Ichidan Verb',
     jlpt: 'N5',
@@ -756,7 +756,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '休む',
     reading: 'やすむ',
     romaji: 'yasumu',
-    meaning: 'To rest / Take a day off',
+    meaning: 'To rest',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
@@ -771,7 +771,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '遊ぶ',
     reading: 'あそぶ',
     romaji: 'asobu',
-    meaning: 'To play / Hang out',
+    meaning: 'To play',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
@@ -801,7 +801,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '浴びる',
     reading: 'あびる',
     romaji: 'abiru',
-    meaning: 'To bathe / Take a shower',
+    meaning: 'To bathe',
     pos: 'verb',
     posLabel: 'Ichidan Verb',
     jlpt: 'N5',
@@ -831,7 +831,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '作る',
     reading: 'つくる',
     romaji: 'tsukuru',
-    meaning: 'To make / Produce',
+    meaning: 'To make',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
@@ -861,11 +861,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '置く',
     reading: 'おく',
     romaji: 'oku',
-    meaning: 'To put / Place',
+    meaning: 'To put',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"置","meaning":"Place / Put"}],
+    kanjiBreakdown: [{"char":"置","meaning":"Place"}],
     sentences: [
       { id: 'ws-n5-56-1', sentence: '机の上に本を置きます。', furigana: 'つくえ の うえ に ほん を おきます。', romaji: 'Tsukue no ue ni hon o okimasu.', english: 'I put the book on the desk.' },
       { id: 'ws-n5-56-2', sentence: 'ここに荷物を置いてください。', furigana: 'ここ に にもつ を おいて ください。', romaji: 'Koko ni nimotsu o oite kudasai.', english: 'Please put your luggage here.' }
@@ -876,11 +876,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '持つ',
     reading: 'もつ',
     romaji: 'motsu',
-    meaning: 'To hold / Possess',
+    meaning: 'To hold',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"持","meaning":"Hold / Have"}],
+    kanjiBreakdown: [{"char":"持","meaning":"Hold"}],
     sentences: [
       { id: 'ws-n5-57-1', sentence: '重い荷物を持ちます。', furigana: 'おもい にもつ を もちます。', romaji: 'Omoi nimotsu o mochimasu.', english: 'I will hold the heavy luggage.' },
       { id: 'ws-n5-57-2', sentence: '私は黒い傘を持っています。', furigana: 'わたし は くろい かさ を もって います。', romaji: 'Watashi wa kuroi kasa o motte imasu.', english: 'I have a black umbrella.' }
@@ -891,7 +891,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '取る',
     reading: 'とる',
     romaji: 'toru',
-    meaning: 'To take / Pick up',
+    meaning: 'To take',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
@@ -936,11 +936,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '頼む',
     reading: 'たのむ',
     romaji: 'tanomu',
-    meaning: 'To ask / Order / Request',
+    meaning: 'To ask',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"頼","meaning":"Rely / Request"}],
+    kanjiBreakdown: [{"char":"頼","meaning":"Rely"}],
     sentences: [
       { id: 'ws-n5-61-1', sentence: 'レストランで水を頼みました。', furigana: 'レストラン で みず を たのみました。', romaji: 'Resutoran de mizu o tanomimashita.', english: 'I ordered water at the restaurant.' },
       { id: 'ws-n5-61-2', sentence: '友達に買い物を頼みます。', furigana: 'ともだち に かいもの を たのみます。', romaji: 'Tomodachi ni kaimono o tanomimasu.', english: 'I ask a friend to do some shopping for me.' }
@@ -951,7 +951,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '呼ぶ',
     reading: 'よぶ',
     romaji: 'yobu',
-    meaning: 'To call / Invite',
+    meaning: 'To call',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
@@ -981,11 +981,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '笑う',
     reading: 'わらう',
     romaji: 'warau',
-    meaning: 'To laugh / Smile',
+    meaning: 'To laugh',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"笑","meaning":"Laugh / Smile"}],
+    kanjiBreakdown: [{"char":"笑","meaning":"Laugh"}],
     sentences: [
       { id: 'ws-n5-64-1', sentence: '田中さんはいつも明るく笑います。', furigana: 'たなかさん は いつも あかるく わらいます。', romaji: 'Tanaka-san wa itsumo akaruku waraimasu.', english: 'Mr. Tanaka always smiles cheerfully.' },
       { id: 'ws-n5-64-2', sentence: '面白い話を聞いて笑いました。', furigana: 'おもしろい はなし を きいて わらい ました。', romaji: 'Omoshiroi hanashi o kiite waraimashita.', english: 'I laughed when I heard a funny story.' }
@@ -996,7 +996,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '困る',
     reading: 'こまる',
     romaji: 'komaru',
-    meaning: 'To be troubled / In trouble',
+    meaning: 'To be troubled',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
@@ -1026,7 +1026,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '住む',
     reading: 'すむ',
     romaji: 'sumu',
-    meaning: 'To live / Reside',
+    meaning: 'To live',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
@@ -1060,7 +1060,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"分","meaning":"Part / Understand"}],
+    kanjiBreakdown: [{"char":"分","meaning":"Part"}],
     sentences: [
       { id: 'ws-n5-69-1', sentence: '日本語がよく分かります。', furigana: 'にほんご が よく わかります。', romaji: 'Nihongo ga yoku wakarimasu.', english: 'I understand Japanese well.' },
       { id: 'ws-n5-69-2', sentence: 'この質問の意味が分かりました。', furigana: 'この しつもん の いみ が わかりました。', romaji: 'Kono shitsumon no imi ga wakarimashita.', english: 'I understood the meaning of this question.' }
@@ -1071,7 +1071,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '乗る',
     reading: 'のる',
     romaji: 'noru',
-    meaning: 'To ride / Get on',
+    meaning: 'To ride',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
@@ -1086,11 +1086,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '降りる',
     reading: 'おりる',
     romaji: 'oriru',
-    meaning: 'To get off / Descend',
+    meaning: 'To get off',
     pos: 'verb',
     posLabel: 'Ichidan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"降","meaning":"Descend / Fall"}],
+    kanjiBreakdown: [{"char":"降","meaning":"Descend"}],
     sentences: [
       { id: 'ws-n5-71-1', sentence: '次の駅で電車を降ります。', furigana: 'つぎ の えき で でんしゃ を おります。', romaji: 'Tsugi no eki de densha o orimasu.', english: 'I get off the train at the next station.' },
       { id: 'ws-n5-71-2', sentence: 'ここでバスを降りてください。', furigana: 'ここ で バス を おりて ください。', romaji: 'Koko de basu o orite kudasai.', english: 'Please get off the bus here.' }
@@ -1105,7 +1105,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"渡","meaning":"Transit / Ferry"}],
+    kanjiBreakdown: [{"char":"渡","meaning":"Transit"}],
     sentences: [
       { id: 'ws-n5-72-1', sentence: '青信号で道を渡ります。', furigana: 'あおしんごう で みち を わたり ます。', romaji: 'Aoshingou de michi o watarimasu.', english: 'I cross the street at the green light.' },
       { id: 'ws-n5-72-2', sentence: '気をつけて橋を渡ってください。', furigana: 'き を つけて はし を わたって ください。', romaji: 'Ki o tsukete hashi o watatte kudasai.', english: 'Please cross the bridge carefully.' }
@@ -1116,11 +1116,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '曲がる',
     reading: 'まがる',
     romaji: 'magaru',
-    meaning: 'To turn / Bend',
+    meaning: 'To turn',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"曲","meaning":"Bend / Music"}],
+    kanjiBreakdown: [{"char":"曲","meaning":"Bend"}],
     sentences: [
       { id: 'ws-n5-73-1', sentence: '次の角を右へ曲がってください。', furigana: 'つぎ の かど を みぎ へ まがって ください。', romaji: 'Tsugi no kado o migi e magatte kudasai.', english: 'Please turn right at the next corner.' },
       { id: 'ws-n5-73-2', sentence: '交差点を左に曲がりました。', furigana: 'こうさてん を ひだり に まがりました。', romaji: 'Kousaten o hidari ni magarimashita.', english: 'I turned left at the intersection.' }
@@ -1131,7 +1131,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '止まる',
     reading: 'とまる',
     romaji: 'tomaru',
-    meaning: 'To stop / Halt',
+    meaning: 'To stop',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
@@ -1146,7 +1146,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '始まる',
     reading: 'はじまる',
     romaji: 'hajimaru',
-    meaning: 'To begin / Start',
+    meaning: 'To begin',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
@@ -1161,7 +1161,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '終わる',
     reading: 'おわる',
     romaji: 'owaru',
-    meaning: 'To end / Finish',
+    meaning: 'To end',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
@@ -1176,7 +1176,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '届く',
     reading: 'とどく',
     romaji: 'todoku',
-    meaning: 'To reach / Be delivered',
+    meaning: 'To reach',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
@@ -1191,7 +1191,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '押す',
     reading: 'おす',
     romaji: 'osu',
-    meaning: 'To push / Press',
+    meaning: 'To push',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
@@ -1206,7 +1206,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '引く',
     reading: 'ひく',
     romaji: 'hiku',
-    meaning: 'To pull / Catch (a cold)',
+    meaning: 'To pull',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
@@ -1221,11 +1221,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '出す',
     reading: 'だす',
     romaji: 'dasu',
-    meaning: 'To take out / Hand in',
+    meaning: 'To take out',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"出","meaning":"Exit / Produce"}],
+    kanjiBreakdown: [{"char":"出","meaning":"Exit"}],
     sentences: [
       { id: 'ws-n5-80-1', sentence: 'カバンからノートを出します。', furigana: 'カバン から ノート を だします。', romaji: 'Kaban kara nooto o dashimasu.', english: 'I take a notebook out of the bag.' },
       { id: 'ws-n5-80-2', sentence: '先生に宿題を出しました。', furigana: 'せんせい に しゅくだい を だしました。', romaji: 'Sensei ni shukudai o dashimashita.', english: 'I handed in my homework to the teacher.' }
@@ -1236,11 +1236,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '入れる',
     reading: 'いれる',
     romaji: 'ireru',
-    meaning: 'To put in / Insert',
+    meaning: 'To put in',
     pos: 'verb',
     posLabel: 'Ichidan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"入","meaning":"Enter / Insert"}],
+    kanjiBreakdown: [{"char":"入","meaning":"Enter"}],
     sentences: [
       { id: 'ws-n5-81-1', sentence: 'お茶に砂糖を入れます。', furigana: 'おちゃ に さとう を いれます。', romaji: 'Ocha ni satou o iremasu.', english: 'I put sugar into the tea.' },
       { id: 'ws-n5-81-2', sentence: '財布にお金を入れました。', furigana: 'さいふ に おかね を いれました。', romaji: 'Saifu ni okane o iremashita.', english: 'I put money into my wallet.' }
@@ -1266,7 +1266,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '晴れる',
     reading: 'はれる',
     romaji: 'hareru',
-    meaning: 'To clear up / Be sunny',
+    meaning: 'To clear up',
     pos: 'verb',
     posLabel: 'Ichidan Verb',
     jlpt: 'N5',
@@ -1315,7 +1315,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"降","meaning":"Fall / Descend"}],
+    kanjiBreakdown: [{"char":"降","meaning":"Fall"}],
     sentences: [
       { id: 'ws-n5-86-1', sentence: '外で雨がたくさん降っています。', furigana: 'そと で あめ が たくさん ふって います。', romaji: 'Soto de ame ga takusan futte imasu.', english: 'A lot of rain is falling outside.' },
       { id: 'ws-n5-86-2', sentence: '昨日、白い雪が降りました。', furigana: 'きのう、しろい ゆき が ふりました。', romaji: 'Kinou, shiroi yuki ga furimashita.', english: 'Yesterday, white snow fell.' }
@@ -1326,11 +1326,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '鳴く',
     reading: 'なく',
     romaji: 'naku',
-    meaning: 'To bark / Meow / Chirp (animals)',
+    meaning: 'To bark',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"鳴","meaning":"Chirp / Cry"}],
+    kanjiBreakdown: [{"char":"鳴","meaning":"Chirp"}],
     sentences: [
       { id: 'ws-n5-87-1', sentence: '庭で犬が元気に鳴いています。', furigana: 'にわ で いぬ が げんき に ないて います。', romaji: 'Niwa de inu ga genki ni naite imasu.', english: 'The dog is barking energetically in the yard.' },
       { id: 'ws-n5-87-2', sentence: 'かわいい猫がニャーと鳴きました。', furigana: 'かわいい ねこ が ニャー と なきました。', romaji: 'Kawaii neko ga nyaa to nakimashita.', english: 'The cute cat meowed.' }
@@ -1341,11 +1341,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '磨く',
     reading: 'みがく',
     romaji: 'migaku',
-    meaning: 'To brush / Polish',
+    meaning: 'To brush',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"磨","meaning":"Polish / Grind"}],
+    kanjiBreakdown: [{"char":"磨","meaning":"Polish"}],
     sentences: [
       { id: 'ws-n5-88-1', sentence: '毎朝、歯をきれいに磨きます。', furigana: 'まいあさ、は を きれい に みがきます。', romaji: 'Maiasa, ha o kirei ni migakimasu.', english: 'Every morning, I brush my teeth cleanly.' },
       { id: 'ws-n5-88-2', sentence: '出かける前に靴を磨きました。', furigana: 'でかける まえ に くつ を みがき ました。', romaji: 'Dekakeru mae ni kutsu o migakimashita.', english: 'I polished my shoes before going out.' }
@@ -1356,11 +1356,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '履く',
     reading: 'はく',
     romaji: 'haku',
-    meaning: 'To put on / Wear (shoes/pants)',
+    meaning: 'To put on',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"履","meaning":"Footwear / Put on"}],
+    kanjiBreakdown: [{"char":"履","meaning":"Footwear"}],
     sentences: [
       { id: 'ws-n5-89-1', sentence: '新しい靴を履きます。', furigana: 'あたらしい くつ を はきます。', romaji: 'Atarashii kutsu o hakimasu.', english: 'I put on new shoes.' },
       { id: 'ws-n5-89-2', sentence: '黒いズボンを履きました。', furigana: 'くろい ズボン を はきました。', romaji: 'Kuroi zubon o hakimashita.', english: 'I wore black pants.' }
@@ -1371,11 +1371,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '着る',
     reading: 'きる',
     romaji: 'kiru',
-    meaning: 'To wear / Put on (upper body)',
+    meaning: 'To wear',
     pos: 'verb',
     posLabel: 'Ichidan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"着","meaning":"Don / Wear"}],
+    kanjiBreakdown: [{"char":"着","meaning":"Don"}],
     sentences: [
       { id: 'ws-n5-90-1', sentence: '寒いのでセーターを着ます。', furigana: 'さむい ので セーター を きます。', romaji: 'Samui node seetaa o kimasu.', english: 'Because it is cold, I wear a sweater.' },
       { id: 'ws-n5-90-2', sentence: '白いシャツを着ました。', furigana: 'しろい シャツ を きました。', romaji: 'Shiroi shatsu o kimashita.', english: 'I wore a white shirt.' }
@@ -1390,7 +1390,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"脱","meaning":"Undress / Doff"}],
+    kanjiBreakdown: [{"char":"脱","meaning":"Undress"}],
     sentences: [
       { id: 'ws-n5-91-1', sentence: '部屋で靴を脱いでください。', furigana: 'へや で くつ を ぬいで ください。', romaji: 'Heya de kutsu o nuide kudasai.', english: 'Please take off your shoes in the room.' },
       { id: 'ws-n5-91-2', sentence: '家に入ってコートを脱ぎました。', furigana: 'いえ に はいって コート を ぬぎました。', romaji: 'Ie ni haitte kooto o nugimashita.', english: 'I entered the house and took off my coat.' }
@@ -1401,11 +1401,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '被る',
     reading: 'かぶる',
     romaji: 'kaburu',
-    meaning: 'To wear / Put on (hat)',
+    meaning: 'To wear',
     pos: 'verb',
     posLabel: 'Godan Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"被","meaning":"Cover / Wear"}],
+    kanjiBreakdown: [{"char":"被","meaning":"Cover"}],
     sentences: [
       { id: 'ws-n5-92-1', sentence: '帽子を被って出かけます。', furigana: 'ぼうし を かぶって でかけます。', romaji: 'Boushi o kabutte dekakemasu.', english: 'I put on a hat and go out.' },
       { id: 'ws-n5-92-2', sentence: '田中さんは赤い帽子を被りました。', furigana: 'たなかさん は あかい ぼうし を かぶりました。', romaji: 'Tanaka-san wa akai boushi o kaburimashita.', english: 'Mr. Tanaka put on a red hat.' }
@@ -1416,7 +1416,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'かける',
     reading: 'かける',
     romaji: 'kakeru',
-    meaning: 'To wear (glasses) / Make (a call)',
+    meaning: 'To wear (glasses)',
     pos: 'verb',
     posLabel: 'Ichidan Verb',
     jlpt: 'N5',
@@ -1430,7 +1430,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '答える',
     reading: 'こたえる',
     romaji: 'kotaeru',
-    meaning: 'To answer / Reply',
+    meaning: 'To answer',
     pos: 'verb',
     posLabel: 'Ichidan Verb',
     jlpt: 'N5',
@@ -1445,7 +1445,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '人',
     reading: 'ひと',
     romaji: 'hito',
-    meaning: 'Person / People',
+    meaning: 'Person',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -1460,7 +1460,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '男',
     reading: 'おとこ',
     romaji: 'otoko',
-    meaning: 'Man / Male',
+    meaning: 'Man',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -1475,7 +1475,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '女',
     reading: 'おんな',
     romaji: 'onna',
-    meaning: 'Woman / Female',
+    meaning: 'Woman',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -1524,7 +1524,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"家","meaning":"House"},{"char":"族","meaning":"Tribe / Family"}],
+    kanjiBreakdown: [{"char":"家","meaning":"House"},{"char":"族","meaning":"Tribe"}],
     sentences: [
       { id: 'ws-n5-100-1', sentence: '私の家族は四人です。', furigana: 'わたし の かぞく は よにん です。', romaji: 'Watashi no kazoku wa yonin desu.', english: 'My family has four members.' },
       { id: 'ws-n5-100-2', sentence: '毎晩、家族と一緒にご飯を食べます。', furigana: 'まいばん、かぞく と いっしょ に ごはん を たべます。', romaji: 'Maiban, kazoku to issho ni gohan o tabemasu.', english: 'Every evening, I eat dinner together with my family.' }
@@ -1565,7 +1565,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'お父さん',
     reading: 'おとうさん',
     romaji: 'otousan',
-    meaning: 'Father (polite / someone else\'s)',
+    meaning: 'Father (polite)',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -1580,7 +1580,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'お母さん',
     reading: 'おかあさん',
     romaji: 'okaasan',
-    meaning: 'Mother (polite / someone else\'s)',
+    meaning: 'Mother (polite)',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -1655,7 +1655,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '子供',
     reading: 'こども',
     romaji: 'kodomo',
-    meaning: 'Child / Children',
+    meaning: 'Child',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -1670,7 +1670,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '医者',
     reading: 'いしゃ',
     romaji: 'isha',
-    meaning: 'Doctor / Physician',
+    meaning: 'Doctor',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -1685,7 +1685,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '会社員',
     reading: 'かいしゃいん',
     romaji: 'kaishain',
-    meaning: 'Company employee / Office worker',
+    meaning: 'Company employee',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -1700,7 +1700,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '国',
     reading: 'くに',
     romaji: 'kuni',
-    meaning: 'Country / Nation',
+    meaning: 'Country',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -1749,7 +1749,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"英","meaning":"Heroic / English"},{"char":"語","meaning":"Language"}],
+    kanjiBreakdown: [{"char":"英","meaning":"Heroic"},{"char":"語","meaning":"Language"}],
     sentences: [
       { id: 'ws-n5-115-1', sentence: '私は英語を話すことができます。', furigana: 'わたし は えいご を はなす こと が できます。', romaji: 'Watashi wa eigo o hanasu koto ga dekimasu.', english: 'I can speak English.' },
       { id: 'ws-n5-115-2', sentence: '田中先生は英語を教えます。', furigana: 'たなかせんせい は えいご を おしえます。', romaji: 'Tanaka sensei wa eigo o oshiemasu.', english: 'Teacher Tanaka teaches English.' }
@@ -1764,7 +1764,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"本","meaning":"Book / Origin"}],
+    kanjiBreakdown: [{"char":"本","meaning":"Book"}],
     sentences: [
       { id: 'ws-n5-116-1', sentence: '図書館で本を読みます。', furigana: 'としょかん で ほん を よみます。', romaji: 'Toshokan de hon o yomimasu.', english: 'I read books at the library.' },
       { id: 'ws-n5-116-2', sentence: '本屋で面白い本を買いました。', furigana: 'ほんや で おもしろい ほん を かいました。', romaji: 'Hon\'ya de omoshiroi hon o kaimashita.', english: 'I bought an interesting book at the bookstore.' }
@@ -1779,7 +1779,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"辞","meaning":"Word / Resign"},{"char":"書","meaning":"Book / Write"}],
+    kanjiBreakdown: [{"char":"辞","meaning":"Word"},{"char":"書","meaning":"Book"}],
     sentences: [
       { id: 'ws-n5-117-1', sentence: '机の上に辞書があります。', furigana: 'つくえ の うえ に じしょ が あります。', romaji: 'Tsukue no ue ni jisho ga arimasu.', english: 'There is a dictionary on the desk.' },
       { id: 'ws-n5-117-2', sentence: '辞書で言葉を調べます。', furigana: 'じしょ で ことば を しらべます。', romaji: 'Jisho de kotoba o shirabemasu.', english: 'I look up words in the dictionary.' }
@@ -1794,7 +1794,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"雑","meaning":"Mixed"},{"char":"誌","meaning":"Document / Magazine"}],
+    kanjiBreakdown: [{"char":"雑","meaning":"Mixed"},{"char":"誌","meaning":"Document"}],
     sentences: [
       { id: 'ws-n5-118-1', sentence: '本屋で日本の雑誌を買いました。', furigana: 'ほんや で にほん の ざっし を かいました。', romaji: 'Hon\'ya de nihon no zasshi o kaimashita.', english: 'I bought a Japanese magazine at the bookstore.' },
       { id: 'ws-n5-118-2', sentence: '部屋で雑誌を読みます。', furigana: 'へや で ざっし を よみます。', romaji: 'Heya de zasshi o yomimasu.', english: 'I read magazines in my room.' }
@@ -1895,7 +1895,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '鞄',
     reading: 'かばん',
     romaji: 'kaban',
-    meaning: 'Bag / Briefcase',
+    meaning: 'Bag',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -1938,7 +1938,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '時計',
     reading: 'とけい',
     romaji: 'tokei',
-    meaning: 'Clock / Watch',
+    meaning: 'Clock',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -1953,7 +1953,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '眼鏡',
     reading: 'めがね',
     romaji: 'megane',
-    meaning: 'Eyeglasses / Glasses',
+    meaning: 'Eyeglasses',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -2045,11 +2045,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'ご飯',
     reading: 'ごはん',
     romaji: 'gohan',
-    meaning: 'Cooked rice / Meal',
+    meaning: 'Cooked rice',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"飯","meaning":"Meal / Boiled rice"}],
+    kanjiBreakdown: [{"char":"飯","meaning":"Meal"}],
     sentences: [
       { id: 'ws-n5-135-1', sentence: '七時に朝ご飯を食べました。', furigana: 'しちじ に あさごはん を たべました。', romaji: 'Shichiji ni asagohan o tabemashita.', english: 'I ate breakfast at 7 o\'clock.' },
       { id: 'ws-n5-135-2', sentence: '白いご飯が大好きです。', furigana: 'しろい ごはん が だいすき です。', romaji: 'Shiroi gohan ga daisuki desu.', english: 'I love white rice.' }
@@ -2074,7 +2074,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '水',
     reading: 'みず',
     romaji: 'mizu',
-    meaning: 'Water (cold / room temp)',
+    meaning: 'Water (cold',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -2089,7 +2089,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'お茶',
     reading: 'おちゃ',
     romaji: 'ocha',
-    meaning: 'Green tea / Tea',
+    meaning: 'Green tea',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -2162,11 +2162,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'お酒',
     reading: 'おさけ',
     romaji: 'osake',
-    meaning: 'Sake / Alcoholic drink',
+    meaning: 'Sake',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"酒","meaning":"Sake / Liquor"}],
+    kanjiBreakdown: [{"char":"酒","meaning":"Sake"}],
     sentences: [
       { id: 'ws-n5-143-1', sentence: '父はお酒が好きです。', furigana: 'ちち は おさけ が すき です。', romaji: 'Chichi wa osake ga suki desu.', english: 'My father likes alcohol / sake.' },
       { id: 'ws-n5-143-2', sentence: '日本では二十歳からお酒を飲むことができます。', furigana: 'にほん で は はたち から おさけ を のむ こと が できます。', romaji: 'Nihon de wa hatachi kara osake o nomu koto ga dekimasu.', english: 'In Japan, you can drink alcohol from age 20.' }
@@ -2325,7 +2325,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'みかん',
     reading: 'みかん',
     romaji: 'mikan',
-    meaning: 'Mandarin orange / Tangerine',
+    meaning: 'Mandarin orange',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -2411,11 +2411,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '料理',
     reading: 'りょうり',
     romaji: 'ryouri',
-    meaning: 'Cuisine / Cooking',
+    meaning: 'Cuisine',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"料","meaning":"Fee / Material"},{"char":"理","meaning":"Logic / Reason"}],
+    kanjiBreakdown: [{"char":"料","meaning":"Fee"},{"char":"理","meaning":"Logic"}],
     sentences: [
       { id: 'ws-n5-160-1', sentence: '母の手料理はとても美味しいです。', furigana: 'はは の てりょうり は とても おいしい です。', romaji: 'Haha no teryouri wa totemo oishii desu.', english: 'My mother\'s home cooking is very delicious.' },
       { id: 'ws-n5-160-2', sentence: '週末に日本料理を作ります。', furigana: 'しゅうまつ に にほんりょうり を つくります。', romaji: 'Shuumatsu ni nihonryouri o tsukurimasu.', english: 'I will make Japanese dishes on the weekend.' }
@@ -2445,7 +2445,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"昼","meaning":"Noon / Daytime"},{"char":"飯","meaning":"Meal"}],
+    kanjiBreakdown: [{"char":"昼","meaning":"Noon"},{"char":"飯","meaning":"Meal"}],
     sentences: [
       { id: 'ws-n5-162-1', sentence: '十二時に昼ご飯を食べましょう。', furigana: 'じゅうにじ に ひるごはん を たべましょう。', romaji: 'Juuniji ni hirugohan o tabemashou.', english: 'Let\'s eat lunch at 12 o\'clock.' },
       { id: 'ws-n5-162-2', sentence: '友達と一緒に昼ご飯を食べました。', furigana: 'ともだち と いっしょ に ひるごはん を たべました。', romaji: 'Tomodachi to issho ni hirugohan o tabemashita.', english: 'I ate lunch together with a friend.' }
@@ -2456,7 +2456,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '晩ご飯',
     reading: 'ばんごはん',
     romaji: 'bangohan',
-    meaning: 'Dinner / Supper',
+    meaning: 'Dinner',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -2486,11 +2486,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'お菓子',
     reading: 'おかし',
     romaji: 'okashi',
-    meaning: 'Sweets / Candy / Snacks',
+    meaning: 'Sweets',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"菓","meaning":"Candy"},{"char":"子","meaning":"Child / Object"}],
+    kanjiBreakdown: [{"char":"菓","meaning":"Candy"},{"char":"子","meaning":"Child"}],
     sentences: [
       { id: 'ws-n5-165-1', sentence: '子供たちにお菓子をあげました。', furigana: 'こどもたち に おかし を あげました。', romaji: 'Kodomotachi ni okashi o agemashita.', english: 'I gave snacks to the children.' },
       { id: 'ws-n5-165-2', sentence: 'お茶と一緒にお菓子を食べます。', furigana: 'おちゃ と いっしょ に おかし を たべます。', romaji: 'Ocha to issho ni okashi o tabemasu.', english: 'I eat snacks together with green tea.' }
@@ -2571,7 +2571,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'お皿',
     reading: 'おさら',
     romaji: 'osara',
-    meaning: 'Plate / Dish',
+    meaning: 'Plate',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -2586,7 +2586,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'コップ',
     reading: 'コップ',
     romaji: 'koppu',
-    meaning: 'Glass / Cup',
+    meaning: 'Glass',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -2600,7 +2600,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '茶碗',
     reading: 'ちゃわん',
     romaji: 'chawan',
-    meaning: 'Rice bowl / Tea cup',
+    meaning: 'Rice bowl',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -2671,7 +2671,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '店',
     reading: 'みせ',
     romaji: 'mise',
-    meaning: 'Shop / Store',
+    meaning: 'Shop',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -2718,7 +2718,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"喫","meaning":"Inhale / Drink"},{"char":"茶","meaning":"Tea"},{"char":"店","meaning":"Shop"}],
+    kanjiBreakdown: [{"char":"喫","meaning":"Inhale"},{"char":"茶","meaning":"Tea"},{"char":"店","meaning":"Shop"}],
     sentences: [
       { id: 'ws-n5-181-1', sentence: '喫茶店でコーヒーを飲みます。', furigana: 'きっさてん で コーヒー を のみます。', romaji: 'Kissaten de koohii o nomimasu.', english: 'I drink coffee at a coffee shop.' },
       { id: 'ws-n5-181-2', sentence: '静かな喫茶店に入りました。', furigana: 'しずか な きっさてん に はいりました。', romaji: 'Shizuka na kissaten ni hairimashita.', english: 'I entered a quiet coffee shop.' }
@@ -2729,7 +2729,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '食堂',
     reading: 'しょくどう',
     romaji: 'shokudou',
-    meaning: 'Dining hall / Cafeteria',
+    meaning: 'Dining hall',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -2758,7 +2758,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '八百屋',
     reading: 'やおや',
     romaji: 'yaoya',
-    meaning: 'Greengrocer / Vegetable store',
+    meaning: 'Greengrocer',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -2788,7 +2788,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '魚屋',
     reading: 'さかなや',
     romaji: 'sakanaya',
-    meaning: 'Fishmonger / Fish market',
+    meaning: 'Fishmonger',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -2818,7 +2818,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '花屋',
     reading: 'はなや',
     romaji: 'hanaya',
-    meaning: 'Florist / Flower shop',
+    meaning: 'Florist',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -2848,7 +2848,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '薬屋',
     reading: 'くすりや',
     romaji: 'kusuriya',
-    meaning: 'Pharmacy / Drugstore',
+    meaning: 'Pharmacy',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -2882,7 +2882,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"金","meaning":"Gold / Money"}],
+    kanjiBreakdown: [{"char":"金","meaning":"Gold"}],
     sentences: [
       { id: 'ws-n5-192-1', sentence: '財布にお金が入っています。', furigana: 'さいふ に おかね が はいって います。', romaji: 'Saifu ni okane ga haitte imasu.', english: 'There is money in the wallet.' },
       { id: 'ws-n5-192-2', sentence: 'お金を大切に使います。', furigana: 'おかね を たいせつ に つかいます。', romaji: 'Okane o taisetsu ni tsukaimasu.', english: 'I spend money carefully.' }
@@ -2897,7 +2897,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"円","meaning":"Yen / Circle"}],
+    kanjiBreakdown: [{"char":"円","meaning":"Yen"}],
     sentences: [
       { id: 'ws-n5-193-1', sentence: 'このリンゴは百円です。', furigana: 'この リンゴ は ひゃくえん です。', romaji: 'Kono ringo wa hyakuen desu.', english: 'This apple is 100 yen.' },
       { id: 'ws-n5-193-2', sentence: '千円札を一枚出しました。', furigana: 'せんえんさつ を いちまい だしました。', romaji: 'Sen\'ensatsu o ichimai dashimashita.', english: 'I took out a 1,000 yen bill.' }
@@ -2908,7 +2908,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '財布',
     reading: 'さいふ',
     romaji: 'saifu',
-    meaning: 'Wallet / Purse',
+    meaning: 'Wallet',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -2937,11 +2937,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '値段',
     reading: 'ねだん',
     romaji: 'nedan',
-    meaning: 'Price / Cost',
+    meaning: 'Price',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"値","meaning":"Value / Price"},{"char":"段","meaning":"Step / Grade"}],
+    kanjiBreakdown: [{"char":"値","meaning":"Value"},{"char":"段","meaning":"Step"}],
     sentences: [
       { id: 'ws-n5-196-1', sentence: 'この時計の値段はいくらですか。', furigana: 'この とけい の ねだん は いくら です か。', romaji: 'Kono tokei no nedan wa ikura desu ka.', english: 'What is the price of this watch?' },
       { id: 'ws-n5-196-2', sentence: 'その本の値段は安いです。', furigana: 'その ほん の ねだん は やすい です。', romaji: 'Sono hon no nedan wa yasui desu.', english: 'The price of that book is cheap.' }
@@ -2952,11 +2952,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '注文',
     reading: 'ちゅうもん',
     romaji: 'chuumon',
-    meaning: 'Order / Request',
+    meaning: 'Order',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"注","meaning":"Pour / Concentrate"},{"char":"文","meaning":"Sentence / Literature"}],
+    kanjiBreakdown: [{"char":"注","meaning":"Pour"},{"char":"文","meaning":"Sentence"}],
     sentences: [
       { id: 'ws-n5-197-1', sentence: 'レストランで料理を注文します。', furigana: 'レストラン で りょうり を ちゅうもん します。', romaji: 'Resutoran de ryouri o chuumon shimasu.', english: 'I order food at the restaurant.' },
       { id: 'ws-n5-197-2', sentence: '注文をお願いします。', furigana: 'ちゅうもん を おねがい します。', romaji: 'Chuumon o onegai shimasu.', english: 'We are ready to order, please.' }
@@ -2981,11 +2981,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '味',
     reading: 'あじ',
     romaji: 'aji',
-    meaning: 'Flavor / Taste',
+    meaning: 'Flavor',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"味","meaning":"Flavor / Taste"}],
+    kanjiBreakdown: [{"char":"味","meaning":"Flavor"}],
     sentences: [
       { id: 'ws-n5-199-1', sentence: 'このスープはとてもいい味です。', furigana: 'この スープ は とても いい あじ です。', romaji: 'Kono suupu wa totemo ii aji desu.', english: 'This soup has a very good flavor.' },
       { id: 'ws-n5-199-2', sentence: '日本料理の味を覚えました。', furigana: 'にほんりょうり の あじ を おぼえました。', romaji: 'Nihonryouri no aji o oboemashita.', english: 'I learned the taste of Japanese food.' }
@@ -2996,7 +2996,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '美味しい',
     reading: 'おいしい',
     romaji: 'oishii',
-    meaning: 'Delicious / Tasty',
+    meaning: 'Delicious',
     pos: 'adjective',
     posLabel: 'i-Adjective',
     jlpt: 'N5',
@@ -3011,7 +3011,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'まずい',
     reading: 'まずい',
     romaji: 'mazui',
-    meaning: 'Bad-tasting / Unpalatable',
+    meaning: 'Bad-tasting',
     pos: 'adjective',
     posLabel: 'i-Adjective',
     jlpt: 'N5',
@@ -3040,11 +3040,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '辛い',
     reading: 'からい',
     romaji: 'karai',
-    meaning: 'Spicy / Hot',
+    meaning: 'Spicy',
     pos: 'adjective',
     posLabel: 'i-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"辛","meaning":"Spicy / Bitter"}],
+    kanjiBreakdown: [{"char":"辛","meaning":"Spicy"}],
     sentences: [
       { id: 'ws-n5-203-1', sentence: 'このカレーはとても辛いです。', furigana: 'この カレー は とても からい です。', romaji: 'Kono karee wa totemo karai desu.', english: 'This curry is very spicy.' },
       { id: 'ws-n5-203-2', sentence: '辛い料理を食べると汗が出ます。', furigana: 'からい りょうり を たべる と あせ が でます。', romaji: 'Karai ryouri o taberu to ase ga demasu.', english: 'When I eat spicy food, I sweat.' }
@@ -3059,7 +3059,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'adjective',
     posLabel: 'i-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"苦","meaning":"Bitter / Hardship"}],
+    kanjiBreakdown: [{"char":"苦","meaning":"Bitter"}],
     sentences: [
       { id: 'ws-n5-204-1', sentence: 'このコーヒーは少し苦いです。', furigana: 'この コーヒー は すこし にがい です。', romaji: 'Kono koohii wa sukoshi nigai desu.', english: 'This coffee is a little bitter.' },
       { id: 'ws-n5-204-2', sentence: '苦いお茶を飲みました。', furigana: 'にがい おちゃ を のみました。', romaji: 'Nigai ocha o nomimashita.', english: 'I drank bitter tea.' }
@@ -3099,7 +3099,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'お腹',
     reading: 'おなか',
     romaji: 'onaka',
-    meaning: 'Stomach / Belly',
+    meaning: 'Stomach',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -3127,7 +3127,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '家',
     reading: 'いえ',
     romaji: 'ie',
-    meaning: 'House / Home',
+    meaning: 'House',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -3142,7 +3142,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'うち',
     reading: 'うち',
     romaji: 'uchi',
-    meaning: 'My home / Household',
+    meaning: 'My home',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -3170,11 +3170,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '玄関',
     reading: 'げんかん',
     romaji: 'genkan',
-    meaning: 'Entrance hall / Foyer',
+    meaning: 'Entrance hall',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"玄","meaning":"Mysterious / Deep"},{"char":"関","meaning":"Barrier / Gateway"}],
+    kanjiBreakdown: [{"char":"玄","meaning":"Mysterious"},{"char":"関","meaning":"Barrier"}],
     sentences: [
       { id: 'ws-n5-212-1', sentence: '玄関で靴を脱ぎます。', furigana: 'げんかん で くつ を ぬぎます。', romaji: 'Genkan de kutsu o nugimasu.', english: 'I take off shoes at the entrance.' },
       { id: 'ws-n5-212-2', sentence: '玄関のドアを開けました。', furigana: 'げんかん の ドア を あけました。', romaji: 'Genkan no doa o akemashita.', english: 'I opened the front door.' }
@@ -3230,7 +3230,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'トイレ',
     reading: 'トイレ',
     romaji: 'toire',
-    meaning: 'Toilet / Restroom',
+    meaning: 'Toilet',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -3244,7 +3244,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'お手洗い',
     reading: 'おてあらい',
     romaji: 'otearai',
-    meaning: 'Restroom / Washroom (polite)',
+    meaning: 'Restroom',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -3259,7 +3259,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '階段',
     reading: 'かいだん',
     romaji: 'kaidan',
-    meaning: 'Stairs / Staircase',
+    meaning: 'Stairs',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -3274,7 +3274,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '廊下',
     reading: 'ろうか',
     romaji: 'rouka',
-    meaning: 'Corridor / Hallway',
+    meaning: 'Corridor',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -3289,7 +3289,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '庭',
     reading: 'にわ',
     romaji: 'niwa',
-    meaning: 'Garden / Yard',
+    meaning: 'Garden',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -3353,7 +3353,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"床","meaning":"Bed / Floor"}],
+    kanjiBreakdown: [{"char":"床","meaning":"Bed"}],
     sentences: [
       { id: 'ws-n5-224-1', sentence: '床をきれいに拭きました。', furigana: 'ゆか を きれい に ふきました。', romaji: 'Yuka o kirei ni fukimashita.', english: 'I wiped the floor cleanly.' },
       { id: 'ws-n5-224-2', sentence: '床に本を置かないでください。', furigana: 'ゆか に ほん を おかないで ください。', romaji: 'Yuka ni hon o okanaide kudasai.', english: 'Please don\'t put books on the floor.' }
@@ -3378,11 +3378,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '布団',
     reading: 'ふとん',
     romaji: 'futon',
-    meaning: 'Futon / Japanese bedding',
+    meaning: 'Futon',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"布","meaning":"Cloth"},{"char":"団","meaning":"Group / Round"}],
+    kanjiBreakdown: [{"char":"布","meaning":"Cloth"},{"char":"団","meaning":"Group"}],
     sentences: [
       { id: 'ws-n5-226-1', sentence: '畳の上に布団を敷きます。', furigana: 'たたみ の うえ に ふとん を しきます。', romaji: 'Tatami no ue ni futon o shikimasu.', english: 'I lay out the futon on the tatami.' },
       { id: 'ws-n5-226-2', sentence: '朝起きて布団を畳みました。', furigana: 'あさ おきて ふとん を たたみました。', romaji: 'Asa okite futon o tatamimashita.', english: 'I woke up and folded the futon.' }
@@ -3421,7 +3421,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'ソファ',
     reading: 'ソファ',
     romaji: 'sofa',
-    meaning: 'Sofa / Couch',
+    meaning: 'Sofa',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -3435,7 +3435,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'テレビ',
     reading: 'テレビ',
     romaji: 'terebi',
-    meaning: 'Television / TV',
+    meaning: 'Television',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -3463,7 +3463,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '冷蔵庫',
     reading: 'れいぞうこ',
     romaji: 'reizouko',
-    meaning: 'Refrigerator / Fridge',
+    meaning: 'Refrigerator',
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -3532,7 +3532,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"昼","meaning":"Noon / Daytime"}],
+    kanjiBreakdown: [{"char":"昼","meaning":"Noon"}],
     sentences: [
       { id: 'ws-n5-236-1', sentence: '昼に友達とご飯を食べます。', furigana: 'ひる に ともだち と ごはん を たべます。', romaji: 'Hiru ni tomodachi to gohan o tabemasu.', english: 'I eat lunch with a friend at noon.' },
       { id: 'ws-n5-236-2', sentence: '昼の十二時に会いましょう。', furigana: 'ひる の じゅうにじ に あいましょう。', romaji: 'Hiru no juuniji ni aimashou.', english: 'Let\'s meet at 12 noon.' }
@@ -3547,7 +3547,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"晩","meaning":"Night / Evening"}],
+    kanjiBreakdown: [{"char":"晩","meaning":"Night"}],
     sentences: [
       { id: 'ws-n5-237-1', sentence: '今日の晩、何をしますか。', furigana: 'きょう の ばん、なに を します か。', romaji: 'Kyou no ban, nani o shimasu ka.', english: 'What will you do this evening?' },
       { id: 'ws-n5-237-2', sentence: '晩ご飯を食べました。', furigana: 'ばんごはん を たべました。', romaji: 'Bangohan o tabemashita.', english: 'I ate dinner.' }
@@ -3907,7 +3907,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"月","meaning":"Moon / Monday"},{"char":"曜","meaning":"Day of week"},{"char":"日","meaning":"Day"}],
+    kanjiBreakdown: [{"char":"月","meaning":"Moon"},{"char":"曜","meaning":"Day of week"},{"char":"日","meaning":"Day"}],
     sentences: [
       { id: 'ws-n5-261-1', sentence: '月曜日に学校へ行きます。', furigana: 'げつようび に がっこう へ いきます。', romaji: 'Getsuyoubi ni gakkou e ikimasu.', english: 'I go to school on Monday.' },
       { id: 'ws-n5-261-2', sentence: '月曜日の朝は忙しいです。', furigana: 'げつようび の あさ は いそがしい です。', romaji: 'Getsuyoubi no asa wa isogashii desu.', english: 'Monday morning is busy.' }
@@ -3922,7 +3922,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"火","meaning":"Fire / Tuesday"},{"char":"曜","meaning":"Day of week"},{"char":"日","meaning":"Day"}],
+    kanjiBreakdown: [{"char":"火","meaning":"Fire"},{"char":"曜","meaning":"Day of week"},{"char":"日","meaning":"Day"}],
     sentences: [
       { id: 'ws-n5-262-1', sentence: '火曜日に日本語のクラスがあります。', furigana: 'かようび に にほんご の クラス が あります。', romaji: 'Kayoubi ni nihongo no kurasu ga arimasu.', english: 'There is a Japanese class on Tuesday.' },
       { id: 'ws-n5-262-2', sentence: '火曜日の午後に友達と会います。', furigana: 'かようび の ごご に ともだち と あいます。', romaji: 'Kayoubi no gogo ni tomodachi to aimasu.', english: 'I will meet a friend on Tuesday afternoon.' }
@@ -3937,7 +3937,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"水","meaning":"Water / Wednesday"},{"char":"曜","meaning":"Day of week"},{"char":"日","meaning":"Day"}],
+    kanjiBreakdown: [{"char":"水","meaning":"Water"},{"char":"曜","meaning":"Day of week"},{"char":"日","meaning":"Day"}],
     sentences: [
       { id: 'ws-n5-263-1', sentence: '水曜日は図書館が休みです。', furigana: 'すいようび は としょかん が やすみ です。', romaji: 'Suiyoubi wa toshokan ga yasumi desu.', english: 'The library is closed on Wednesday.' },
       { id: 'ws-n5-263-2', sentence: '水曜日にプールで泳ぎます。', furigana: 'すいようび に プール で およぎます。', romaji: 'Suiyoubi ni puuru de oyogimasu.', english: 'I swim at the pool on Wednesday.' }
@@ -3952,7 +3952,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"木","meaning":"Tree / Thursday"},{"char":"曜","meaning":"Day of week"},{"char":"日","meaning":"Day"}],
+    kanjiBreakdown: [{"char":"木","meaning":"Tree"},{"char":"曜","meaning":"Day of week"},{"char":"日","meaning":"Day"}],
     sentences: [
       { id: 'ws-n5-264-1', sentence: '木曜日にテストがあります。', furigana: 'もくようび に テスト が あります。', romaji: 'Mokuyoubi ni tesuto ga arimasu.', english: 'There is a test on Thursday.' },
       { id: 'ws-n5-264-2', sentence: '木曜日の夜、映画を見ました。', furigana: 'もくようび の よる、えいが を みました。', romaji: 'Mokuyoubi no yoru, eiga o mimashita.', english: 'On Thursday night, I watched a movie.' }
@@ -3967,7 +3967,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"金","meaning":"Gold / Friday"},{"char":"曜","meaning":"Day of week"},{"char":"日","meaning":"Day"}],
+    kanjiBreakdown: [{"char":"金","meaning":"Gold"},{"char":"曜","meaning":"Day of week"},{"char":"日","meaning":"Day"}],
     sentences: [
       { id: 'ws-n5-265-1', sentence: '金曜日の夜は友達とご飯を食べます。', furigana: 'きんようび の よる は ともだち と ごはん を たべます。', romaji: 'Kin\'youbi no yoru wa tomodachi to gohan o tabemasu.', english: 'On Friday night, I eat dinner with friends.' },
       { id: 'ws-n5-265-2', sentence: '明日は金曜日ですね。', furigana: 'あした は きんようび です ね。', romaji: 'Ashita wa kin\'youbi desu ne.', english: 'Tomorrow is Friday, isn\'t it?' }
@@ -3982,7 +3982,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"土","meaning":"Earth / Saturday"},{"char":"曜","meaning":"Day of week"},{"char":"日","meaning":"Day"}],
+    kanjiBreakdown: [{"char":"土","meaning":"Earth"},{"char":"曜","meaning":"Day of week"},{"char":"日","meaning":"Day"}],
     sentences: [
       { id: 'ws-n5-266-1', sentence: '土曜日にデパートで買い物をします。', furigana: 'どようび に デパート で かいもの を します。', romaji: 'Doyoubi ni depaato de kaimono o shimasu.', english: 'I go shopping at the department store on Saturday.' },
       { id: 'ws-n5-266-2', sentence: '土曜日は仕事が休みです。', furigana: 'どようび は しごと が やすみ です。', romaji: 'Doyoubi wa shigoto ga yasumi desu.', english: 'I have the day off work on Saturday.' }
@@ -3997,7 +3997,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"日","meaning":"Sun / Sunday"},{"char":"曜","meaning":"Day of week"},{"char":"日","meaning":"Day"}],
+    kanjiBreakdown: [{"char":"日","meaning":"Sun"},{"char":"曜","meaning":"Day of week"},{"char":"日","meaning":"Day"}],
     sentences: [
       { id: 'ws-n5-267-1', sentence: '日曜日に家でゆっくり休みます。', furigana: 'にちようび に いえ で ゆっくり やすみます。', romaji: 'Nichiyoubi ni ie de yukkuri yasumimasu.', english: 'I rest comfortably at home on Sunday.' },
       { id: 'ws-n5-267-2', sentence: '日曜日は家族と一緒に公園に行きます。', furigana: 'にちようび は かぞく と いっしょ に こうえん に いきます。', romaji: 'Nichiyoubi wa kazoku to issho ni kouen ni ikimasu.', english: 'On Sunday, I go to the park with my family.' }
@@ -4417,7 +4417,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"天","meaning":"Heaven"},{"char":"気","meaning":"Spirit / Atmosphere"}],
+    kanjiBreakdown: [{"char":"天","meaning":"Heaven"},{"char":"気","meaning":"Spirit"}],
     sentences: [
       { id: 'ws-n5-295-1', sentence: '今日の天気はどうですか。', furigana: 'きょう の てんき は どう です か。', romaji: 'Kyou no tenki wa dou desu ka.', english: 'How is the weather today?' },
       { id: 'ws-n5-295-2', sentence: '今日は天気が良くて暖かいです。', furigana: 'きょう は てんき が よくて あたたかい です。', romaji: 'Kyou wa tenki ga yokute atatakai desu.', english: 'Today the weather is nice and warm.' }
@@ -4522,7 +4522,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"太","meaning":"Thick / Great"},{"char":"陽","meaning":"Sun"}],
+    kanjiBreakdown: [{"char":"太","meaning":"Thick"},{"char":"陽","meaning":"Sun"}],
     sentences: [
       { id: 'ws-n5-302-1', sentence: '朝、太陽が昇ります。', furigana: 'あさ、たいよう が のぼります。', romaji: 'Asa, taiyou ga noborimasu.', english: 'In the morning, the sun rises.' },
       { id: 'ws-n5-302-2', sentence: '太陽の光が暖かいです。', furigana: 'たいよう の ひかり が あたたかい です。', romaji: 'Taiyou no hikari ga atatakai desu.', english: 'The sunlight is warm.' }
@@ -4702,7 +4702,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"道","meaning":"Road / Way"}],
+    kanjiBreakdown: [{"char":"道","meaning":"Road"}],
     sentences: [
       { id: 'ws-n5-314-1', sentence: 'この道をまっすぐ行ってください。', furigana: 'この みち を まっすぐ いって ください。', romaji: 'Kono michi o massugu itte kudasai.', english: 'Please go straight along this road.' },
       { id: 'ws-n5-314-2', sentence: '駅への道を教えてもらいました。', furigana: 'えき への みち を おしえて もらいました。', romaji: 'Eki e no michi o oshiete moraimashita.', english: 'Someone showed me the way to the station.' }
@@ -4807,7 +4807,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"上","meaning":"Up / Above"}],
+    kanjiBreakdown: [{"char":"上","meaning":"Up"}],
     sentences: [
       { id: 'ws-n5-321-1', sentence: '机の上に本があります。', furigana: 'つくえ の うえ に ほん が あります。', romaji: 'Tsukue no ue ni hon ga arimasu.', english: 'There is a book on the desk.' },
       { id: 'ws-n5-321-2', sentence: 'テーブルの上にリンゴを置きました。', furigana: 'テーブル の うえ に リンゴ を おきました。', romaji: 'Teeburu no ue ni ringo o okimashita.', english: 'I put an apple on the table.' }
@@ -4822,7 +4822,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"下","meaning":"Down / Below"}],
+    kanjiBreakdown: [{"char":"下","meaning":"Down"}],
     sentences: [
       { id: 'ws-n5-322-1', sentence: '机の下に猫がいます。', furigana: 'つくえ の した に ねこ が います。', romaji: 'Tsukue no shita ni neko ga imasu.', english: 'There is a cat under the desk.' },
       { id: 'ws-n5-322-2', sentence: '木の下で少し休みましょう。', furigana: 'き の した で すこし やすみましょう。', romaji: 'Ki no shita de sukoshi yasumimashou.', english: 'Let\'s rest a little under the tree.' }
@@ -4837,7 +4837,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"前","meaning":"Front / Before"}],
+    kanjiBreakdown: [{"char":"前","meaning":"Front"}],
     sentences: [
       { id: 'ws-n5-323-1', sentence: '駅の前で友達を待ちます。', furigana: 'えき の まえ で ともだち を まちます。', romaji: 'Eki no mae de tomodachi o machimasu.', english: 'I wait for a friend in front of the station.' },
       { id: 'ws-n5-323-2', sentence: 'ご飯の前に手を洗ってください。', furigana: 'ごはん の まえ に て を あらって ください。', romaji: 'Gohan no mae ni te o aratte kudasai.', english: 'Please wash your hands before eating.' }
@@ -4852,7 +4852,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"後","meaning":"Behind / After"}],
+    kanjiBreakdown: [{"char":"後","meaning":"Behind"}],
     sentences: [
       { id: 'ws-n5-324-1', sentence: '私の後ろに田中さんが座っています。', furigana: 'わたし の うしろ に たなかさん が すわって います。', romaji: 'Watashi no ushiro ni Tanaka-san ga suwatte imasu.', english: 'Mr. Tanaka is sitting behind me.' },
       { id: 'ws-n5-324-2', sentence: '車の後ろに荷物を乗せました。', furigana: 'くるま の うしろ に にもつ を のせました。', romaji: 'Kuruma no ushiro ni nimotsu o nosemashita.', english: 'I put luggage in the back of the car.' }
@@ -4867,7 +4867,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"中","meaning":"Inside / Middle"}],
+    kanjiBreakdown: [{"char":"中","meaning":"Inside"}],
     sentences: [
       { id: 'ws-n5-325-1', sentence: '鞄の中に財布と鍵があります。', furigana: 'かばん の なか に さいふ と かぎ が あります。', romaji: 'Kaban no naka ni saifu to kagi ga arimasu.', english: 'Inside the bag, there are a wallet and keys.' },
       { id: 'ws-n5-325-2', sentence: '部屋の中に入ってください。', furigana: 'へや の なか に はいって ください。', romaji: 'Heya no naka ni haitte kudasai.', english: 'Please come inside the room.' }
@@ -4927,7 +4927,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"間","meaning":"Interval / Between"}],
+    kanjiBreakdown: [{"char":"間","meaning":"Interval"}],
     sentences: [
       { id: 'ws-n5-329-1', sentence: '銀行と郵便局の間に本屋があります。', furigana: 'ぎんこう と ゆうびんきょく の あいだ に ほんや が あります。', romaji: 'Ginkou to yuubinkyoku no aida ni hon\'ya ga arimasu.', english: 'There is a bookstore between the bank and the post office.' },
       { id: 'ws-n5-329-2', sentence: '二時と三時の間に来てください。', furigana: 'にじ と さんじ の あいだ に きて ください。', romaji: 'Niji to sanji no aida ni kite kudasai.', english: 'Please come between 2:00 and 3:00.' }
@@ -4957,7 +4957,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"向","meaning":"Yonder / Face"}],
+    kanjiBreakdown: [{"char":"向","meaning":"Yonder"}],
     sentences: [
       { id: 'ws-n5-331-1', sentence: '川の向こうに山が見えます。', furigana: 'かわ の むこう に やま が みえます。', romaji: 'Kawa no mukou ni yama ga miemasu.', english: 'You can see mountains across the river.' },
       { id: 'ws-n5-331-2', sentence: '向こうの店で買い物をしましょう。', furigana: 'むこう の みせ で かいもの を しましょう。', romaji: 'Mukou no mise de kaimono o shimashou.', english: 'Let\'s shop at that store over there.' }
@@ -5200,7 +5200,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"靴","meaning":"Shoe"},{"char":"下","meaning":"Under / Below"}],
+    kanjiBreakdown: [{"char":"靴","meaning":"Shoe"},{"char":"下","meaning":"Under"}],
     sentences: [
       { id: 'ws-n5-347-1', sentence: '毎朝、白い靴下を履きます。', furigana: 'まいあさ、しろい くつした を はきます。', romaji: 'Maiasa, shiroi kutsushita o hakimasu.', english: 'Every morning, I put on white socks.' },
       { id: 'ws-n5-347-2', sentence: '靴下に穴が開いていました。', furigana: 'くつした に あな が あいて いました。', romaji: 'Kutsushita ni ana ga aite imashita.', english: 'There was a hole in my sock.' }
@@ -5215,7 +5215,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"帽","meaning":"Cap"},{"char":"子","meaning":"Child / Noun suffix"}],
+    kanjiBreakdown: [{"char":"帽","meaning":"Cap"},{"char":"子","meaning":"Child"}],
     sentences: [
       { id: 'ws-n5-348-1', sentence: '晴れた日は帽子を被って出かけます。', furigana: 'はれた ひ は ぼうし を かぶって でかけます。', romaji: 'Hareta hi wa boushi o kabutte dekakemasu.', english: 'On sunny days, I wear a hat and go out.' },
       { id: 'ws-n5-348-2', sentence: '田中さんは黒い帽子を被っています。', furigana: 'たなかさん は くろい ぼうし を かぶって います。', romaji: 'Tanaka-san wa kuroi boushi o kabutte imasu.', english: 'Mr. Tanaka is wearing a black hat.' }
@@ -5290,7 +5290,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"手","meaning":"Hand"},{"char":"袋","meaning":"Bag / Sack"}],
+    kanjiBreakdown: [{"char":"手","meaning":"Hand"},{"char":"袋","meaning":"Bag"}],
     sentences: [
       { id: 'ws-n5-353-1', sentence: '冬は暖かい手袋をはめます。', furigana: 'ふゆ は あたたかい てぶくろ を はめます。', romaji: 'Fuyu wa atatakai tebukuro o hamemasu.', english: 'In winter, I wear warm gloves.' },
       { id: 'ws-n5-353-2', sentence: '手袋を落としてしまいました。', furigana: 'てぶくろ を おとして しまいました。', romaji: 'Tebukuro o otoshite shimaimashita.', english: 'I accidentally dropped my gloves.' }
@@ -5305,7 +5305,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"指","meaning":"Finger"},{"char":"輪","meaning":"Ring / Circle"}],
+    kanjiBreakdown: [{"char":"指","meaning":"Finger"},{"char":"輪","meaning":"Ring"}],
     sentences: [
       { id: 'ws-n5-354-1', sentence: '母にきれいな指輪をプレゼントしました。', furigana: 'はは に きれい な ゆびわ を プレゼント しました。', romaji: 'Haha ni kirei na yubiwa o purezento shimashita.', english: 'I presented a pretty ring to my mother.' },
       { id: 'ws-n5-354-2', sentence: '彼女は銀の指輪をしています。', furigana: 'かのじょ は ぎん の ゆびわ を して います。', romaji: 'Kanojo wa gin no yubiwa o shite imasu.', english: 'She is wearing a silver ring.' }
@@ -5395,7 +5395,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"荷","meaning":"Load / Luggage"},{"char":"物","meaning":"Thing"}],
+    kanjiBreakdown: [{"char":"荷","meaning":"Load"},{"char":"物","meaning":"Thing"}],
     sentences: [
       { id: 'ws-n5-360-1', sentence: '重い荷物を持ちます。', furigana: 'おもい にもつ を もちます。', romaji: 'Omoi nimotsu o mochimasu.', english: 'I carry heavy luggage.' },
       { id: 'ws-n5-360-2', sentence: '今日、家に荷物が届きました。', furigana: 'きょう、いえ に にもつ が とどきました。', romaji: 'Kyou, ie ni nimotsu ga todokimashita.', english: 'A package arrived at home today.' }
@@ -5650,7 +5650,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"足","meaning":"Foot / Leg"}],
+    kanjiBreakdown: [{"char":"足","meaning":"Foot"}],
     sentences: [
       { id: 'ws-n5-377-1', sentence: 'たくさん歩いて足が痛くなりました。', furigana: 'たくさん あるいて あし が いたく なりました。', romaji: 'Takusan aruite ashi ga itaku narimashita.', english: 'My legs became sore from walking a lot.' },
       { id: 'ws-n5-377-2', sentence: '電車で足を踏まれてしまいました。', furigana: 'でんしゃ で あし を ふまれて しまいました。', romaji: 'Densha de ashi o fumarete shimaimashita.', english: 'My foot was stepped on in the train.' }
@@ -5680,7 +5680,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"爪","meaning":"Nail / Claw"}],
+    kanjiBreakdown: [{"char":"爪","meaning":"Nail"}],
     sentences: [
       { id: 'ws-n5-379-1', sentence: 'お風呂の後に爪を切ります。', furigana: 'おふろ の あと に つめ を きります。', romaji: 'Ofuro no ato ni tsume o kirimasu.', english: 'I clip my nails after the bath.' },
       { id: 'ws-n5-379-2', sentence: '爪をきれいに洗いました。', furigana: 'つめ を きれい に あらいました。', romaji: 'Tsume o kirei ni araimashita.', english: 'I washed my nails cleanly.' }
@@ -5770,7 +5770,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"心","meaning":"Heart / Mind"}],
+    kanjiBreakdown: [{"char":"心","meaning":"Heart"}],
     sentences: [
       { id: 'ws-n5-385-1', sentence: '田中さんは心がとても優しい人です。', furigana: 'たなかさん は こころ が とても やさしい ひと です。', romaji: 'Tanaka-san wa kokoro ga totemo yasashii hito desu.', english: 'Mr. Tanaka is a very kind-hearted person.' },
       { id: 'ws-n5-385-2', sentence: '美しい音楽を聞いて心が落ち着きました。', furigana: 'うつくしい おんがく を きいて こころ が おちつきました。', romaji: 'Utsukushii ongaku o kiite kokoro ga ochitsukimashita.', english: 'Listening to beautiful music calmed my heart.' }
@@ -5785,7 +5785,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"病","meaning":"Illness"},{"char":"気","meaning":"Spirit / Energy"}],
+    kanjiBreakdown: [{"char":"病","meaning":"Illness"},{"char":"気","meaning":"Spirit"}],
     sentences: [
       { id: 'ws-n5-386-1', sentence: '病気で学校を休みました。', furigana: 'びょうき で がっこう を やすみました。', romaji: 'Byouki de gakkou o yasumimashita.', english: 'I took a day off school due to illness.' },
       { id: 'ws-n5-386-2', sentence: '早く病気が治るといいですね。', furigana: 'はやく びょうき が なおる と いい です ね。', romaji: 'Hayaku byouki ga naoru to ii desu ne.', english: 'I hope you recover from your illness soon.' }
@@ -5800,7 +5800,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"風","meaning":"Wind"},{"char":"邪","meaning":"Wicked / Evil"}],
+    kanjiBreakdown: [{"char":"風","meaning":"Wind"},{"char":"邪","meaning":"Wicked"}],
     sentences: [
       { id: 'ws-n5-387-1', sentence: '寒いので風邪を引きました。', furigana: 'さむい ので かぜ を ひきました。', romaji: 'Samui node kaze o hikimashita.', english: 'Because it was cold, I caught a cold.' },
       { id: 'ws-n5-387-2', sentence: '風邪薬を飲んで早く寝ます。', furigana: 'かぜぐすり を のんで はやく ねます。', romaji: 'Kazegusuri o nonde hayaku nemasu.', english: 'I will take cold medicine and sleep early.' }
@@ -5815,7 +5815,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"熱","meaning":"Heat / Fever"}],
+    kanjiBreakdown: [{"char":"熱","meaning":"Heat"}],
     sentences: [
       { id: 'ws-n5-388-1', sentence: '熱が三十八度あります。', furigana: 'ねつ が さんじゅうはちど あります。', romaji: 'Netsu ga sanjuuhachido arimasu.', english: 'I have a fever of 38 degrees.' },
       { id: 'ws-n5-388-2', sentence: '高い熱が出たので病院へ行きました。', furigana: 'たかい ねつ が でた ので びょういん へ いきました。', romaji: 'Takai netsu ga deta node byouin e ikimashita.', english: 'I went to the hospital because I had a high fever.' }
@@ -5845,7 +5845,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"怪","meaning":"Suspicious / Mystery"},{"char":"我","meaning":"Self"}],
+    kanjiBreakdown: [{"char":"怪","meaning":"Suspicious"},{"char":"我","meaning":"Self"}],
     sentences: [
       { id: 'ws-n5-390-1', sentence: 'サッカーをして足に怪我をしました。', furigana: 'サッカー を して あし に けが を しました。', romaji: 'Sakkaa o shite ashi ni kega o shimashita.', english: 'I injured my leg playing soccer.' },
       { id: 'ws-n5-390-2', sentence: '大した怪我ではなくて良かったです。', furigana: 'たいした けが で は なくて よかった です。', romaji: 'Taishita kega de wa nakute yokatta desu.', english: 'I am glad it was not a serious injury.' }
@@ -5890,7 +5890,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"薬","meaning":"Medicine"},{"char":"局","meaning":"Bureau / Department"}],
+    kanjiBreakdown: [{"char":"薬","meaning":"Medicine"},{"char":"局","meaning":"Bureau"}],
     sentences: [
       { id: 'ws-n5-393-1', sentence: '薬局で目薬を買いました。', furigana: 'やっきょく で めぐすり を かいました。', romaji: 'Yakkyoku de megusuri o kaimashita.', english: 'I bought eye drops at the pharmacy.' },
       { id: 'ws-n5-393-2', sentence: '病院の前に薬局があります。', furigana: 'びょういん の まえ に やっきょく が あります。', romaji: 'Byouin no mae ni yakkyoku ga arimasu.', english: 'There is a pharmacy in front of the hospital.' }
@@ -5920,7 +5920,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"看","meaning":"Watch / Care"},{"char":"護","meaning":"Protect"},{"char":"師","meaning":"Master / Expert"}],
+    kanjiBreakdown: [{"char":"看","meaning":"Watch"},{"char":"護","meaning":"Protect"},{"char":"師","meaning":"Master"}],
     sentences: [
       { id: 'ws-n5-395-1', sentence: 'あの看護師さんはとても親切です。', furigana: 'あの かんごしさん は とても しんせつ です。', romaji: 'Ano kangoshisan wa totemo shinsetsu desu.', english: 'That nurse is very kind.' },
       { id: 'ws-n5-395-2', sentence: '私の姉は病院で看護師をしています。', furigana: 'わたし の あね は びょういん で かんごし を して います。', romaji: 'Watashi no ane wa byouin de kangoshi o shite imasu.', english: 'My older sister is a nurse at a hospital.' }
@@ -5995,7 +5995,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'adjective',
     posLabel: 'na-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"丈","meaning":"Length / Stature"},{"char":"夫","meaning":"Man / Husband"}],
+    kanjiBreakdown: [{"char":"丈","meaning":"Length"},{"char":"夫","meaning":"Man"}],
     sentences: [
       { id: 'ws-n5-400-1', sentence: '彼は体がとても丈夫です。', furigana: 'かれ は からだ が とても じょうぶ です。', romaji: 'Kare wa karada ga totemo joubu desu.', english: 'He has a very sturdy body.' },
       { id: 'ws-n5-400-2', sentence: 'この机は丈夫で長持ちします。', furigana: 'この つくえ は じょうぶ で ながもち します。', romaji: 'Kono tsukue wa joubu de nagamochi shimasu.', english: 'This desk is sturdy and durable.' }
@@ -6040,7 +6040,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"石","meaning":"Stone"},{"char":"鹸","meaning":"Soap / Salt"}],
+    kanjiBreakdown: [{"char":"石","meaning":"Stone"},{"char":"鹸","meaning":"Soap"}],
     sentences: [
       { id: 'ws-n5-403-1', sentence: '石鹸で手をきれいに洗います。', furigana: 'せっけん で て を きれい に あらいます。', romaji: 'Sekken de te o kirei ni araimasu.', english: 'I wash my hands cleanly with soap.' },
       { id: 'ws-n5-403-2', sentence: 'いい匂いの石鹸を買いました。', furigana: 'いい におい の せっけん を かいました。', romaji: 'Ii nioi no sekken o kaimashita.', english: 'I bought a nice-smelling soap.' }
@@ -6145,7 +6145,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"洗","meaning":"Wash"},{"char":"剤","meaning":"Dose / Agent"}],
+    kanjiBreakdown: [{"char":"洗","meaning":"Wash"},{"char":"剤","meaning":"Dose"}],
     sentences: [
       { id: 'ws-n5-410-1', sentence: '洗濯機に洗剤を入れます。', furigana: 'せんたくき に せんざい を いれます。', romaji: 'Sentakuki ni senzai o iremasu.', english: 'I put detergent into the washing machine.' },
       { id: 'ws-n5-410-2', sentence: 'スーパーで食器用洗剤を買いました。', furigana: 'スーパー で しょっきよう せんざい を かいました。', romaji: 'Suupaa de shokkiyou senzai o kaimashita.', english: 'I bought dish detergent at the supermarket.' }
@@ -6190,7 +6190,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"灰","meaning":"Ash"},{"char":"皿","meaning":"Plate / Dish"}],
+    kanjiBreakdown: [{"char":"灰","meaning":"Ash"},{"char":"皿","meaning":"Plate"}],
     sentences: [
       { id: 'ws-n5-413-1', sentence: '灰皿はテーブルの上にあります。', furigana: 'はいざら は テーブル の うえ に あります。', romaji: 'Haizara wa teeburu no ue ni arimasu.', english: 'The ashtray is on the table.' },
       { id: 'ws-n5-413-2', sentence: '灰皿をきれいに洗いました。', furigana: 'はいざら を きれい に あらいました。', romaji: 'Haizara o kirei ni araimashita.', english: 'I washed the ashtray cleanly.' }
@@ -6250,7 +6250,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"電","meaning":"Electricity"},{"char":"気","meaning":"Spirit / Energy"}],
+    kanjiBreakdown: [{"char":"電","meaning":"Electricity"},{"char":"気","meaning":"Spirit"}],
     sentences: [
       { id: 'ws-n5-417-1', sentence: '部屋の電気をつけてください。', furigana: 'へや の でんき を つけて ください。', romaji: 'Heya no denki o tsukete kudasai.', english: 'Please turn on the room light.' },
       { id: 'ws-n5-417-2', sentence: '寝る前に電気を消します。', furigana: 'ねる まえ に でんき を けします。', romaji: 'Neru mae ni denki o keshimasu.', english: 'I turn off the lights before sleeping.' }
@@ -6265,7 +6265,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"電","meaning":"Electricity"},{"char":"灯","meaning":"Lamp / Light"}],
+    kanjiBreakdown: [{"char":"電","meaning":"Electricity"},{"char":"灯","meaning":"Lamp"}],
     sentences: [
       { id: 'ws-n5-418-1', sentence: '天井の電灯がとても明るいです。', furigana: 'てんじょう の でんとう が とても あかるい です。', romaji: 'Tenjou no dentou ga totemo akarui desu.', english: 'The ceiling lamp is very bright.' },
       { id: 'ws-n5-418-2', sentence: '部屋の電灯を取り替えました。', furigana: 'へや の でんとう を とりかえました。', romaji: 'Heya no dentou o torikaemashita.', english: 'I replaced the lamp in the room.' }
@@ -6325,7 +6325,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"電","meaning":"Electricity"},{"char":"話","meaning":"Talk / Speech"}],
+    kanjiBreakdown: [{"char":"電","meaning":"Electricity"},{"char":"話","meaning":"Talk"}],
     sentences: [
       { id: 'ws-n5-422-1', sentence: '友達に電話をかけました。', furigana: 'ともだち に でんわ を かけました。', romaji: 'Tomodachi ni denwa o kakemashita.', english: 'I made a phone call to my friend.' },
       { id: 'ws-n5-422-2', sentence: '部屋の電話が鳴っています。', furigana: 'へや の でんわ が なって います。', romaji: 'Heya no denwa ga natte imasu.', english: 'The phone in the room is ringing.' }
@@ -6340,7 +6340,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"携","meaning":"Carry in hand"},{"char":"帯","meaning":"Belt / Carry"}],
+    kanjiBreakdown: [{"char":"携","meaning":"Carry in hand"},{"char":"帯","meaning":"Belt"}],
     sentences: [
       { id: 'ws-n5-423-1', sentence: '新しい携帯電話を買いました。', furigana: 'あたらしい けいたいでんわ を かいました。', romaji: 'Atarashii keitaidenwa o kaimashita.', english: 'I bought a new mobile phone.' },
       { id: 'ws-n5-423-2', sentence: '電車の中で携帯を見ます。', furigana: 'でんしゃ の なか で けいたい を みます。', romaji: 'Densha no naka de keitai o mimasu.', english: 'I look at my cell phone in the train.' }
@@ -6370,7 +6370,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"写","meaning":"Copy / Photograph"},{"char":"真","meaning":"True"}],
+    kanjiBreakdown: [{"char":"写","meaning":"Copy"},{"char":"真","meaning":"True"}],
     sentences: [
       { id: 'ws-n5-425-1', sentence: '公園できれいな写真を撮りました。', furigana: 'こうえん で きれい な しゃしん を とりました。', romaji: 'Kouen de kirei na shashin o torimashita.', english: 'I took pretty photos in the park.' },
       { id: 'ws-n5-425-2', sentence: '家族の写真を見せてください。', furigana: 'かぞく の しゃしん を みせて ください。', romaji: 'Kazoku no shashin o misete kudasai.', english: 'Please show me your family photo.' }
@@ -6415,7 +6415,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"封","meaning":"Seal"},{"char":"筒","meaning":"Cylinder / Pipe"}],
+    kanjiBreakdown: [{"char":"封","meaning":"Seal"},{"char":"筒","meaning":"Cylinder"}],
     sentences: [
       { id: 'ws-n5-428-1', sentence: '手紙を白い封筒に入れました。', furigana: 'てがみ を しろい ふうとう に いれました。', romaji: 'Tegami o shiroi fuutou ni iremashita.', english: 'I put the letter into a white envelope.' },
       { id: 'ws-n5-428-2', sentence: '封筒に切手を貼ってください。', furigana: 'ふうとう に きって を はって ください。', romaji: 'Fuutou ni kitte o hatte kudasai.', english: 'Please paste a stamp on the envelope.' }
@@ -6430,7 +6430,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"万","meaning":"Ten thousand"},{"char":"年","meaning":"Year"},{"char":"筆","meaning":"Brush / Writing tool"}],
+    kanjiBreakdown: [{"char":"万","meaning":"Ten thousand"},{"char":"年","meaning":"Year"},{"char":"筆","meaning":"Brush"}],
     sentences: [
       { id: 'ws-n5-429-1', sentence: '父の日に万年筆をプレゼントしました。', furigana: 'ちち の ひ に まんねんひつ を プレゼント しました。', romaji: 'Chichi no hi ni mannenhitsu o purezento shimashita.', english: 'I gave a fountain pen for Father\'s Day.' },
       { id: 'ws-n5-429-2', sentence: '万年筆で丁寧に手紙を書きました。', furigana: 'まんねんひつ で ていねい に てがみ を かきました。', romaji: 'Mannenhitsu de teinei ni tegami o kakimashita.', english: 'I wrote a letter carefully with a fountain pen.' }
@@ -6460,7 +6460,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"定","meaning":"Fix / Determine"},{"char":"規","meaning":"Rule / Measure"}],
+    kanjiBreakdown: [{"char":"定","meaning":"Fix"},{"char":"規","meaning":"Rule"}],
     sentences: [
       { id: 'ws-n5-431-1', sentence: '定規を使って真っ直ぐな線を引きます。', furigana: 'じょうぎ を つかって まっすぐ な せん を ひきます。', romaji: 'Jougi o tsukatte massugu na sen o hikimasu.', english: 'I draw a straight line using a ruler.' },
       { id: 'ws-n5-431-2', sentence: '筆箱の中に定規が入っています。', furigana: 'ふでばこ の なか に じょうぎ が はいって います。', romaji: 'Fudebako no naka ni jougi ga haitte imasu.', english: 'There is a ruler inside the pencil case.' }
@@ -6490,7 +6490,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char":"筆","meaning":"Brush / Writing brush"},{"char":"箱","meaning":"Box"}],
+    kanjiBreakdown: [{"char":"筆","meaning":"Brush"},{"char":"箱","meaning":"Box"}],
     sentences: [
       { id: 'ws-n5-433-1', sentence: '筆箱の中にペンと鉛筆があります。', furigana: 'ふでばこ の なか に ペン と えんぴつ が あります。', romaji: 'Fudebako no naka ni pen to enpitsu ga arimasu.', english: 'There are pens and pencils in the pencil case.' },
       { id: 'ws-n5-433-2', sentence: '新しい筆箱を買いました。', furigana: 'あたらしい ふでばこ を かいました。', romaji: 'Atarashii fudebako o kaimashita.', english: 'I bought a new pencil case.' }
@@ -6553,7 +6553,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "都", "meaning": "Metropolis"}, {"char": "会", "meaning": "City / Meeting"}],
+    kanjiBreakdown: [{"char": "都", "meaning": "Metropolis"}, {"char": "会", "meaning": "City"}],
     sentences: [
       { id: 'ws-n5-437-1', sentence: '東京はとても賑やかな都会です。', furigana: 'とうきょう は とても にぎやか な とかい です。', romaji: 'Toukyou wa totemo nigiyaka na tokai desu.', english: 'Tokyo is a very bustling metropolis.' },
       { id: 'ws-n5-437-2', sentence: '都会には高いビルがたくさんあります。', furigana: 'とかい に は たかい ビル が たくさん あります。', romaji: 'Tokai ni wa takai biru ga takusan arimasu.', english: 'There are many tall buildings in the city.' }
@@ -6583,7 +6583,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "故", "meaning": "Old / Origin"}, {"char": "郷", "meaning": "Hometown"}],
+    kanjiBreakdown: [{"char": "故", "meaning": "Old"}, {"char": "郷", "meaning": "Hometown"}],
     sentences: [
       { id: 'ws-n5-439-1', sentence: '私の故郷は海の近くにあります。', furigana: 'わたし の ふるさと は うみ の ちかく に あります。', romaji: 'Watashi no furusato wa umi no chikaku ni arimasu.', english: 'My hometown is near the sea.' },
       { id: 'ws-n5-439-2', sentence: 'お正月に故郷へ帰りました。', furigana: 'おしょうがつ に ふるさと へ かえりました。', romaji: 'Oshougatsu ni furusato e kaerimashita.', english: 'I returned to my hometown for New Year\'s.' }
@@ -6718,7 +6718,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "停", "meaning": "Halt / Stop"}],
+    kanjiBreakdown: [{"char": "停", "meaning": "Halt"}],
     sentences: [
       { id: 'ws-n5-448-1', sentence: 'バス停でバスを待ちます。', furigana: 'バスてい で バス を まちます。', romaji: 'Basutei de basu o machimasu.', english: 'I wait for the bus at the bus stop.' },
       { id: 'ws-n5-448-2', sentence: '家の近くにバス停があります。', furigana: 'いえ の ちかく に バスてい が あります。', romaji: 'Ie no chikaku ni basutei ga arimasu.', english: 'There is a bus stop near my house.' }
@@ -7243,7 +7243,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "銀", "meaning": "Silver"}, {"char": "行", "meaning": "Go / Shop"}],
+    kanjiBreakdown: [{"char": "銀", "meaning": "Silver"}, {"char": "行", "meaning": "Go"}],
     sentences: [
       { id: 'ws-n5-483-1', sentence: '銀行でお金を下ろします。', furigana: 'ぎんこう で おかね を おろします。', romaji: 'Ginkou de okane o oroshimasu.', english: 'I withdraw money at the bank.' },
       { id: 'ws-n5-483-2', sentence: '銀行は郵便局の隣にあります。', furigana: 'ぎんこう は ゆうびんきょく の となり に あります。', romaji: 'Ginkou wa yuubinkyoku no tonari ni arimasu.', english: 'The bank is next to the post office.' }
@@ -7273,7 +7273,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "交", "meaning": "Mix / Cross"}, {"char": "番", "meaning": "Turn / Guard"}],
+    kanjiBreakdown: [{"char": "交", "meaning": "Mix"}, {"char": "番", "meaning": "Turn"}],
     sentences: [
       { id: 'ws-n5-485-1', sentence: '交番で駅への道を聞きました。', furigana: 'こうばん で えき への みち を ききました。', romaji: 'Kouban de eki e no michi o kikimashita.', english: 'I asked for directions at the police box.' },
       { id: 'ws-n5-485-2', sentence: '駅前に交番があります。', furigana: 'えきまえ に こうばん が あります。', romaji: 'Ekimae ni kouban ga arimasu.', english: 'There is a police box in front of the station.' }
@@ -7558,7 +7558,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "会", "meaning": "Meet"}, {"char": "社", "meaning": "Company / Shrine"}],
+    kanjiBreakdown: [{"char": "会", "meaning": "Meet"}, {"char": "社", "meaning": "Company"}],
     sentences: [
       { id: 'ws-n5-504-1', sentence: '父は毎朝八時に会社へ行きます。', furigana: 'ちち は まいあさ はちじ に かいしゃ へ いきます。', romaji: 'Chichi wa maiasa hachiji ni kaisha e ikimasu.', english: 'My father goes to the company at 8:00 AM.' },
       { id: 'ws-n5-504-2', sentence: '兄は大きな会社で働いています。', furigana: 'あに は おおきな かいしゃ で はたらいて います。', romaji: 'Ani wa ookina kaisha de hataraite imasu.', english: 'My older brother works at a large company.' }
@@ -7603,7 +7603,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "神", "meaning": "God / Spirit"}, {"char": "社", "meaning": "Shrine"}],
+    kanjiBreakdown: [{"char": "神", "meaning": "God"}, {"char": "社", "meaning": "Shrine"}],
     sentences: [
       { id: 'ws-n5-507-1', sentence: 'お正月に家族と神社へ行きました。', furigana: 'おしょうがつ に かぞく と じんじゃ へ いきました。', romaji: 'Oshougatsu ni kazoku to jinja e ikimashita.', english: 'I went to a shrine with my family on New Year\'s.' },
       { id: 'ws-n5-507-2', sentence: '神社に赤い鳥居があります。', furigana: 'じんじゃ に あかい とりい が あります。', romaji: 'Jinja ni akai torii ga arimasu.', english: 'There is a red torii gate at the shrine.' }
@@ -7618,7 +7618,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "教", "meaning": "Teach"}, {"char": "会", "meaning": "Meeting / Assembly"}],
+    kanjiBreakdown: [{"char": "教", "meaning": "Teach"}, {"char": "会", "meaning": "Meeting"}],
     sentences: [
       { id: 'ws-n5-508-1', sentence: '日曜日の朝に教会へ行きます。', furigana: 'にちようび の あさ に きょうかい へ いきます。', romaji: 'Nichiyoubi no asa ni kyoukai e ikimasu.', english: 'I go to church on Sunday mornings.' },
       { id: 'ws-n5-508-2', sentence: '白いきれいな教会を見ました。', furigana: 'しろい きれい な きょうかい を みました。', romaji: 'Shiroi kirei na kyoukai o mimashita.', english: 'I saw a pretty white church.' }
@@ -7648,7 +7648,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "交", "meaning": "Cross"}, {"char": "差", "meaning": "Difference / Branch"}, {"char": "点", "meaning": "Point"}],
+    kanjiBreakdown: [{"char": "交", "meaning": "Cross"}, {"char": "差", "meaning": "Difference"}, {"char": "点", "meaning": "Point"}],
     sentences: [
       { id: 'ws-n5-510-1', sentence: '交差点を左に曲がってください。', furigana: 'こうさてん を ひだり に まがって ください。', romaji: 'Kousaten o hidari ni magatte kudasai.', english: 'Please turn left at the intersection.' },
       { id: 'ws-n5-510-2', sentence: '交差点で車が止まりました。', furigana: 'こうさてん で くるま が とまりました。', romaji: 'Kousaten de kuruma ga tomarimashita.', english: 'The car stopped at the intersection.' }
@@ -7663,7 +7663,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "角", "meaning": "Corner / Horn"}],
+    kanjiBreakdown: [{"char": "角", "meaning": "Corner"}],
     sentences: [
       { id: 'ws-n5-511-1', sentence: '次の角を右に曲がります。', furigana: 'つぎ の かど を みぎ に まがります。', romaji: 'Tsugi no kado o migi ni magarimasu.', english: 'Turn right at the next corner.' },
       { id: 'ws-n5-511-2', sentence: '角の店でパンを買いました。', furigana: 'かど の みせ で パン を かいました。', romaji: 'Kado no mise de pan o kaimashita.', english: 'I bought bread at the corner shop.' }
@@ -7678,7 +7678,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "信", "meaning": "Trust / Message"}, {"char": "号", "meaning": "Number / Signal"}],
+    kanjiBreakdown: [{"char": "信", "meaning": "Trust"}, {"char": "号", "meaning": "Number"}],
     sentences: [
       { id: 'ws-n5-512-1', sentence: '赤信号で止まってください。', furigana: 'あかしんごう で とまって ください。', romaji: 'Akashingou de tomatte kudasai.', english: 'Please stop at the red light.' },
       { id: 'ws-n5-512-2', sentence: '青信号になったら道を渡ります。', furigana: 'あおしんごう に なったら みち を わたり ます。', romaji: 'Aoshingou ni nattara michi o watarimasu.', english: 'Cross the street when the light turns green.' }
@@ -7708,7 +7708,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "横", "meaning": "Side / Across"}, {"char": "断", "meaning": "Sever"}, {"char": "歩", "meaning": "Walk"}, {"char": "道", "meaning": "Road"}],
+    kanjiBreakdown: [{"char": "横", "meaning": "Side"}, {"char": "断", "meaning": "Sever"}, {"char": "歩", "meaning": "Walk"}, {"char": "道", "meaning": "Road"}],
     sentences: [
       { id: 'ws-n5-514-1', sentence: '横断歩道を渡りましょう。', furigana: 'おうだんほどう を わたりましょう。', romaji: 'Oudanhodou o watarimashou.', english: 'Let\'s cross at the pedestrian crosswalk.' },
       { id: 'ws-n5-514-2', sentence: '横断歩道の前で車が止まりました。', furigana: 'おうだんほどう の まえ で くるま が とまりました。', romaji: 'Oudanhodou no mae de kuruma ga tomarimashita.', english: 'The car stopped in front of the crosswalk.' }
@@ -7768,7 +7768,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "屋", "meaning": "Roof / House"}, {"char": "上", "meaning": "Top"}],
+    kanjiBreakdown: [{"char": "屋", "meaning": "Roof"}, {"char": "上", "meaning": "Top"}],
     sentences: [
       { id: 'ws-n5-518-1', sentence: 'デパートの屋上から富士山が見えました。', furigana: 'デパート の おくじょう から ふじさん が みえました。', romaji: 'Depaato no okujou kara Fujisan ga miemashita.', english: 'I could see Mt. Fuji from the department store roof.' },
       { id: 'ws-n5-518-2', sentence: '天気がいいので屋上で休みました。', furigana: 'てんき が いい ので おくじょう で やすみました。', romaji: 'Tenki ga ii node okujou de yasumimashita.', english: 'Because the weather was good, I rested on the rooftop.' }
@@ -7858,7 +7858,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "改", "meaning": "Examine"}, {"char": "札", "meaning": "Ticket / Bill"}, {"char": "口", "meaning": "Mouth / Gate"}],
+    kanjiBreakdown: [{"char": "改", "meaning": "Examine"}, {"char": "札", "meaning": "Ticket"}, {"char": "口", "meaning": "Mouth"}],
     sentences: [
       { id: 'ws-n5-524-1', sentence: '改札口で切符をタッチします。', furigana: 'かいさつぐち で きっぷ を タッチ します。', romaji: 'Kaisatsuguchi de kippu o tacchi shimasu.', english: 'I touch my card at the ticket gate.' },
       { id: 'ws-n5-524-2', sentence: '改札口の前で待ち合わせをしましょう。', furigana: 'かいさつぐち の まえ で まちあわせ を しましょう。', romaji: 'Kaisatsuguchi no mae de machiawase o shimashou.', english: 'Let\'s meet up in front of the ticket gates.' }
@@ -8008,7 +8008,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "映", "meaning": "Project / Reflect"}, {"char": "画", "meaning": "Picture"}],
+    kanjiBreakdown: [{"char": "映", "meaning": "Project"}, {"char": "画", "meaning": "Picture"}],
     sentences: [
       { id: 'ws-n5-534-1', sentence: '週末に面白い映画を見ました。', furigana: 'しゅうまつ に おもしろい えいが を みました。', romaji: 'Shuumatsu ni omoshiroi eiga o mimashita.', english: 'I watched an interesting movie on the weekend.' },
       { id: 'ws-n5-534-2', sentence: '日本の映画が好きです。', furigana: 'にほん の えいが が すき です。', romaji: 'Nihon no eiga ga suki desu.', english: 'I like Japanese movies.' }
@@ -8056,7 +8056,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'adjective',
     posLabel: 'i-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "暑", "meaning": "Hot / Summer"}],
+    kanjiBreakdown: [{"char": "暑", "meaning": "Hot"}],
     sentences: [
       { id: 'ws-n5-537-1', sentence: '夏の京都はとても暑いです。', furigana: 'なつ の きょうと は とても あつい です。', romaji: 'Natsu no Kyouto wa totemo atsui desu.', english: 'Kyoto in summer is very hot.' },
       { id: 'ws-n5-537-2', sentence: '今日は暑いのでアイスクリームを食べました。', furigana: 'きょう は あつい ので アイスクリーム を たべました。', romaji: 'Kyou wa atsui node aisukuriimu o tabemashita.', english: 'Because it is hot today, I ate ice cream.' }
@@ -8071,7 +8071,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'adjective',
     posLabel: 'i-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "寒", "meaning": "Cold / Winter"}],
+    kanjiBreakdown: [{"char": "寒", "meaning": "Cold"}],
     sentences: [
       { id: 'ws-n5-538-1', sentence: '今日の朝はとても寒いです。', furigana: 'きょう の あさ は とても さむい です。', romaji: 'Kyou no asa wa totemo samui desu.', english: 'It is very cold this morning.' },
       { id: 'ws-n5-538-2', sentence: '寒いのでコートを着てください。', furigana: 'さむい ので コート を きて ください。', romaji: 'Samui node kooto o kite kudasai.', english: 'Because it is cold, please wear a coat.' }
@@ -8086,7 +8086,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'adjective',
     posLabel: 'i-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "熱", "meaning": "Heat / Fever"}],
+    kanjiBreakdown: [{"char": "熱", "meaning": "Heat"}],
     sentences: [
       { id: 'ws-n5-539-1', sentence: '熱いお茶を一杯どうぞ。', furigana: 'あつい おちゃ を いっぱい どうぞ。', romaji: 'Atsui ocha o ippai douzo.', english: 'Please have a cup of hot tea.' },
       { id: 'ws-n5-539-2', sentence: 'スープがとても熱いので気をつけてください。', furigana: 'スープ が とても あつい ので き を つけて ください。', romaji: 'Suupu ga totemo atsui node ki o tsukete kudasai.', english: 'The soup is very hot, so please be careful.' }
@@ -8101,7 +8101,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'adjective',
     posLabel: 'i-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "冷", "meaning": "Cool / Cold"}],
+    kanjiBreakdown: [{"char": "冷", "meaning": "Cool"}],
     sentences: [
       { id: 'ws-n5-540-1', sentence: '冷たい水を一杯ください。', furigana: 'つめたい みず を いっぱい ください。', romaji: 'Tsumetai mizu o ippai kudasai.', english: 'Please give me a glass of cold water.' },
       { id: 'ws-n5-540-2', sentence: '手が冷たくなりました。', furigana: 'て が つめたく なりました。', romaji: 'Te ga tsumetaku narimashita.', english: 'My hands became cold.' }
@@ -8146,7 +8146,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'adjective',
     posLabel: 'i-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "涼", "meaning": "Cool / Refreshing"}],
+    kanjiBreakdown: [{"char": "涼", "meaning": "Cool"}],
     sentences: [
       { id: 'ws-n5-543-1', sentence: '秋になると涼しくなります。', furigana: 'あき に なる と すずしく なります。', romaji: 'Aki ni naru to suzushiku narimasu.', english: 'It becomes cool when autumn comes.' },
       { id: 'ws-n5-543-2', sentence: 'エアコンの部屋は涼しいです。', furigana: 'エアコン の へや は すずしい です。', romaji: 'Eakon no heya wa suzushii desu.', english: 'The air-conditioned room is cool.' }
@@ -8191,7 +8191,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'adjective',
     posLabel: 'i-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "遅", "meaning": "Slow / Late"}],
+    kanjiBreakdown: [{"char": "遅", "meaning": "Slow"}],
     sentences: [
       { id: 'ws-n5-546-1', sentence: '電車の到着が遅いです。', furigana: 'でんしゃ の とうちゃく が おそい です。', romaji: 'Densha no touchaku ga osoi desu.', english: 'The train arrival is late.' },
       { id: 'ws-n5-546-2', sentence: '昨日の夜、遅くに寝ました。', furigana: 'きのう の よる、おそく に ねました。', romaji: 'Kinou no yoru, osoku ni nemashita.', english: 'Last night, I went to sleep late.' }
@@ -8296,7 +8296,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'adjective',
     posLabel: 'i-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "広", "meaning": "Wide / Broad"}],
+    kanjiBreakdown: [{"char": "広", "meaning": "Wide"}],
     sentences: [
       { id: 'ws-n5-553-1', sentence: '私の部屋はとても広いです。', furigana: 'わたし の へや は とても ひろい です。', romaji: 'Watashi no heya wa totemo hiroi desu.', english: 'My room is very spacious.' },
       { id: 'ws-n5-553-2', sentence: '広い公園で散歩をしました。', furigana: 'ひろい こうえん で さんぽ を しました。', romaji: 'Hiroi kouen de sanpo o shimashita.', english: 'I walked in a wide park.' }
@@ -8371,7 +8371,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'adjective',
     posLabel: 'i-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "少", "meaning": "Few / Little"}],
+    kanjiBreakdown: [{"char": "少", "meaning": "Few"}],
     sentences: [
       { id: 'ws-n5-558-1', sentence: '今日の電車は人が少ないです。', furigana: 'きょう の でんしゃ は ひと が すくない です。', romaji: 'Kyou no densha wa hito ga sukunai desu.', english: 'There are few people on today\'s train.' },
       { id: 'ws-n5-558-2', sentence: '時間が少ないので急ぎましょう。', furigana: 'じかん が すくない ので いそぎましょう。', romaji: 'Jikan ga sukunai node isogimashou.', english: 'We have little time, so let\'s hurry.' }
@@ -8386,7 +8386,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'adjective',
     posLabel: 'i-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "楽", "meaning": "Enjoy / Pleasure"}],
+    kanjiBreakdown: [{"char": "楽", "meaning": "Enjoy"}],
     sentences: [
       { id: 'ws-n5-559-1', sentence: '旅行はとても楽しかったです。', furigana: 'りょこう は とても たのしかった です。', romaji: 'Ryokou wa totemo tanoshikatta desu.', english: 'The trip was very fun.' },
       { id: 'ws-n5-559-2', sentence: '友達と日本語を勉強するのは楽しいです。', furigana: 'ともだち と にほんご を べんきょう する の は たのしい です。', romaji: 'Tomodachi to nihongo o benkyou suru no wa tanoshii desu.', english: 'Studying Japanese with friends is fun.' }
@@ -8401,7 +8401,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'adjective',
     posLabel: 'i-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "面", "meaning": "Face"}, {"char": "白", "meaning": "White / Clear"}],
+    kanjiBreakdown: [{"char": "面", "meaning": "Face"}, {"char": "白", "meaning": "White"}],
     sentences: [
       { id: 'ws-n5-560-1', sentence: 'この本はとても面白いです。', furigana: 'この ほん は とても おもしろい です。', romaji: 'Kono hon wa totemo omoshiroi desu.', english: 'This book is very interesting.' },
       { id: 'ws-n5-560-2', sentence: '面白い話を聞いて笑いました。', furigana: 'おもしろい はなし を きいて わらい ました。', romaji: 'Omoshiroi hanashi o kiite waraimashita.', english: 'I heard a funny story and laughed.' }
@@ -8446,7 +8446,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'adjective',
     posLabel: 'i-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "優", "meaning": "Gentle / Superior"}],
+    kanjiBreakdown: [{"char": "優", "meaning": "Gentle"}],
     sentences: [
       { id: 'ws-n5-563-1', sentence: '田中先生はとても優しいです。', furigana: 'たなかせんせい は とても やさしい です。', romaji: 'Tanaka sensei wa totemo yasashii desu.', english: 'Teacher Tanaka is very kind.' },
       { id: 'ws-n5-563-2', sentence: '母はいつも優しく話してくれます。', furigana: 'はは は いつも やさしく はなして くれます。', romaji: 'Haha wa itsumo yasashiku hanashite kuremasu.', english: 'My mother always speaks kindly to me.' }
@@ -8566,7 +8566,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'adjective',
     posLabel: 'i-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "嬉", "meaning": "Glad / Joy"}],
+    kanjiBreakdown: [{"char": "嬉", "meaning": "Glad"}],
     sentences: [
       { id: 'ws-n5-571-1', sentence: 'プレゼントをもらってとても嬉しいです。', furigana: 'プレゼント を もらって とても うれしい です。', romaji: 'Purezento o moratte totemo ureshii desu.', english: 'I am very happy to receive a gift.' },
       { id: 'ws-n5-571-2', sentence: 'テストに合格して嬉しかったです。', furigana: 'テスト に ごうかく して うれしかった です。', romaji: 'Tesuto ni goukaku shite ureshikatta desu.', english: 'I was happy to pass the test.' }
@@ -8596,7 +8596,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'adjective',
     posLabel: 'i-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "細", "meaning": "Thin / Slender"}],
+    kanjiBreakdown: [{"char": "細", "meaning": "Thin"}],
     sentences: [
       { id: 'ws-n5-573-1', sentence: '細いペンで字を書きます。', furigana: 'ほそい ペン で じ を かきます。', romaji: 'Hosoi pen de ji o kakimasu.', english: 'I write letters with a fine pen.' },
       { id: 'ws-n5-573-2', sentence: 'あの猫は体が細いです。', furigana: 'あの ねこ は からだ が ほそい です。', romaji: 'Ano neko wa karada ga hosoi desu.', english: 'That cat has a slender body.' }
@@ -8611,7 +8611,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'adjective',
     posLabel: 'i-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "太", "meaning": "Thick / Great"}],
+    kanjiBreakdown: [{"char": "太", "meaning": "Thick"}],
     sentences: [
       { id: 'ws-n5-574-1', sentence: '太いペンで大きく名前を書きました。', furigana: 'ふとい ペン で おおきく なまえ を かきました。', romaji: 'Futoi pen de ookiku namae o kakimashita.', english: 'I wrote my name big with a thick pen.' },
       { id: 'ws-n5-574-2', sentence: 'この木は幹がとても太いです。', furigana: 'この き は みき が とても ふとい です。', romaji: 'Kono ki wa miki ga totemo futoi desu.', english: 'This tree has a very thick trunk.' }
@@ -8761,7 +8761,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'adjective',
     posLabel: 'na-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "親", "meaning": "Parent / Intimate"}, {"char": "切", "meaning": "Cut / Earnest"}],
+    kanjiBreakdown: [{"char": "親", "meaning": "Parent"}, {"char": "切", "meaning": "Cut"}],
     sentences: [
       { id: 'ws-n5-584-1', sentence: '田中さんはとても親切な人です。', furigana: 'たなかさん は とても しんせつ な ひと です。', romaji: 'Tanaka-san wa totemo shinsetsu na hito desu.', english: 'Mr. Tanaka is a very kind person.' },
       { id: 'ws-n5-584-2', sentence: '親切に道を教えてくれました。', furigana: 'しんせつ に みち を おしえて くれました。', romaji: 'Shinsetsu ni michi o oshiete kuremashita.', english: 'Someone kindly told me the way.' }
@@ -8821,7 +8821,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'adjective',
     posLabel: 'na-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "大", "meaning": "Big"}, {"char": "切", "meaning": "Cut / Earnest"}],
+    kanjiBreakdown: [{"char": "大", "meaning": "Big"}, {"char": "切", "meaning": "Cut"}],
     sentences: [
       { id: 'ws-n5-588-1', sentence: '時間を大切にしてください。', furigana: 'じかん を たいせつ に して ください。', romaji: 'Jikan o taisetsu ni shite kudasai.', english: 'Please value your time.' },
       { id: 'ws-n5-588-2', sentence: '家族は私にとって一番大切です。', furigana: 'かぞく は わたし に とって いちばん たいせつ です。', romaji: 'Kazoku wa watashi ni totte ichiban taisetsu desu.', english: 'Family is most important to me.' }
@@ -8851,7 +8851,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'adjective',
     posLabel: 'na-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "立", "meaning": "Stand"}, {"char": "派", "meaning": "School / Faction"}],
+    kanjiBreakdown: [{"char": "立", "meaning": "Stand"}, {"char": "派", "meaning": "School"}],
     sentences: [
       { id: 'ws-n5-590-1', sentence: '駅前に立派なホテルが建ちました。', furigana: 'えきまえ に りっぱ な ホテル が たちました。', romaji: 'Ekimae ni rippa na hoteru ga tachimashita.', english: 'A splendid hotel was built in front of the station.' },
       { id: 'ws-n5-590-2', sentence: '田中さんは立派な先生になりました。', furigana: 'たなかさん は りっぱ な せんせい に なりました。', romaji: 'Tanaka-san wa rippa na sensei ni narimashita.', english: 'Mr. Tanaka became a fine teacher.' }
@@ -8866,7 +8866,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'adjective',
     posLabel: 'na-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "安", "meaning": "Cheap / Peaceful"}, {"char": "全", "meaning": "Whole / Complete"}],
+    kanjiBreakdown: [{"char": "安", "meaning": "Cheap"}, {"char": "全", "meaning": "Whole"}],
     sentences: [
       { id: 'ws-n5-591-1', sentence: '日本はとても安全な国です。', furigana: 'にほん は とても あんぜん な くに です。', romaji: 'Nihon wa totemo anzen na kuni desu.', english: 'Japan is a very safe country.' },
       { id: 'ws-n5-591-2', sentence: 'シートベルトを締めて安全に運転します。', furigana: 'シートベルト を しめて あんぜん に うんてん します。', romaji: 'Shiitoberuto o shimete anzen ni unten shimasu.', english: 'Fasten your seatbelt and drive safely.' }
@@ -8881,7 +8881,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'adjective',
     posLabel: 'na-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "危", "meaning": "Danger"}, {"char": "険", "meaning": "Steep / Incline"}],
+    kanjiBreakdown: [{"char": "危", "meaning": "Danger"}, {"char": "険", "meaning": "Steep"}],
     sentences: [
       { id: 'ws-n5-592-1', sentence: '夜の一人歩きは危険です。', furigana: 'よる の ひとりあるき は きけん です。', romaji: 'Yoru no hitoriaruki wa kiken desu.', english: 'Walking alone at night is dangerous.' },
       { id: 'ws-n5-592-2', sentence: '危険ですから入らないでください。', furigana: 'きけん です から はいらないで ください。', romaji: 'Kiken desu kara hairanaide kudasai.', english: 'Because it is dangerous, please do not enter.' }
@@ -8896,7 +8896,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'adjective',
     posLabel: 'na-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "必", "meaning": "Certain"}, {"char": "要", "meaning": "Need / Pivot"}],
+    kanjiBreakdown: [{"char": "必", "meaning": "Certain"}, {"char": "要", "meaning": "Need"}],
     sentences: [
       { id: 'ws-n5-593-1', sentence: 'パスポートの申請に写真が必要です。', furigana: 'パスポート の しんせい に しゃしん が ひつよう です。', romaji: 'Pasupooto no shinsei ni shashin ga hitsuyou desu.', english: 'A photograph is necessary for the passport application.' },
       { id: 'ws-n5-593-2', sentence: '毎日水を飲むことが必要です。', furigana: 'まいにち みず を のむ こと が ひつよう です。', romaji: 'Mainichi mizu o nomu koto ga hitsuyou desu.', english: 'Drinking water every day is necessary.' }
@@ -8926,7 +8926,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'adverb',
     posLabel: 'Adverb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "少", "meaning": "Few / Little"}],
+    kanjiBreakdown: [{"char": "少", "meaning": "Few"}],
     sentences: [
       { id: 'ws-n5-595-1', sentence: '日本語が少し分かります。', furigana: 'にほんご が すこし わかります。', romaji: 'Nihongo ga sukoshi wakarimasu.', english: 'I understand Japanese a little.' },
       { id: 'ws-n5-595-2', sentence: '少しここで休みましょう。', furigana: 'すこし ここ で やすみましょう。', romaji: 'Sukoshi koko de yasumimashou.', english: 'Let\'s rest here a little.' }
@@ -9589,7 +9589,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Question Word',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "何", "meaning": "What"}, {"char": "時", "meaning": "Time / Hour"}],
+    kanjiBreakdown: [{"char": "何", "meaning": "What"}, {"char": "時", "meaning": "Time"}],
     sentences: [
       { id: 'ws-n5-639-1', sentence: 'すみません、今何時ですか。', furigana: 'すみません、いま なんじ です か。', romaji: 'Sumimasen, ima nanji desu ka.', english: 'Excuse me, what time is it now?' },
       { id: 'ws-n5-639-2', sentence: '明日の朝は何時に起きますか。', furigana: 'あした の あさ は なんじ に おきます か。', romaji: 'Ashita no asa wa nanji ni okimasu ka.', english: 'What time will you wake up tomorrow morning?' }
@@ -9604,7 +9604,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Question Word',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "何", "meaning": "What"}, {"char": "分", "meaning": "Minute / Part"}],
+    kanjiBreakdown: [{"char": "何", "meaning": "What"}, {"char": "分", "meaning": "Minute"}],
     sentences: [
       { id: 'ws-n5-640-1', sentence: 'ここから駅まで何分かかりますか。', furigana: 'ここ から えき まで なんぷん かかります か。', romaji: 'Koko kara eki made nanpun kakarimasu ka.', english: 'How many minutes does it take from here to the station?' },
       { id: 'ws-n5-640-2', sentence: '時計を見ると、今は何時何分ですか。', furigana: 'とけい を みる と、いま は なんじ なんぷん です か。', romaji: 'Looking at the clock, what hour and what minute is it now?', english: 'Looking at the clock, what hour and what minute is it now?' }
@@ -9859,7 +9859,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Pronoun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "私", "meaning": "I / Private"}],
+    kanjiBreakdown: [{"char": "私", "meaning": "I"}],
     sentences: [
       { id: 'ws-n5-657-1', sentence: '私たちは日本語学校の学生です。', furigana: 'わたしたち は にほんごがっこう の がくせい です。', romaji: 'Watashitachi wa Nihongo gakkou no gakusei desu.', english: 'We are students at a Japanese language school.' },
       { id: 'ws-n5-657-2', sentence: '私たちと一緒に昼ご飯を食べましょう。', furigana: 'わたしたち と いっしょ に ひるごはん を たべましょう。', romaji: 'Watashitachi to issho ni hirugohan o tabemashou.', english: 'Let\'s eat lunch together with us.' }
@@ -10245,7 +10245,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '行ってきます',
     reading: 'いってきます',
     romaji: 'ittekimasu',
-    meaning: 'I am leaving / See you (leaving home)',
+    meaning: 'I am leaving',
     pos: 'expression',
     posLabel: 'Expression',
     jlpt: 'N5',
@@ -10489,7 +10489,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "意", "meaning": "Idea"}, {"char": "味", "meaning": "Taste / Meaning"}],
+    kanjiBreakdown: [{"char": "意", "meaning": "Idea"}, {"char": "味", "meaning": "Taste"}],
     sentences: [
       { id: 'ws-n5-699-1', sentence: 'この漢字の意味を辞書で調べました。', furigana: 'この かんじ の いみ を じしょ で しらべました。', romaji: 'Kono kanji no imi o jisho de shirabemashita.', english: 'I looked up the meaning of this kanji in the dictionary.' },
       { id: 'ws-n5-699-2', sentence: 'その言葉の意味がよくわかりません。', furigana: 'その ことば の いみ が よく わかりません。', romaji: 'Sono kotoba no imi ga yoku wakarimasen.', english: 'I do not understand the meaning of that word well.' }
@@ -10519,7 +10519,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "番", "meaning": "Number"}, {"char": "号", "meaning": "Number / Issue"}],
+    kanjiBreakdown: [{"char": "番", "meaning": "Number"}, {"char": "号", "meaning": "Number"}],
     sentences: [
       { id: 'ws-n5-701-1', sentence: '紙に電話番号を書いてください。', furigana: 'かみ に でんわばんごう を かいて ください。', romaji: 'Kami ni denwabangou o kaite kudasai.', english: 'Please write your telephone number on paper.' },
       { id: 'ws-n5-701-2', sentence: '部屋の番号は三〇二号室です。', furigana: 'へや の ばんごう は さんまるにごうしつ です。', romaji: 'Heya no bangou wa san-maru-ni goushitsu desu.', english: 'The room number is room 302.' }
@@ -10534,7 +10534,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "質", "meaning": "Quality / Matter"}, {"char": "問", "meaning": "Question"}],
+    kanjiBreakdown: [{"char": "質", "meaning": "Quality"}, {"char": "問", "meaning": "Question"}],
     sentences: [
       { id: 'ws-n5-702-1', sentence: '先生に日本語で質問をしました。', furigana: 'せんせい に にほんご で しつもん を しました。', romaji: 'Sensei ni Nihongo de shitsumon o shimashita.', english: 'I asked the teacher a question in Japanese.' },
       { id: 'ws-n5-702-2', sentence: '何か質問はありますか。', furigana: 'なに か しつもん は あります か。', romaji: 'Nanika shitsumon wa arimasu ka.', english: 'Do you have any questions?' }
@@ -10579,7 +10579,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "宿", "meaning": "Lodge"}, {"char": "題", "meaning": "Topic / Title"}],
+    kanjiBreakdown: [{"char": "宿", "meaning": "Lodge"}, {"char": "題", "meaning": "Topic"}],
     sentences: [
       { id: 'ws-n5-705-1', sentence: '毎日学校の宿題がたくさんあります。', furigana: 'まいにち がっこう の しゅくだい が たくさん あります。', romaji: 'Mainichi gakkou no shukudai ga takusan arimasu.', english: 'I have a lot of school homework every day.' },
       { id: 'ws-n5-705-2', sentence: '晩ご飯を食べる前に宿題を終わらせます。', furigana: 'ばんごはん を たべる まえ に しゅくだい を おわらせます。', romaji: 'Bangohan o taberu mae ni shukudai o owarasemasu.', english: 'I finish my homework before eating dinner.' }
@@ -10594,7 +10594,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "作", "meaning": "Make"}, {"char": "文", "meaning": "Sentence / Writing"}],
+    kanjiBreakdown: [{"char": "作", "meaning": "Make"}, {"char": "文", "meaning": "Sentence"}],
     sentences: [
       { id: 'ws-n5-706-1', sentence: '日本語で家族についての作文を書きました。', furigana: 'にほんご で かぞく について の さくぶん を かきました。', romaji: 'Nihongo de kazoku ni tsuite no sakubun o kakimashita.', english: 'I wrote an essay about my family in Japanese.' },
       { id: 'ws-n5-706-2', sentence: '授業で作文を発表しました。', furigana: 'じゅぎょう で さくぶん を はっぴょう しました。', romaji: 'Jugyou de sakubun o happyou shimashita.', english: 'I presented my essay in class.' }
@@ -10609,7 +10609,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "授", "meaning": "Instruct / Give"}, {"char": "業", "meaning": "Work / Task"}],
+    kanjiBreakdown: [{"char": "授", "meaning": "Instruct"}, {"char": "業", "meaning": "Work"}],
     sentences: [
       { id: 'ws-n5-707-1', sentence: '毎朝九時から日本語の授業が始まります。', furigana: 'まいあさ くじ から にほんご の じゅぎょう が はじまります。', romaji: 'Maiasa kuji kara Nihongo no jugyou ga hajimarimasu.', english: 'Japanese classes start at 9:00 every morning.' },
       { id: 'ws-n5-707-2', sentence: '授業中にたくさんメモを取りました。', furigana: 'じゅぎょうちゅう に たくさん メモ を とりました。', romaji: 'Jugyouchuu ni takusan memo o torimashita.', english: 'I took many notes during the class.' }
@@ -10639,7 +10639,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "練", "meaning": "Practice / Polish"}, {"char": "習", "meaning": "Learn"}],
+    kanjiBreakdown: [{"char": "練", "meaning": "Practice"}, {"char": "習", "meaning": "Learn"}],
     sentences: [
       { id: 'ws-n5-709-1', sentence: '毎日発音の練習をしています。', furigana: 'まいにち はつおん の れんしゅう を して います。', romaji: 'Mainichi hatsuon no renshuu o shite imasu.', english: 'I practice pronunciation every day.' },
       { id: 'ws-n5-709-2', sentence: 'たくさん練習して上手になりました。', furigana: 'たくさん れんしゅう して じょうず に なりました。', romaji: 'Takusan renshuu shite jouzu ni narimashita.', english: 'I practiced a lot and became skillful.' }
@@ -10654,7 +10654,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "音", "meaning": "Sound"}, {"char": "楽", "meaning": "Music / Pleasure"}],
+    kanjiBreakdown: [{"char": "音", "meaning": "Sound"}, {"char": "楽", "meaning": "Music"}],
     sentences: [
       { id: 'ws-n5-710-1', sentence: '部屋で静かな音楽を聞きます。', furigana: 'へや で しずか な おんがく を ききます。', romaji: 'Heya de shizuka na ongaku o kikimasu.', english: 'I listen to quiet music in my room.' },
       { id: 'ws-n5-710-2', sentence: '日本の音楽が大好きです。', furigana: 'にほん の おんがく が だいすき です。', romaji: 'Nihon no ongaku ga daisuki desu.', english: 'I love Japanese music.' }
@@ -10830,11 +10830,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'いい',
     reading: 'いい',
     romaji: 'ii',
-    meaning: "good / nice",
+    meaning: "good",
     pos: 'adjective',
     posLabel: 'I-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "良", "meaning": "Good / Nice"}],
+    kanjiBreakdown: [{"char": "良", "meaning": "Good"}],
     sentences: [
       { id: 'ws-n5-722-1', sentence: '今日はとてもいい天気ですね。', furigana: 'きょう は とても いい てんき です ね。', romaji: 'Kyou wa totemo ii tenki desu ne.', english: 'It is very nice weather today, isn\'t it?' },
       { id: 'ws-n5-722-2', sentence: 'これはとてもいいアイデアだと思います。', furigana: 'これ は とても いい アイデア だ と おもいます。', romaji: 'Kore wa totemo ii aidea da to omoimasu.', english: 'I think this is a very good idea.' }
@@ -10845,11 +10845,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '言う',
     reading: 'いう',
     romaji: 'iu',
-    meaning: "to say / speak",
+    meaning: "to say",
     pos: 'verb',
     posLabel: 'Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "言", "meaning": "To say / speak"}],
+    kanjiBreakdown: [{"char": "言", "meaning": "To say"}],
     sentences: [
       { id: 'ws-n5-723-1', sentence: '先生に「おはようございます」と言いました。', furigana: 'せんせい に「おはよう ございます」と いいました。', romaji: 'Sensei ni "ohayou gozaimasu" to iimashita.', english: 'I said "good morning" to the teacher.' },
       { id: 'ws-n5-723-2', sentence: '日本語で何と言いますか。', furigana: 'にほんご で なん と いいます か。', romaji: 'Nihongo de nan to iimasu ka.', english: 'What do you say in Japanese?' }
@@ -11040,11 +11040,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '上手い',
     reading: 'うまい',
     romaji: 'umai',
-    meaning: "skillful / delicious",
+    meaning: "skillful",
     pos: 'adjective',
     posLabel: 'I-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "上", "meaning": "Skillful / Delicious"}, {"char": "手", "meaning": "Skillful / Delicious"}],
+    kanjiBreakdown: [{"char": "上", "meaning": "Skillful"}, {"char": "手", "meaning": "Skillful"}],
     sentences: [
       { id: 'ws-n5-736-1', sentence: '母の手料理はとても上手いです。', furigana: 'はは の てりょうり は とても うまい です。', romaji: 'Haha no teryouri wa totemo umai desu.', english: 'My mother\'s home cooking is very delicious.' },
       { id: 'ws-n5-736-2', sentence: '彼はギターがとても上手いです。', furigana: 'かれ は ギター が とても うまい です。', romaji: 'Kare wa gitaa ga totemo umai desu.', english: 'He is very skillful at the guitar.' }
@@ -11055,11 +11055,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '運',
     reading: 'うん',
     romaji: 'un',
-    meaning: "luck / fortune",
+    meaning: "luck",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "運", "meaning": "Luck / Fortune"}],
+    kanjiBreakdown: [{"char": "運", "meaning": "Luck"}],
     sentences: [
       { id: 'ws-n5-737-1', sentence: '今日は運がいい一日でした。', furigana: 'きょう は うん が いい ついたち でした。', romaji: 'Kyou wa un ga ii ichinichi deshita.', english: 'Today was a lucky day.' },
       { id: 'ws-n5-737-2', sentence: '運よく雨が止みました。', furigana: 'うん よく あめ が やみました。', romaji: 'Unyoku ame ga yamimashita.', english: 'Luckily the rain stopped.' }
@@ -11085,11 +11085,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '運動',
     reading: 'うんどう',
     romaji: 'undou',
-    meaning: "exercise / sports",
+    meaning: "exercise",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "運", "meaning": "Exercise / Sports"}, {"char": "動", "meaning": "Exercise / Sports"}],
+    kanjiBreakdown: [{"char": "運", "meaning": "Exercise"}, {"char": "動", "meaning": "Exercise"}],
     sentences: [
       { id: 'ws-n5-739-1', sentence: '健康のために毎朝運動をしています。', furigana: 'けんこう の ため に まいあさ うんどう を して います。', romaji: 'Kenkou no tame ni maiasa undou o shite imasu.', english: 'For my health, I exercise every morning.' },
       { id: 'ws-n5-739-2', sentence: '軽い運動をして気分が良くなりました。', furigana: 'かるい うんどう を して きぶん が よく なりました。', romaji: 'Karui undou o shite kibun ga yoku narimashita.', english: 'I did some light exercise and felt better.' }
@@ -11100,11 +11100,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '受ける',
     reading: 'うける',
     romaji: 'ukeru',
-    meaning: "to take / receive",
+    meaning: "to take",
     pos: 'verb',
     posLabel: 'Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "受", "meaning": "To take / receive"}],
+    kanjiBreakdown: [{"char": "受", "meaning": "To take"}],
     sentences: [
       { id: 'ws-n5-740-1', sentence: '来週日本語能力試験を受けます。', furigana: 'らいしゅう にほんご のうりょく しけん を うけます。', romaji: 'Raishuu Nihongo nouryoku shiken o ukemasu.', english: 'I will take the Japanese Language Proficiency Test next week.' },
       { id: 'ws-n5-740-2', sentence: '先生からアドバイスを受けました。', furigana: 'せんせい から アドバイス を うけました。', romaji: 'Sensei kara adobaisu o ukemashita.', english: 'I received advice from my teacher.' }
@@ -11130,11 +11130,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '宇宙',
     reading: 'うちゅう',
     romaji: 'uchuu',
-    meaning: "universe / space",
+    meaning: "universe",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "宇", "meaning": "Universe / Space"}, {"char": "宙", "meaning": "Universe / Space"}],
+    kanjiBreakdown: [{"char": "宇", "meaning": "Universe"}, {"char": "宙", "meaning": "Universe"}],
     sentences: [
       { id: 'ws-n5-742-1', sentence: 'テレビで宇宙の写真を見ました。', furigana: 'テレビ で うちゅう の しゃしん を みました。', romaji: 'Terebi de uchuu no shashin o mimashita.', english: 'I saw photos of space on television.' },
       { id: 'ws-n5-742-2', sentence: '将来は宇宙飛行士になりたいです。', furigana: 'しょうらい は うちゅうひこうし に なりたい です。', romaji: 'Shourai wa uchuuhikoushi ni naritai desu.', english: 'In the future I want to become an astronaut.' }
@@ -11145,11 +11145,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '絵',
     reading: 'え',
     romaji: 'e',
-    meaning: "picture / painting",
+    meaning: "picture",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "絵", "meaning": "Picture / Painting"}],
+    kanjiBreakdown: [{"char": "絵", "meaning": "Picture"}],
     sentences: [
       { id: 'ws-n5-743-1', sentence: '週末にきれいな風景の絵を描きました。', furigana: 'しゅうまつ に きれい な ふうけい の え を かきました。', romaji: 'Shuumatsu ni kirei na fuukei no e o kakimashita.', english: 'On the weekend I drew a picture of beautiful scenery.' },
       { id: 'ws-n5-743-2', sentence: '部屋の壁に花の絵が飾ってあります。', furigana: 'へや の かべ に はな の え が かざって あります。', romaji: 'Heya no kabe ni hana no e ga kazatte arimasu.', english: 'A painting of flowers is displayed on the room wall.' }
@@ -11160,11 +11160,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '選ぶ',
     reading: 'えらぶ',
     romaji: 'erabu',
-    meaning: "to choose / select",
+    meaning: "to choose",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "選", "meaning": "To choose / select"}],
+    kanjiBreakdown: [{"char": "選", "meaning": "To choose"}],
     sentences: [
       { id: 'ws-n5-744-1', sentence: '好きな色を選んでください。', furigana: 'すき な いろ を えらんで ください。', romaji: 'Suki na iro o erande kudasai.', english: 'Please choose your favorite color.' },
       { id: 'ws-n5-744-2', sentence: '本屋で面白い小説を一冊選びました。', furigana: 'ほんや で おもしろい しょうせつ を いっさつ えらびました。', romaji: 'Hon\'ya de omoshiroi shousetsu o issatsu erabimashita.', english: 'I chose one interesting novel at the bookstore.' }
@@ -11175,11 +11175,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '絵の具',
     reading: 'えのぐ',
     romaji: 'enogu',
-    meaning: "colors / paints",
+    meaning: "colors",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "絵", "meaning": "Colors / Paints"}, {"char": "具", "meaning": "Colors / Paints"}],
+    kanjiBreakdown: [{"char": "絵", "meaning": "Colors"}, {"char": "具", "meaning": "Colors"}],
     sentences: [
       { id: 'ws-n5-745-1', sentence: '赤と青の絵の具を使って絵を描きます。', furigana: 'あか と あお の えのぐ を つかって え を かきます。', romaji: 'Aka to ao no enogu o tsukatte e o kakimasu.', english: 'I use red and blue paints to paint a picture.' },
       { id: 'ws-n5-745-2', sentence: '文房具屋で新しい絵の具を買いました。', furigana: 'ぶんぼうぐや で あたらしい えのぐ を かいました。', romaji: 'Bunbouguya de atarashii enogu o kaimashita.', english: 'I bought new paints at the stationery store.' }
@@ -11205,11 +11205,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '永遠',
     reading: 'えいえん',
     romaji: 'eien',
-    meaning: "eternity / forever",
+    meaning: "eternity",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "永", "meaning": "Eternity / Forever"}, {"char": "遠", "meaning": "Eternity / Forever"}],
+    kanjiBreakdown: [{"char": "永", "meaning": "Eternity"}, {"char": "遠", "meaning": "Eternity"}],
     sentences: [
       { id: 'ws-n5-747-1', sentence: '私たちの友情は永遠です。', furigana: 'わたしたち の ゆうじょう は えいえん です。', romaji: 'Watashitachi no yuujou wa eien desu.', english: 'Our friendship is forever.' },
       { id: 'ws-n5-747-2', sentence: '日本での楽しい思い出を永遠に忘れません。', furigana: 'にほん での たのしい おもいで を えいえん に わすれません。', romaji: 'Nihon deno tanoshii omoide o eien ni wasuremasen.', english: 'I will never forget the pleasant memories in Japan.' }
@@ -11235,11 +11235,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '営業',
     reading: 'えいぎょう',
     romaji: 'eigyou',
-    meaning: "business hours / sales",
+    meaning: "business hours",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "営", "meaning": "Business hours / Sales"}, {"char": "業", "meaning": "Business hours / Sales"}],
+    kanjiBreakdown: [{"char": "営", "meaning": "Business hours"}, {"char": "業", "meaning": "Business hours"}],
     sentences: [
       { id: 'ws-n5-749-1', sentence: 'このデパートは夜八時まで営業しています。', furigana: 'この デパート は よる はちじ まで えいぎょう して います。', romaji: 'Kono depaato wa yoru hachiji made eigyou shite imasu.', english: 'This department store is open until 8:00 PM.' },
       { id: 'ws-n5-749-2', sentence: '日曜日は営業していません。', furigana: 'にちようび は えいぎょう して いません。', romaji: 'Nichiyoubi wa eigyou shite imasen.', english: 'It is not open on Sundays.' }
@@ -11250,11 +11250,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '衛生',
     reading: 'えいせい',
     romaji: 'eisei',
-    meaning: "hygiene / sanitation",
+    meaning: "hygiene",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "衛", "meaning": "Hygiene / Sanitation"}, {"char": "生", "meaning": "Hygiene / Sanitation"}],
+    kanjiBreakdown: [{"char": "衛", "meaning": "Hygiene"}, {"char": "生", "meaning": "Hygiene"}],
     sentences: [
       { id: 'ws-n5-750-1', sentence: '食事の前に手を洗って衛生に気をつけます。', furigana: 'しょくじ の まえ に て を あらって えいせい に き を つけます。', romaji: 'Shokuji no mae ni te o aratte eisei ni ki o tsukemasu.', english: 'Before meals I wash my hands and pay attention to hygiene.' },
       { id: 'ws-n5-750-2', sentence: 'このレストランは衛生管理がとても良いです。', furigana: 'この レストラン は えいせいかんり が とても よい です。', romaji: 'Kono resutoran wa eiseikanri ga totemo yoi desu.', english: 'This restaurant\'s sanitation management is very good.' }
@@ -11280,11 +11280,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '枝',
     reading: 'えだ',
     romaji: 'eda',
-    meaning: "branch / twig",
+    meaning: "branch",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "枝", "meaning": "Branch / Twig"}],
+    kanjiBreakdown: [{"char": "枝", "meaning": "Branch"}],
     sentences: [
       { id: 'ws-n5-752-1', sentence: '木の枝に小さな鳥がとまっています。', furigana: 'き の えだ に ちいさな とり が とまって います。', romaji: 'Ki no eda ni chiisana tori ga tomatte imasu.', english: 'A small bird is perched on the tree branch.' },
       { id: 'ws-n5-752-2', sentence: '庭の木の長い枝をハサミで切りました。', furigana: 'にわ の き の ながい えだ を ハサミ で きりました。', romaji: 'Niwa no ki no nagai eda o hasami de kirimashita.', english: 'I cut the long tree branches in the garden with scissors.' }
@@ -11310,11 +11310,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '偉い',
     reading: 'えらい',
     romaji: 'erai',
-    meaning: "great / admirable",
+    meaning: "great",
     pos: 'adjective',
     posLabel: 'I-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "偉", "meaning": "Great / Admirable"}],
+    kanjiBreakdown: [{"char": "偉", "meaning": "Great"}],
     sentences: [
       { id: 'ws-n5-754-1', sentence: '毎日朝早く起きて勉強して偉いですね。', furigana: 'まいにち あさはやく おきて べんきょう して えらい です ね。', romaji: 'Mainichi asahayaku okite benkyou shite erai desu ne.', english: 'You wake up early every day to study, how admirable!' },
       { id: 'ws-n5-754-2', sentence: '彼は国のために働く偉い人になりました。', furigana: 'かれ は くに の ため に はたらく えらい ひと に なりました。', romaji: 'Kare wa kuni no tame ni hataraku erai hito ni narimashita.', english: 'He became a great person who works for his country.' }
@@ -11325,11 +11325,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '得る',
     reading: 'える',
     romaji: 'eru',
-    meaning: "to obtain / gain",
+    meaning: "to obtain",
     pos: 'verb',
     posLabel: 'Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "得", "meaning": "To obtain / gain"}],
+    kanjiBreakdown: [{"char": "得", "meaning": "To obtain"}],
     sentences: [
       { id: 'ws-n5-755-1', sentence: '本をたくさん読んで新しい知識を得ました。', furigana: 'ほん を たくさん よんで あたらしい ちしき を えました。', romaji: 'Hon o takusan yonde atarashii chishiki o emashita.', english: 'I read many books and gained new knowledge.' },
       { id: 'ws-n5-755-2', sentence: '先輩から役に立つアドバイスを得ました。', furigana: 'せんぱい から やくにたつ アドバイス を えました。', romaji: 'Senpai kara yakunitatsu adobaisu o emashita.', english: 'I obtained helpful advice from my senior.' }
@@ -11340,11 +11340,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '援助',
     reading: 'えんじょ',
     romaji: 'enjo',
-    meaning: "assistance / aid",
+    meaning: "assistance",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "援", "meaning": "Assistance / Aid"}, {"char": "助", "meaning": "Assistance / Aid"}],
+    kanjiBreakdown: [{"char": "援", "meaning": "Assistance"}, {"char": "助", "meaning": "Assistance"}],
     sentences: [
       { id: 'ws-n5-756-1', sentence: '地震で困っている人々に援助をします。', furigana: 'じしん で こまって いる ひとびと に えんじょ を します。', romaji: 'Jishin de komatte iru hitobito ni enjo o shimasu.', english: 'We provide assistance to people troubled by the earthquake.' },
       { id: 'ws-n5-756-2', sentence: '政府からの生活援助を受けました。', furigana: 'せいふ から の せいかつ えんじょ を うけました。', romaji: 'Seifu kara no seikatsu enjo o ukemashita.', english: 'We received livelihood assistance from the government.' }
@@ -11355,11 +11355,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '遠慮',
     reading: 'えんりょ',
     romaji: 'enryo',
-    meaning: "hesitation / restraint",
+    meaning: "hesitation",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "遠", "meaning": "Hesitation / Restraint"}, {"char": "慮", "meaning": "Hesitation / Restraint"}],
+    kanjiBreakdown: [{"char": "遠", "meaning": "Hesitation"}, {"char": "慮", "meaning": "Hesitation"}],
     sentences: [
       { id: 'ws-n5-757-1', sentence: 'どうぞ遠慮しないでたくさん食べてください。', furigana: 'どうぞ えんりょ しないで たくさん たべて ください。', romaji: 'Douzo enryo shinaide takusan tabete kudasai.', english: 'Please eat plenty without hesitating.' },
       { id: 'ws-n5-757-2', sentence: '車内での通話はご遠慮ください。', furigana: 'しゃない での つうわ は ごえんりょ ください。', romaji: 'Shanai deno tsuuwa wa go-enryo kudasai.', english: 'Please refrain from phone calls inside the train.' }
@@ -11385,11 +11385,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '落ちる',
     reading: 'おちる',
     romaji: 'ochiru',
-    meaning: "to fall / drop",
+    meaning: "to fall",
     pos: 'verb',
     posLabel: 'Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "落", "meaning": "To fall / drop"}],
+    kanjiBreakdown: [{"char": "落", "meaning": "To fall"}],
     sentences: [
       { id: 'ws-n5-759-1', sentence: '秋になって木から葉が落ちました。', furigana: 'あき に なって き から は が おちました。', romaji: 'Aki ni natte ki kara ha ga ochimashita.', english: 'Autumn came and leaves fell from the trees.' },
       { id: 'ws-n5-759-2', sentence: 'ポケットから大切な鍵が落ちました。', furigana: 'ポケット から たいせつ な かぎ が おちました。', romaji: 'Poketto kara taisetsu na kagi ga ochimashita.', english: 'My important key dropped from my pocket.' }
@@ -11445,11 +11445,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '用意',
     reading: 'ようい',
     romaji: 'youi',
-    meaning: "preparation / readiness",
+    meaning: "preparation",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "用", "meaning": "Preparation / Readiness"}, {"char": "意", "meaning": "Preparation / Readiness"}],
+    kanjiBreakdown: [{"char": "用", "meaning": "Preparation"}, {"char": "意", "meaning": "Preparation"}],
     sentences: [
       { id: 'ws-n5-763-1', sentence: '明日の旅行の用意を全部終わらせました。', furigana: 'あした の りょこう の ようい を ぜんぶ おわらせました。', romaji: 'Ashita no ryokou no youi o zenbu owarasemashita.', english: 'I completely finished preparations for tomorrow\'s trip.' },
       { id: 'ws-n5-763-2', sentence: '晩ご飯の用意がもうできました。', furigana: 'ばんごはん の ようい が もう できました。', romaji: 'Bangohan no youi ga mou dekimashita.', english: 'Dinner preparations are already done.' }
@@ -11460,11 +11460,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '用事',
     reading: 'ようじ',
     romaji: 'youji',
-    meaning: "errand / business to do",
+    meaning: "errand",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "用", "meaning": "Errand / Business to do"}, {"char": "事", "meaning": "Errand / Business to do"}],
+    kanjiBreakdown: [{"char": "用", "meaning": "Errand"}, {"char": "事", "meaning": "Errand"}],
     sentences: [
       { id: 'ws-n5-764-1', sentence: '今日は銀行へ行く用事があります。', furigana: 'きょう は ぎんこう へ いく ようじ が あります。', romaji: 'Kyou wa ginkou e iku youji ga arimasu.', english: 'I have an errand to go to the bank today.' },
       { id: 'ws-n5-764-2', sentence: '用事が終わったら、映画を見に行きましょう。', furigana: 'ようじ が おわったら、えいが を み に いきましょう。', romaji: 'Youji ga owattara, eiga o mi ni ikimashou.', english: 'When our errands are over, let\'s go see a movie.' }
@@ -11505,11 +11505,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'よろしく',
     reading: 'よろしく',
     romaji: 'yoroshiku',
-    meaning: "best regards / nice to meet you",
+    meaning: "best regards",
     pos: 'verb',
     posLabel: 'Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "宜", "meaning": "Best regards / Nice to meet you"}],
+    kanjiBreakdown: [{"char": "宜", "meaning": "Best regards"}],
     sentences: [
       { id: 'ws-n5-767-1', sentence: '新しいクラスでもよろしくね。', furigana: 'あたらしい クラス でも よろしく ね。', romaji: 'Atarashii kurasu demo yoroshiku ne.', english: 'Best regards in our new class too!' },
       { id: 'ws-n5-767-2', sentence: '田中さんによろしくお伝えください。', furigana: 'たなかさん に よろしく おつたえ ください。', romaji: 'Tanaka-san ni yoroshiku otsutae kudasai.', english: 'Please give my best regards to Tanaka-san.' }
@@ -11520,11 +11520,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '弱気',
     reading: 'よわき',
     romaji: 'yowaki',
-    meaning: "timid / weak-spirited",
+    meaning: "timid",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "弱", "meaning": "Timid / Weak-spirited"}, {"char": "気", "meaning": "Timid / Weak-spirited"}],
+    kanjiBreakdown: [{"char": "弱", "meaning": "Timid"}, {"char": "気", "meaning": "Timid"}],
     sentences: [
       { id: 'ws-n5-768-1', sentence: '試合の前でも弱気になってはいけません。', furigana: 'しあい の まえ でも よわき に なって は いけません。', romaji: 'Shiai no mae demo yowaki ni natte wa ikemasen.', english: 'You must not be timid even before the match.' },
       { id: 'ws-n5-768-2', sentence: '彼は少し弱気なことを言いました。', furigana: 'かれ は すこし よわき な こと を いいました。', romaji: 'Kare wa sukoshi yowaki na koto o iimashita.', english: 'He said something slightly timid.' }
@@ -11535,11 +11535,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '弱い',
     reading: 'よわい',
     romaji: 'yowai',
-    meaning: "weak / fragile",
+    meaning: "weak",
     pos: 'adjective',
     posLabel: 'I-Adjective',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "弱", "meaning": "Weak / Fragile"}],
+    kanjiBreakdown: [{"char": "弱", "meaning": "Weak"}],
     sentences: [
       { id: 'ws-n5-769-1', sentence: '病気の後で、体がまだ少し弱いです。', furigana: 'びょうき の あと で、からだ が まだ すこし よわい です。', romaji: 'Byouki no ato de, karada ga mada sukoshi yowai desu.', english: 'After illness, my body is still slightly weak.' },
       { id: 'ws-n5-769-2', sentence: '強い風の後に弱い雨が降ってきました。', furigana: 'つよい かぜ の あと に よわい あめ が ふって きました。', romaji: 'Tsuyoi kaze no ato ni yowai ame ga futte kimashita.', english: 'After strong winds, weak rain started falling.' }
@@ -11595,11 +11595,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '寄り道',
     reading: 'よりみち',
     romaji: 'yorimichi',
-    meaning: "side trip / detour",
+    meaning: "side trip",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "寄", "meaning": "Side trip / Detour"}, {"char": "道", "meaning": "Side trip / Detour"}],
+    kanjiBreakdown: [{"char": "寄", "meaning": "Side trip"}, {"char": "道", "meaning": "Side trip"}],
     sentences: [
       { id: 'ws-n5-773-1', sentence: '学校の帰りに友達と本屋へ寄り道しました。', furigana: 'がっこう の かえり に ともだち と ほんや へ よりみち しました。', romaji: 'Gakkou no kaeri ni tomodachi to hon\'ya e yorimichi shimashita.', english: 'On the way home from school, I stopped by the bookstore with a friend.' },
       { id: 'ws-n5-773-2', sentence: '寄り道をしないで、まっすぐ家に帰ります。', furigana: 'よりみち を しないで、まっすぐ いえ に かえります。', romaji: 'Yorimichi o shinaide, massugu ie ni kaerimasu.', english: 'Without taking detours, I go straight home.' }
@@ -11610,11 +11610,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '休み',
     reading: 'やすみ',
     romaji: 'yasumi',
-    meaning: "holiday / rest",
+    meaning: "holiday",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "休", "meaning": "Holiday / Rest"}],
+    kanjiBreakdown: [{"char": "休", "meaning": "Holiday"}],
     sentences: [
       { id: 'ws-n5-774-1', sentence: '明日は会社が休みなので、家でゆっくりします。', furigana: 'あした は かいしゃ が やすみ なので、いえ で ゆっくり します。', romaji: 'Ashita wa kaisha ga yasumi nanode, ie de yukkuri shimasu.', english: 'Tomorrow work is off, so I will relax at home.' },
       { id: 'ws-n5-774-2', sentence: 'ベンチに座って少し休みを取りましょう。', furigana: 'ベンチ に すわって すこし やすみ を とりましょう。', romaji: 'Benchi ni suwatte sukoshi yasumi o torimashou.', english: 'Let\'s sit on the bench and take a short rest.' }
@@ -11625,11 +11625,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '約束',
     reading: 'やくそく',
     romaji: 'yakusoku',
-    meaning: "promise / appointment",
+    meaning: "promise",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "約", "meaning": "Promise / Appointment"}, {"char": "束", "meaning": "Promise / Appointment"}],
+    kanjiBreakdown: [{"char": "約", "meaning": "Promise"}, {"char": "束", "meaning": "Promise"}],
     sentences: [
       { id: 'ws-n5-775-1', sentence: '明日の午後二時に友達と会う約束をしました。', furigana: 'あした の ごご にじ に ともだち と あう やくそく を しました。', romaji: 'Ashita no gogo niji ni tomodachi to au yakusoku o shimashita.', english: 'I made a promise to meet my friend at 2:00 PM tomorrow.' },
       { id: 'ws-n5-775-2', sentence: '約束の時間をしっかり守ってください。', furigana: 'やくそく の じかん を しっかり まもって ください。', romaji: 'Yakusoku no jikan o shikkari mamotte kudasai.', english: 'Please properly keep the appointed time.' }
@@ -11640,11 +11640,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '役所',
     reading: 'やくしょ',
     romaji: 'yakusho',
-    meaning: "public office / city hall",
+    meaning: "public office",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "役", "meaning": "Public office / City hall"}, {"char": "所", "meaning": "Public office / City hall"}],
+    kanjiBreakdown: [{"char": "役", "meaning": "Public office"}, {"char": "所", "meaning": "Public office"}],
     sentences: [
       { id: 'ws-n5-776-1', sentence: '住所の変更手続きのために役所へ行きました。', furigana: 'じゅうしょ の へんこう てつづき の ため に やくしょ へ いきました。', romaji: 'Juusho no henkou tetsuzuki no tame ni yakusho e ikimashita.', english: 'I went to city hall for address change procedures.' },
       { id: 'ws-n5-776-2', sentence: '役所の窓口は何時から開いていますか。', furigana: 'やくしょ の まどぐち は なんじ から あいて います か。', romaji: 'Yakusho no madoguchi wa nanji kara aite imasu ka.', english: 'From what time is the city hall counter open?' }
@@ -11655,11 +11655,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '焼く',
     reading: 'やく',
     romaji: 'yaku',
-    meaning: "to bake / grill",
+    meaning: "to bake",
     pos: 'verb',
     posLabel: 'Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "焼", "meaning": "To bake / grill"}],
+    kanjiBreakdown: [{"char": "焼", "meaning": "To bake"}],
     sentences: [
       { id: 'ws-n5-777-1', sentence: '朝ご飯のためにトースターでパンを焼きました。', furigana: 'あさごはん の ため に トースター で パン を やきました。', romaji: 'Asagohan no tame ni toosutaa de pan o yakimashita.', english: 'I toasted bread in the toaster for breakfast.' },
       { id: 'ws-n5-777-2', sentence: 'フライパンで新鮮な魚を焼きます。', furigana: 'フライパン で しんせん な さかな を やきます。', romaji: 'Furaipan de shinsen na sakana o yakimasu.', english: 'I cook fresh fish in a frying pan.' }
@@ -11670,11 +11670,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '焼肉',
     reading: 'やきにく',
     romaji: 'yakiniku',
-    meaning: "grilled meat / bbq",
+    meaning: "grilled meat",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "焼", "meaning": "Grilled meat / BBQ"}, {"char": "肉", "meaning": "Grilled meat / BBQ"}],
+    kanjiBreakdown: [{"char": "焼", "meaning": "Grilled meat"}, {"char": "肉", "meaning": "Grilled meat"}],
     sentences: [
       { id: 'ws-n5-778-1', sentence: '家族みんなで美味しい焼肉を食べに行きました。', furigana: 'かぞく みんな で おいしい やきにく を たべ に いきました。', romaji: 'Kazoku minna de oishii yakiniku o tabe ni ikimashita.', english: 'The whole family went to eat delicious yakiniku.' },
       { id: 'ws-n5-778-2', sentence: '日本の焼肉はたれがとても美味しいです。', furigana: 'にほん の やきにく は たれ が とても おいしい です。', romaji: 'Nihon no yakiniku wa tare ga totemo oishii desu.', english: 'The sauce of Japanese yakiniku is very delicious.' }
@@ -11685,11 +11685,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'やっぱり',
     reading: 'やっぱり',
     romaji: 'yappari',
-    meaning: "as expected / after all",
+    meaning: "as expected",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "矢", "meaning": "As expected / After all"}, {"char": "張", "meaning": "As expected / After all"}],
+    kanjiBreakdown: [{"char": "矢", "meaning": "As expected"}, {"char": "張", "meaning": "As expected"}],
     sentences: [
       { id: 'ws-n5-779-1', sentence: 'やっぱり家で飲むお茶が一番落ち着きます。', furigana: 'やっぱり いえ で のむ おちゃ が いちばん おちつきます。', romaji: 'Yappari ie de nomu ocha ga ichiban ochitsukimasu.', english: 'After all, drinking tea at home is the most calming.' },
       { id: 'ws-n5-779-2', sentence: 'やっぱり田中さんは時間通りに来ましたね。', furigana: 'やっぱり たなかさん は じかんどおり に きました ね。', romaji: 'Yappari Tanaka-san wa jikandoori ni kimashita ne.', english: 'Tanaka-san came right on time as expected, didn\'t he?' }
@@ -11700,11 +11700,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '辞める',
     reading: 'やめる',
     romaji: 'yameru',
-    meaning: "to quit / stop",
+    meaning: "to quit",
     pos: 'verb',
     posLabel: 'Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "辞", "meaning": "To quit / stop"}],
+    kanjiBreakdown: [{"char": "辞", "meaning": "To quit"}],
     sentences: [
       { id: 'ws-n5-780-1', sentence: '来月で今のアルバイトを辞める予定です。', furigana: 'らいげつ で いま の アルバイト を やめる よてい です。', romaji: 'Raigetsu de ima no arubaito o yameru yotei desu.', english: 'I plan to quit my current part-time job next month.' },
       { id: 'ws-n5-780-2', sentence: '健康のためにタバコを完全に辞めました。', furigana: 'けんこう の ため に タバコ を かんぜん に やめました。', romaji: 'Kenkou no tame ni tabako o kanzen ni yamemashita.', english: 'I completely quit smoking for my health.' }
@@ -11715,11 +11715,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'やる',
     reading: 'やる',
     romaji: 'yaru',
-    meaning: "to do / perform",
+    meaning: "to do",
     pos: 'verb',
     posLabel: 'Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "遣", "meaning": "To do / perform"}],
+    kanjiBreakdown: [{"char": "遣", "meaning": "To do"}],
     sentences: [
       { id: 'ws-n5-781-1', sentence: '晩ご飯の前に今日の宿題をやります。', furigana: 'ばんごはん の まえ に きょう の しゅくだい を やります。', romaji: 'Bangohan no mae ni kyou no shukudai o yarimasu.', english: 'I will do today\'s homework before dinner.' },
       { id: 'ws-n5-781-2', sentence: 'みんなで一緒に庭の掃除をやりましょう。', furigana: 'みんな で いっしょ に にわ の そうじ を やりましょう。', romaji: 'Minna de issho ni niwa no souji o yarimashou.', english: 'Let\'s clean the garden together with everyone.' }
@@ -11745,11 +11745,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '厄介',
     reading: 'やっかい',
     romaji: 'yakkai',
-    meaning: "trouble / burden",
+    meaning: "trouble",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "厄", "meaning": "Trouble / Burden"}, {"char": "介", "meaning": "Trouble / Burden"}],
+    kanjiBreakdown: [{"char": "厄", "meaning": "Trouble"}, {"char": "介", "meaning": "Trouble"}],
     sentences: [
       { id: 'ws-n5-783-1', sentence: '仕事で少し厄介な問題が起きました。', furigana: 'しごと で すこし やっかい な もんだい が おきました。', romaji: 'Shigoto de sukoshi yakkai na mondai ga okimashita.', english: 'A slightly troublesome problem occurred at work.' },
       { id: 'ws-n5-783-2', sentence: '三日間大変お厄介になりました。', furigana: 'みっかかん たいへん おやっかい に なりました。', romaji: 'Mikkakan taihen oyakkai ni narimashita.', english: 'Thank you very much for taking care of me for three days.' }
@@ -11760,11 +11760,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '宿',
     reading: 'やど',
     romaji: 'yado',
-    meaning: "inn / lodging",
+    meaning: "inn",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "宿", "meaning": "Inn / Lodging"}],
+    kanjiBreakdown: [{"char": "宿", "meaning": "Inn"}],
     sentences: [
       { id: 'ws-n5-784-1', sentence: '京都の温泉街で静かな宿に泊まりました。', furigana: 'きょうと の おんせんがい で しずか な やど に とまりました。', romaji: 'Kyouto no onsengai de shizuka na yado ni tomarimashita.', english: 'I stayed at a quiet inn in a Kyoto hot spring district.' },
       { id: 'ws-n5-784-2', sentence: '旅行の前にインターネットで宿を予約します。', furigana: 'りょこう の まえ に インターネット で やど を よやく します。', romaji: 'Ryokou no mae ni intaanetto de yado o yoyaku shimasu.', english: 'Before traveling, I reserve lodging on the Internet.' }
@@ -11850,11 +11850,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '愉快',
     reading: 'ゆかい',
     romaji: 'yukai',
-    meaning: "delightful / pleasant",
+    meaning: "delightful",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "愉", "meaning": "Delightful / Pleasant"}, {"char": "快", "meaning": "Delightful / Pleasant"}],
+    kanjiBreakdown: [{"char": "愉", "meaning": "Delightful"}, {"char": "快", "meaning": "Delightful"}],
     sentences: [
       { id: 'ws-n5-790-1', sentence: '友達と愉快な冗談を言って笑いました。', furigana: 'ともだち と ゆかい な じょうだん を いって わらいました。', romaji: 'Tomodachi to yukai na joudan o itte waraimashita.', english: 'I laughed and shared pleasant jokes with my friend.' },
       { id: 'ws-n5-790-2', sentence: '今日はとても愉快な一日を過ごしました。', furigana: 'きょう は とても ゆかい な ついたち を すごしました。', romaji: 'Kyou wa totemo yukai na ichinichi o sugoshimashita.', english: 'I spent a very delightful day today.' }
@@ -11880,11 +11880,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '許す',
     reading: 'ゆるす',
     romaji: 'yurusu',
-    meaning: "to forgive / permit",
+    meaning: "to forgive",
     pos: 'verb',
     posLabel: 'Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "許", "meaning": "To forgive / permit"}],
+    kanjiBreakdown: [{"char": "許", "meaning": "To forgive"}],
     sentences: [
       { id: 'ws-n5-792-1', sentence: '友達が謝ったので、優しく許しました。', furigana: 'ともだち が あやまった ので、やさしく ゆるしました。', romaji: 'Tomodachi ga ayamatta node, yasashiku yurushimashita.', english: 'Because my friend apologized, I kindly forgave them.' },
       { id: 'ws-n5-792-2', sentence: 'ここに車を止めることは許されていません。', furigana: 'ここ に くるま を とめる こと は ゆるされて いません。', romaji: 'Koko ni kuruma o tomeru koto wa yurusarete imasen.', english: 'Parking cars here is not permitted.' }
@@ -11895,11 +11895,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '揺れる',
     reading: 'ゆれる',
     romaji: 'yureru',
-    meaning: "to shake / sway",
+    meaning: "to shake",
     pos: 'verb',
     posLabel: 'Verb',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "揺", "meaning": "To shake / sway"}],
+    kanjiBreakdown: [{"char": "揺", "meaning": "To shake"}],
     sentences: [
       { id: 'ws-n5-793-1', sentence: '地震で部屋の電気が大きく揺れました。', furigana: 'じしん で へや の でんき が おおきく ゆれました。', romaji: 'Jishin de heya no denki ga ookiku yuremashita.', english: 'Due to the earthquake, the room light swayed greatly.' },
       { id: 'ws-n5-793-2', sentence: '強い風で庭の木の枝が揺れています。', furigana: 'つよい かぜ で にわ の き の えだ が ゆれて います。', romaji: 'Tsuyoi kaze de niwa no ki no eda ga yurete imasu.', english: 'The garden tree branches are swaying in strong wind.' }
@@ -11910,11 +11910,11 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: '優勝',
     reading: 'ゆうしょう',
     romaji: 'yuushou',
-    meaning: "victory / championship",
+    meaning: "victory",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
-    kanjiBreakdown: [{"char": "優", "meaning": "Victory / Championship"}, {"char": "勝", "meaning": "Victory / Championship"}],
+    kanjiBreakdown: [{"char": "優", "meaning": "Victory"}, {"char": "勝", "meaning": "Victory"}],
     sentences: [
       { id: 'ws-n5-794-1', sentence: '私たちのサッカー部が大会で優勝しました。', furigana: 'わたしたち の サッカーぶ が たいかい で ゆうしょう しました。', romaji: 'Watashitachi no sakkaabu ga taikai de yuushou shimashita.', english: 'Our soccer club won championship at the tournament.' },
       { id: 'ws-n5-794-2', sentence: '優勝おめでとうございます！', furigana: 'ゆうしょう おめでとう ございます！', romaji: 'Yuushou omedetou gozaimasu!', english: 'Congratulations on your championship victory!' }
@@ -12015,7 +12015,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'クラブ',
     reading: 'クラブ',
     romaji: 'kurabu',
-    meaning: "club / activity",
+    meaning: "club",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',
@@ -12060,7 +12060,7 @@ export const WORDS_N5_LIST: WordItem[] = [
     word: 'クリア',
     reading: 'クリア',
     romaji: 'kuria',
-    meaning: "clear / cleared",
+    meaning: "clear",
     pos: 'noun',
     posLabel: 'Noun',
     jlpt: 'N5',

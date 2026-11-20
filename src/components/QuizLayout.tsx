@@ -131,10 +131,10 @@ export const QuizLayout: React.FC<QuizLayoutProps> = ({
           </div>
         </div>
 
-        {/* Mobile Horizontal Pill Bar (always visible below header on < md) */}
+        {/* Mobile 4-Tab Bar (fits without horizontal scroll) */}
         <nav
           aria-label="Mobile Quiz Navigation"
-          className={`md:hidden border-t px-3 py-2 flex items-center gap-1.5 overflow-x-auto scrollbar-thin ${
+          className={`md:hidden border-t px-2 py-1.5 grid grid-cols-4 gap-1 ${
             theme === 'dark'
               ? 'bg-[#0E0E12]/95 border-slate-800'
               : 'bg-[#FAF7F5]/95 border-slate-200/80'
@@ -147,7 +147,7 @@ export const QuizLayout: React.FC<QuizLayoutProps> = ({
                 key={item.id}
                 type="button"
                 onClick={() => handleTabClick(item.id)}
-                className={`px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition cursor-pointer shrink-0 ${
+                className={`px-1.5 py-1.5 rounded-full text-[11px] font-semibold text-center truncate transition cursor-pointer ${
                   isActive
                     ? 'bg-[#FF5E3A] text-white font-bold shadow-xs'
                     : theme === 'dark'
@@ -155,7 +155,7 @@ export const QuizLayout: React.FC<QuizLayoutProps> = ({
                       : 'bg-white text-slate-600 border border-slate-200'
                 }`}
               >
-                {item.label}
+                {item.label.replace(' Quiz', '')}
               </button>
             );
           })}
@@ -192,7 +192,7 @@ export const QuizLayout: React.FC<QuizLayoutProps> = ({
       </header>
 
       {/* MAIN CONTENT */}
-      <main className="flex-1 w-full max-w-4xl mx-auto px-3 sm:px-6 py-4 sm:py-8">
+      <main className="flex-1 w-full max-w-4xl mx-auto px-3 sm:px-6 py-3 sm:py-5">
         {children}
       </main>
     </div>

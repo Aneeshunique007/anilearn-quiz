@@ -34,19 +34,15 @@ body {
   color: #F3F4F6;
 }
 
-/* Smooth Horizontal Scrollbar Styling */
-.scrollbar-thin::-webkit-scrollbar {
-  height: 5px;
+/* Hide scrollbars on desktop and mobile while keeping scroll functional */
+html, body, * {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
-.scrollbar-thin::-webkit-scrollbar-track {
-  background: transparent;
-}
-.scrollbar-thin::-webkit-scrollbar-thumb {
-  background: rgba(156, 163, 175, 0.25);
-  border-radius: 9999px;
-}
-.scrollbar-thin::-webkit-scrollbar-thumb:hover {
-  background: rgba(156, 163, 175, 0.45);
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none;
 }
 
 h1, h2, h3, h4, h5, h6 {

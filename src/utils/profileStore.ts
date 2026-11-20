@@ -152,6 +152,9 @@ export const profileStore = {
         `${PROGRESS_PREFIX}${profileId}_${quizKey}`,
         JSON.stringify({ ...state, updatedAt: new Date().toISOString() })
       );
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('anilearn_quiz_progress_saved'));
+      }
     } catch (e) {
       console.error('Failed to save quiz progress:', e);
     }

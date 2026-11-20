@@ -56,7 +56,7 @@ export const QuizLayout: React.FC<QuizLayoutProps> = ({
             : 'bg-[#FAF7F5]/90 border-slate-200/80 shadow-xs'
         }`}
       >
-        <div className="w-full max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-3">
+        <div className="w-full max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-2.5 flex items-center justify-between gap-3">
           {/* Left: Brand Logo */}
           <button
             type="button"
@@ -217,7 +217,7 @@ export const QuizLayout: React.FC<QuizLayoutProps> = ({
       </header>
 
       {/* MAIN CONTENT */}
-      <main className="flex-1 w-full max-w-4xl mx-auto px-3 sm:px-6 py-3 sm:py-5">
+      <main className="flex-1 w-full max-w-4xl mx-auto px-3 sm:px-6 py-2.5 sm:py-3">
         {children}
       </main>
     </div>

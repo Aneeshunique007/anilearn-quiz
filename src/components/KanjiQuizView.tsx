@@ -366,18 +366,18 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
   const currentRepeatsLeft = currentQuestion ? repeatCounts[currentQuestion.char] || 0 : 0;
 
   return (
-    <div className="space-y-4 sm:space-y-6">
+    <div className="space-y-3">
       {/* Header & Filters */}
-      <div className={`rounded-2xl border p-3.5 sm:p-5 ${surfaceClass}`}>
+      <div className={`rounded-2xl border p-3 sm:p-4 ${surfaceClass}`}>
         <div className="flex items-center justify-between gap-2">
-          <div className="min-w-0">
-            <span className="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FF5E3A] mb-0.5">
-              <Sparkles className="w-3.5 h-3.5" />
-              JLPT N5–N3 Kanji ({sourcePool.length} Available)
-            </span>
-            <h1 className="text-lg sm:text-2xl font-extrabold font-heading tracking-tight truncate">
+          <div className="min-w-0 flex items-center gap-2.5">
+            <h1 className="text-lg sm:text-xl font-extrabold font-heading tracking-tight truncate">
               Kanji Quiz
             </h1>
+            <span className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-bold bg-[#FF5E3A]/10 text-[#FF5E3A]">
+              <Sparkles className="w-3 h-3" />
+              {sourcePool.length}
+            </span>
           </div>
 
           <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
@@ -387,7 +387,7 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
                 audio.playClick();
                 setAutoPlayAudio((prev) => !prev);
               }}
-              className={`inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl text-xs font-bold border transition cursor-pointer ${
+              className={`inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl text-xs font-bold border transition cursor-pointer ${
                 autoPlayAudio
                   ? 'bg-[#FF5E3A]/15 text-[#FF5E3A] border-[#FF5E3A]/40'
                   : pillInactive
@@ -395,6 +395,7 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
               title="Automatically pronounce each Kanji"
             >
               {autoPlayAudio ? <Volume2 className="w-3.5 h-3.5" /> : <VolumeX className="w-3.5 h-3.5" />}
+              <span className="sm:hidden">Auto</span>
               <span className="hidden sm:inline">Auto Audio</span>
             </button>
 
@@ -404,7 +405,7 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
                 audio.playClick();
                 setShowReadings((prev) => !prev);
               }}
-              className={`inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl text-xs font-bold border transition cursor-pointer ${
+              className={`inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl text-xs font-bold border transition cursor-pointer ${
                 showReadings
                   ? 'bg-[#FF5E3A]/15 text-[#FF5E3A] border-[#FF5E3A]/40'
                   : pillInactive
@@ -437,7 +438,7 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
                 audio.playClick();
                 generateQuestions();
               }}
-              className="inline-flex items-center gap-1.5 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-xl text-xs font-bold bg-[#FF5E3A]/10 text-[#FF5E3A] hover:bg-[#FF5E3A] hover:text-white transition cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1.5 rounded-xl text-xs font-bold bg-[#FF5E3A]/10 text-[#FF5E3A] hover:bg-[#FF5E3A] hover:text-white transition cursor-pointer"
               title="Restart Quiz"
             >
               <RotateCcw className="w-3.5 h-3.5" />
@@ -447,36 +448,34 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
         </div>
 
         <div
-          className={`mt-3 pt-3 border-t border-slate-200/70 dark:border-slate-800 flex-col gap-2.5 ${
+          className={`mt-2.5 pt-2.5 border-t border-slate-200/70 dark:border-slate-800 flex-wrap items-center justify-between gap-2 ${
             filtersOpen ? 'flex' : 'hidden sm:flex'
           }`}
         >
-          <div className="flex flex-wrap items-center justify-between gap-2">
-            {/* JLPT Level Filter */}
-            <div className="flex flex-wrap items-center gap-1.5">
-              {(['ALL', 'N5', 'N4', 'N3'] as LevelFilter[]).map((lvl) => (
-                <button
-                  key={lvl}
-                  type="button"
-                  onClick={() => {
-                    audio.playClick();
-                    setLevel(lvl);
-                  }}
-                  className={`px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-semibold border transition cursor-pointer ${
-                    level === lvl
-                      ? 'bg-[#FF5E3A] text-white border-[#FF5E3A]'
-                      : pillInactive
-                  }`}
-                >
-                  {lvl === 'ALL' ? `All (${ALL_JLPT_KANJI_DATABASE.length})` : `JLPT ${lvl}`}
-                </button>
-              ))}
-            </div>
+          {/* JLPT Level Filter */}
+          <div className="flex flex-wrap items-center gap-1.5">
+            {(['ALL', 'N5', 'N4', 'N3'] as LevelFilter[]).map((lvl) => (
+              <button
+                key={lvl}
+                type="button"
+                onClick={() => {
+                  audio.playClick();
+                  setLevel(lvl);
+                }}
+                className={`px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-semibold border transition cursor-pointer ${
+                  level === lvl
+                    ? 'bg-[#FF5E3A] text-white border-[#FF5E3A]'
+                    : pillInactive
+                }`}
+              >
+                {lvl === 'ALL' ? `All (${ALL_JLPT_KANJI_DATABASE.length})` : `JLPT ${lvl}`}
+              </button>
+            ))}
           </div>
 
           {/* Direction Toggle */}
           <div className="flex items-center gap-1.5 flex-wrap">
-            <span className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium mr-0.5">
+            <span className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium">
               Mode:
             </span>
             {(
@@ -493,7 +492,7 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
                   audio.playClick();
                   setDirection(opt.id);
                 }}
-                className={`px-2.5 sm:px-3 py-1 rounded-lg text-[11px] sm:text-xs font-semibold border whitespace-nowrap transition cursor-pointer ${
+                className={`px-2.5 py-1 rounded-lg text-[11px] sm:text-xs font-semibold border whitespace-nowrap transition cursor-pointer ${
                   direction === opt.id
                     ? 'bg-[#FF5E3A] text-white border-[#FF5E3A]'
                     : pillInactive
@@ -577,7 +576,7 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
           </div>
         </div>
       ) : currentQuestion ? (
-        <div className={`rounded-2xl sm:rounded-3xl border p-4 sm:p-8 space-y-5 sm:space-y-6 ${surfaceClass}`}>
+        <div className={`rounded-2xl sm:rounded-3xl border p-4 sm:p-5 space-y-3.5 sm:space-y-4 ${surfaceClass}`}>
           {/* Progress */}
           <div className="space-y-2">
             <div className="flex items-center justify-between text-xs font-semibold text-slate-500 dark:text-slate-400">
@@ -602,22 +601,22 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
           </div>
 
           {/* Prompt */}
-          <div className="text-center py-2 sm:py-4 space-y-3">
+          <div className="text-center py-1 space-y-2.5">
             <div className="inline-flex items-center gap-2">
               <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#FF5E3A]/10 text-[#FF5E3A]">
                 {currentQuestion.jlpt}
               </span>
-              <span className="text-xs font-bold uppercase tracking-widest text-slate-400">
+              <span className="text-[11px] font-bold uppercase tracking-widest text-slate-400">
                 {currentQuestion.mode === 'kanji-to-meaning'
                   ? 'What does this Kanji mean?'
                   : 'Select the matching Kanji'}
               </span>
             </div>
 
-            <div className="flex flex-col items-center gap-3">
+            <div className="flex flex-col items-center gap-2">
               {currentQuestion.mode === 'kanji-to-meaning' ? (
                 <div
-                  className={`w-32 h-32 sm:w-36 sm:h-36 rounded-3xl border-2 flex items-center justify-center text-6xl sm:text-7xl font-black font-jp select-none ${
+                  className={`w-24 h-24 sm:w-28 sm:h-28 rounded-3xl border-2 flex items-center justify-center text-5xl sm:text-6xl font-black font-jp select-none ${
                     theme === 'dark'
                       ? 'bg-[#0E0E12] border-slate-800 text-white'
                       : 'bg-[#FAF7F5] border-slate-200 text-[#1A1A1F]'
@@ -627,7 +626,7 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
                 </div>
               ) : (
                 <div
-                  className={`px-5 py-4 sm:px-8 sm:py-6 rounded-3xl border-2 text-xl sm:text-3xl font-extrabold font-heading select-none w-full max-w-md break-words ${
+                  className={`px-5 py-3.5 sm:px-6 sm:py-4 rounded-3xl border-2 text-xl sm:text-2xl font-extrabold font-heading select-none w-full max-w-md break-words ${
                     theme === 'dark'
                       ? 'bg-[#0E0E12] border-slate-800 text-white'
                       : 'bg-[#FAF7F5] border-slate-200 text-[#1A1A1F]'
@@ -712,7 +711,7 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
                   type="button"
                   disabled={isAnswered}
                   onClick={() => handleSelectOption(option)}
-                  className={`relative py-3.5 px-4 rounded-2xl border-2 font-bold transition cursor-pointer disabled:cursor-default ${
+                  className={`relative py-2.5 sm:py-3 px-4 rounded-2xl border-2 font-bold transition cursor-pointer disabled:cursor-default ${
                     currentQuestion.mode === 'meaning-to-kanji'
                       ? 'text-3xl sm:text-4xl font-jp'
                       : 'text-sm sm:text-base'
@@ -729,7 +728,7 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
 
           {/* Feedback / Recall Flow */}
           {isAnswered && (
-            <div className="pt-4 border-t border-slate-200/70 dark:border-slate-800 space-y-3">
+            <div className="pt-3 border-t border-slate-200/70 dark:border-slate-800 space-y-2.5">
               {isCorrect ? (
                 <>
                   <div className="flex items-center justify-between gap-2">

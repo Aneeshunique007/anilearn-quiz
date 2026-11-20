@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Sun, Moon, Menu, X } from 'lucide-react';
 import audio from '../utils/audio';
+import { QuizProfile } from '../utils/profileStore';
 
 export type QuizTab = 'hiragana' | 'katakana' | 'kanji' | 'words';
 
@@ -9,6 +10,8 @@ interface QuizLayoutProps {
   onSelectTab: (tab: QuizTab) => void;
   theme: 'dark' | 'light';
   onToggleTheme: () => void;
+  activeProfile: QuizProfile;
+  onOpenProfileModal: () => void;
   children: React.ReactNode;
 }
 
@@ -24,6 +27,8 @@ export const QuizLayout: React.FC<QuizLayoutProps> = ({
   onSelectTab,
   theme,
   onToggleTheme,
+  activeProfile,
+  onOpenProfileModal,
   children,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -97,8 +102,28 @@ export const QuizLayout: React.FC<QuizLayoutProps> = ({
             })}
           </nav>
 
-          {/* Right: Theme Toggle + Mobile Menu Button */}
+          {/* Right: Profile Pill + Theme Toggle + Mobile Menu Button */}
           <div className="flex items-center gap-2 shrink-0">
+            <button
+              type="button"
+              onClick={() => {
+                audio.playClick();
+                onOpenProfileModal();
+              }}
+              className={`inline-flex items-center gap-2 px-2.5 sm:px-3 py-1.5 rounded-xl border text-xs font-bold transition cursor-pointer ${
+                theme === 'dark'
+                  ? 'bg-[#17171C] border-slate-800 text-slate-100 hover:border-[#FF5E3A]/60'
+                  : 'bg-white border-slate-200 text-[#1A1A1F] hover:border-[#FF5E3A]/60'
+              }`}
+              title="Switch or create learner profile"
+            >
+              <span className="text-sm leading-none">{activeProfile.avatar}</span>
+              <span className="max-w-[80px] sm:max-w-[110px] truncate">{activeProfile.name}</span>
+              <span className="px-1.5 py-0.5 rounded-md text-[10px] font-extrabold bg-[#FF5E3A]/15 text-[#FF5E3A]">
+                {activeProfile.xp || 0} XP
+              </span>
+            </button>
+
             <button
               type="button"
               onClick={() => {

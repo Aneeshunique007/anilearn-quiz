@@ -15,10 +15,13 @@ import { HIRAGANA_DATA, KATAKANA_DATA, KanaChar } from '../data/kanaData';
 import { getKanaDetails, KanaDetailsData } from '../data/kanaWords';
 import { KanaDetailModal } from './KanaDetailModal';
 import audio from '../utils/audio';
+import { profileStore } from '../utils/profileStore';
 
 interface KanaQuizViewProps {
   script: 'hiragana' | 'katakana';
   theme: 'dark' | 'light';
+  profileId: string;
+  onAddXp: (xp: number) => void;
 }
 
 type CategoryFilter = 'all' | 'basic' | 'dakuten' | 'yoon';
@@ -39,21 +42,42 @@ interface QuestionItem {
   options: string[];
 }
 
-export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => {
-  const [category, setCategory] = useState<CategoryFilter>('all');
-  const [direction, setDirection] = useState<QuizDirection>('kana-to-romaji');
+export const KanaQuizView: React.FC<KanaQuizViewProps> = ({
+  script,
+  theme,
+  profileId,
+  onAddXp,
+}) => {
+  const savedSession = React.useMemo(
+    () => profileStore.loadQuizState<QuestionItem, CategorizedKana>(profileId, script),
+    [profileId, script]
+  );
+  const skipNextGenerateRef = React.useRef<boolean>(Boolean(savedSession));
+
+  const [category, setCategory] = useState<CategoryFilter>(
+    (savedSession?.filter as CategoryFilter) || 'all'
+  );
+  const [direction, setDirection] = useState<QuizDirection>(
+    (savedSession?.direction as QuizDirection) || 'kana-to-romaji'
+  );
   const [autoPlayAudio, setAutoPlayAudio] = useState<boolean>(false);
   const [filtersOpen, setFiltersOpen] = useState<boolean>(false);
 
-  const [questions, setQuestions] = useState<QuestionItem[]>([]);
-  const [initialTotal, setInitialTotal] = useState<number>(0);
-  const [masteredKeys, setMasteredKeys] = useState<string[]>([]);
-  const [repeatCounts, setRepeatCounts] = useState<Record<string, number>>({});
-  const [missedItems, setMissedItems] = useState<CategorizedKana[]>([]);
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [questions, setQuestions] = useState<QuestionItem[]>(savedSession?.questions || []);
+  const [initialTotal, setInitialTotal] = useState<number>(savedSession?.initialTotal || 0);
+  const [masteredKeys, setMasteredKeys] = useState<string[]>(savedSession?.masteredKeys || []);
+  const [repeatCounts, setRepeatCounts] = useState<Record<string, number>>(
+    savedSession?.repeatCounts || {}
+  );
+  const [missedItems, setMissedItems] = useState<CategorizedKana[]>(
+    savedSession?.missedItems || []
+  );
+  const [currentIndex, setCurrentIndex] = useState<number>(savedSession?.currentIndex || 0);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [isAnswered, setIsAnswered] = useState<boolean>(false);
-  const [quizFinished, setQuizFinished] = useState<boolean>(false);
+  const [quizFinished, setQuizFinished] = useState<boolean>(
+    Boolean(savedSession && savedSession.currentIndex >= savedSession.questions.length)
+  );
 
   const [detailModalOpen, setDetailModalOpen] = useState<boolean>(false);
   const [activeKanaDetail, setActiveKanaDetail] = useState<KanaDetailsData | null>(null);
@@ -138,8 +162,39 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
   }, [buildQuestions, sourcePool]);
 
   useEffect(() => {
+    if (skipNextGenerateRef.current) {
+      skipNextGenerateRef.current = false;
+      return;
+    }
     generateQuestions();
   }, [generateQuestions]);
+
+  // Persist progress per profile
+  useEffect(() => {
+    if (questions.length === 0) return;
+    profileStore.saveQuizState<QuestionItem, CategorizedKana>(profileId, script, {
+      filter: category,
+      direction,
+      questions,
+      initialTotal,
+      masteredKeys,
+      repeatCounts,
+      missedItems,
+      currentIndex: quizFinished ? questions.length : currentIndex,
+    });
+  }, [
+    profileId,
+    script,
+    category,
+    direction,
+    questions,
+    initialTotal,
+    masteredKeys,
+    repeatCounts,
+    missedItems,
+    currentIndex,
+    quizFinished,
+  ]);
 
   const currentQuestion = questions[currentIndex];
   const isCorrect = isAnswered && selectedOption === currentQuestion?.correctAnswer;
@@ -257,9 +312,10 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({ script, theme }) => 
       setMasteredKeys((prev) =>
         prev.includes(currentQuestion.char) ? prev : [...prev, currentQuestion.char]
       );
+      onAddXp(10);
       advanceOrFinish(questions.length, currentIndex);
     }
-  }, [currentQuestion, repeatCounts, questions, currentIndex, scheduleRepeat, advanceOrFinish]);
+  }, [currentQuestion, repeatCounts, questions, currentIndex, scheduleRepeat, advanceOrFinish, onAddXp]);
 
   const handlePrevious = useCallback(() => {
     if (currentIndex <= 0) return;

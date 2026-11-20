@@ -18,9 +18,12 @@ import { getKanjiDetails } from '../data/kanjiWords';
 import { KanjiDetailsData } from '../types';
 import { KanjiDetailModal } from './KanjiDetailModal';
 import audio from '../utils/audio';
+import { profileStore } from '../utils/profileStore';
 
 interface KanjiQuizViewProps {
   theme: 'dark' | 'light';
+  profileId: string;
+  onAddXp: (xp: number) => void;
 }
 
 type LevelFilter = 'ALL' | 'N5' | 'N4' | 'N3';
@@ -38,22 +41,42 @@ interface KanjiQuestionItem {
   options: string[];
 }
 
-export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({ theme }) => {
-  const [level, setLevel] = useState<LevelFilter>('ALL');
-  const [direction, setDirection] = useState<QuizDirection>('kanji-to-meaning');
+export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
+  theme,
+  profileId,
+  onAddXp,
+}) => {
+  const savedSession = React.useMemo(
+    () => profileStore.loadQuizState<KanjiQuestionItem, MasterKanjiItem>(profileId, 'kanji'),
+    [profileId]
+  );
+  const skipNextGenerateRef = React.useRef<boolean>(Boolean(savedSession));
+
+  const [level, setLevel] = useState<LevelFilter>(
+    (savedSession?.filter as LevelFilter) || 'ALL'
+  );
+  const [direction, setDirection] = useState<QuizDirection>(
+    (savedSession?.direction as QuizDirection) || 'kanji-to-meaning'
+  );
   const [showReadings, setShowReadings] = useState<boolean>(false);
   const [autoPlayAudio, setAutoPlayAudio] = useState<boolean>(false);
   const [filtersOpen, setFiltersOpen] = useState<boolean>(false);
 
-  const [questions, setQuestions] = useState<KanjiQuestionItem[]>([]);
-  const [initialTotal, setInitialTotal] = useState<number>(0);
-  const [masteredKeys, setMasteredKeys] = useState<string[]>([]);
-  const [repeatCounts, setRepeatCounts] = useState<Record<string, number>>({});
-  const [missedItems, setMissedItems] = useState<MasterKanjiItem[]>([]);
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [questions, setQuestions] = useState<KanjiQuestionItem[]>(savedSession?.questions || []);
+  const [initialTotal, setInitialTotal] = useState<number>(savedSession?.initialTotal || 0);
+  const [masteredKeys, setMasteredKeys] = useState<string[]>(savedSession?.masteredKeys || []);
+  const [repeatCounts, setRepeatCounts] = useState<Record<string, number>>(
+    savedSession?.repeatCounts || {}
+  );
+  const [missedItems, setMissedItems] = useState<MasterKanjiItem[]>(
+    savedSession?.missedItems || []
+  );
+  const [currentIndex, setCurrentIndex] = useState<number>(savedSession?.currentIndex || 0);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [isAnswered, setIsAnswered] = useState<boolean>(false);
-  const [quizFinished, setQuizFinished] = useState<boolean>(false);
+  const [quizFinished, setQuizFinished] = useState<boolean>(
+    Boolean(savedSession && savedSession.currentIndex >= savedSession.questions.length)
+  );
 
   const [detailModalOpen, setDetailModalOpen] = useState<boolean>(false);
   const [activeKanjiDetail, setActiveKanjiDetail] = useState<KanjiDetailsData | null>(null);
@@ -137,8 +160,38 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({ theme }) => {
   }, [buildQuestions, sourcePool]);
 
   useEffect(() => {
+    if (skipNextGenerateRef.current) {
+      skipNextGenerateRef.current = false;
+      return;
+    }
     generateQuestions();
   }, [generateQuestions]);
+
+  // Persist progress per profile
+  useEffect(() => {
+    if (questions.length === 0) return;
+    profileStore.saveQuizState<KanjiQuestionItem, MasterKanjiItem>(profileId, 'kanji', {
+      filter: level,
+      direction,
+      questions,
+      initialTotal,
+      masteredKeys,
+      repeatCounts,
+      missedItems,
+      currentIndex: quizFinished ? questions.length : currentIndex,
+    });
+  }, [
+    profileId,
+    level,
+    direction,
+    questions,
+    initialTotal,
+    masteredKeys,
+    repeatCounts,
+    missedItems,
+    currentIndex,
+    quizFinished,
+  ]);
 
   const currentQuestion = questions[currentIndex];
   const isCorrect = isAnswered && selectedOption === currentQuestion?.correctAnswer;
@@ -238,9 +291,10 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({ theme }) => {
       setMasteredKeys((prev) =>
         prev.includes(currentQuestion.char) ? prev : [...prev, currentQuestion.char]
       );
+      onAddXp(15);
       advanceOrFinish(questions.length, currentIndex);
     }
-  }, [currentQuestion, repeatCounts, questions, currentIndex, scheduleRepeat, advanceOrFinish]);
+  }, [currentQuestion, repeatCounts, questions, currentIndex, scheduleRepeat, advanceOrFinish, onAddXp]);
 
   const handlePrevious = useCallback(() => {
     if (currentIndex <= 0) return;

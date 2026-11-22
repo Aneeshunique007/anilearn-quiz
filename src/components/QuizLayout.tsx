@@ -3,11 +3,12 @@ import { Sun, Moon, GraduationCap, RotateCcw } from 'lucide-react';
 import audio from '../utils/audio';
 import { QuizProfile } from '../utils/profileStore';
 
-export type QuizTab = 'hiragana' | 'katakana' | 'kanji' | 'words';
+export type QuizTab = 'home' | 'hiragana' | 'katakana' | 'kanji' | 'words';
 
 interface QuizLayoutProps {
   activeTab: QuizTab;
   onSelectTab: (tab: QuizTab) => void;
+  onGoHome: () => void;
   theme: 'dark' | 'light';
   onToggleTheme: () => void;
   activeProfile: QuizProfile;
@@ -19,7 +20,7 @@ interface QuizLayoutProps {
   children: React.ReactNode;
 }
 
-const NAV_ITEMS: Array<{ id: QuizTab; label: string }> = [
+const NAV_ITEMS: Array<{ id: Exclude<QuizTab, 'home'>; label: string }> = [
   { id: 'hiragana', label: 'Hiragana Quiz' },
   { id: 'katakana', label: 'Katakana Quiz' },
   { id: 'kanji', label: 'Kanji Quiz' },
@@ -29,6 +30,7 @@ const NAV_ITEMS: Array<{ id: QuizTab; label: string }> = [
 export const QuizLayout: React.FC<QuizLayoutProps> = ({
   activeTab,
   onSelectTab,
+  onGoHome,
   theme,
   onToggleTheme,
   activeProfile,
@@ -68,9 +70,12 @@ export const QuizLayout: React.FC<QuizLayoutProps> = ({
           <div className="flex items-center gap-3 min-w-0">
             <button
               type="button"
-              onClick={() => handleTabClick('hiragana')}
+              onClick={() => {
+                audio.playClick();
+                onGoHome();
+              }}
               className="flex items-center gap-2 cursor-pointer select-none group shrink-0 text-left"
-              title="AniLearn Quiz"
+              title="AniLearn Quiz Home"
             >
               <div className="w-9 h-9 rounded-full bg-[#FF5E3A] flex items-center justify-center text-white shadow-md shadow-orange-500/20 group-hover:scale-105 transition-transform">
                 <span className="font-black text-base font-jp tracking-tighter">あ</span>

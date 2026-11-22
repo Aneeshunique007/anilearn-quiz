@@ -5,12 +5,13 @@ import { KanjiQuizView } from './components/KanjiQuizView';
 import { WordsQuizView } from './components/WordsQuizView';
 import { RetrainHubView } from './components/RetrainHubView';
 import { ReviewPageView } from './components/ReviewPageView';
+import { QuizHomeView } from './components/QuizHomeView';
 import { ProfileModal } from './components/ProfileModal';
 import { profileStore, QuizProfile } from './utils/profileStore';
 import { quizSupabase, CloudAccountUser } from './utils/supabaseClient';
 
 export function App() {
-  const [activeTab, setActiveTab] = useState<QuizTab>('hiragana');
+  const [activeTab, setActiveTab] = useState<QuizTab>('home');
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {
     return (localStorage.getItem('anilearn_quiz_theme') as 'dark' | 'light') || 'light';
   });
@@ -103,6 +104,11 @@ export function App() {
         setReviewOpen(false);
         setActiveTab(tab);
       }}
+      onGoHome={() => {
+        setRetrainOpen(false);
+        setReviewOpen(false);
+        setActiveTab('home');
+      }}
       theme={theme}
       onToggleTheme={handleToggleTheme}
       activeProfile={activeProfile}
@@ -133,6 +139,15 @@ export function App() {
           theme={theme}
           onBack={() => setRetrainOpen(false)}
           onAddXp={handleAddXp}
+        />
+      ) : activeTab === 'home' ? (
+        <QuizHomeView
+          key={`home-${activeProfile.id}-${syncVersion}`}
+          profile={activeProfile}
+          theme={theme}
+          onSelectQuiz={(tab) => setActiveTab(tab)}
+          onOpenRetrain={() => setRetrainOpen(true)}
+          onOpenReview={() => setReviewOpen(true)}
         />
       ) : (
         <>

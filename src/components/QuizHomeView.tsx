@@ -60,7 +60,7 @@ export const QuizHomeView: React.FC<QuizHomeViewProps> = ({
     {
       id: 'hiragana',
       title: 'Hiragana Quiz',
-      jp: 'あいう',
+      jp: 'あ',
       subtitle: 'Basic, Dakuten & Yoon',
       learned: learnedSummary.hiragana,
       total: 104,
@@ -69,7 +69,7 @@ export const QuizHomeView: React.FC<QuizHomeViewProps> = ({
     {
       id: 'katakana',
       title: 'Katakana Quiz',
-      jp: 'アイウ',
+      jp: 'ア',
       subtitle: 'Basic, Dakuten & Yoon',
       learned: learnedSummary.katakana,
       total: 104,
@@ -78,7 +78,7 @@ export const QuizHomeView: React.FC<QuizHomeViewProps> = ({
     {
       id: 'kanji',
       title: 'Kanji Quiz',
-      jp: '漢字',
+      jp: '漢',
       subtitle: 'JLPT N5–N3 & Workbook Days 1–27',
       learned: learnedSummary.kanji,
       total: ALL_JLPT_KANJI_DATABASE.length,
@@ -87,7 +87,7 @@ export const QuizHomeView: React.FC<QuizHomeViewProps> = ({
     {
       id: 'words',
       title: 'Words Quiz',
-      jp: '単語',
+      jp: '語',
       subtitle: 'JLPT N5–N3 Vocabulary',
       learned: learnedSummary.words,
       total: ALL_JLPT_WORDS_DATABASE.length,

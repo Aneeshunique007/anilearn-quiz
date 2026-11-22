@@ -522,7 +522,7 @@ export function formatKanjiReading(rawReading: string): { hiragana: string; roma
   const trimmed = (rawReading || '').trim();
   if (!trimmed) return { hiragana: '', romaji: '' };
   if (/[a-zA-Z]/.test(trimmed)) {
-    const cleanRomaji = trimmed.toLowerCase();
+    const cleanRomaji = trimmed.toLowerCase().replace(/[-.\s]+/g, '');
     return {
       hiragana: romajiToHiragana(cleanRomaji),
       romaji: cleanRomaji,

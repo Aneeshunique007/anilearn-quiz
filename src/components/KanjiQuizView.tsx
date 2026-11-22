@@ -20,7 +20,7 @@ import { KanjiDetailsData } from '../types';
 import { KanjiDetailModal } from './KanjiDetailModal';
 import audio from '../utils/audio';
 import { profileStore } from '../utils/profileStore';
-import { formatKanjiReading } from '../utils/romaji';
+import { formatKanjiReading, getKanjiPronunciation } from '../utils/romaji';
 
 interface KanjiQuizViewProps {
   theme: 'dark' | 'light';
@@ -248,8 +248,8 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
 
   useEffect(() => {
     if (autoPlayAudio && currentQuestion && !quizFinished && !isAnswered) {
-      const raw = currentQuestion.kunyomi[0] || currentQuestion.onyomi[0] || '';
-      const spoken = raw ? formatKanjiReading(raw).hiragana : currentQuestion.char;
+      const primary = getKanjiPronunciation(currentQuestion);
+      const spoken = formatKanjiReading(primary).hiragana;
       audio.speak(spoken || currentQuestion.char);
     }
   }, [autoPlayAudio, currentQuestion, quizFinished, isAnswered]);
@@ -723,9 +723,9 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
               )}
 
               {(showReadings || isAnswered) && (() => {
-                const raw = currentQuestion.kunyomi[0] || currentQuestion.onyomi[0];
-                if (!raw) return null;
-                const { hiragana, romaji } = formatKanjiReading(raw);
+                const primary = getKanjiPronunciation(currentQuestion);
+                if (!primary || primary === currentQuestion.char) return null;
+                const { hiragana, romaji } = formatKanjiReading(primary);
                 return (
                   <div className="flex items-center justify-center text-xs font-jp">
                     <span className="px-3 py-1 rounded-lg bg-orange-500/10 text-[#FF5E3A] font-semibold">
@@ -739,8 +739,8 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
                 <button
                   type="button"
                   onClick={() => {
-                    const raw = currentQuestion.kunyomi[0] || currentQuestion.onyomi[0] || '';
-                    const spoken = raw ? formatKanjiReading(raw).hiragana : currentQuestion.char;
+                    const primary = getKanjiPronunciation(currentQuestion);
+                    const spoken = formatKanjiReading(primary).hiragana;
                     audio.speak(spoken || currentQuestion.char);
                   }}
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-[#FF5E3A]/10 text-[#FF5E3A] hover:bg-[#FF5E3A]/20 transition cursor-pointer"

@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "test": "node -e \"import('rolldown').then(async ({ rolldown }) => { const b = await rolldown({ input: 'src/test.ts', platform: 'node' }); await b.write({ file: '/tmp/anilearn-test.mjs', format: 'esm' }); })\" && node /tmp/anilearn-test.mjs && rm -f /tmp/anilearn-test.mjs"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.119.2",

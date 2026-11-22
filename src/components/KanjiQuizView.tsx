@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { ALL_JLPT_KANJI_DATABASE, MasterKanjiItem } from '../data/kanjiDatabase';
+import { KANJI_WORKBOOK_DAYS } from '../data/kanjiWorkbookDays';
 import { getKanjiDetails } from '../data/kanjiWords';
 import { KanjiDetailsData } from '../types';
 import { KanjiDetailModal } from './KanjiDetailModal';
@@ -52,9 +53,16 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
   );
   const skipNextGenerateRef = React.useRef<boolean>(Boolean(savedSession));
 
+  const initialFilterParts = (savedSession?.filter || 'ALL|ALL').split('|');
   const [level, setLevel] = useState<LevelFilter>(
-    (savedSession?.filter as LevelFilter) || 'ALL'
+    (initialFilterParts[0] as LevelFilter) || 'ALL'
   );
+  const [selectedDay, setSelectedDay] = useState<'ALL' | number>(() => {
+    const raw = initialFilterParts[1];
+    if (!raw || raw === 'ALL') return 'ALL';
+    const num = Number(raw);
+    return Number.isFinite(num) && num >= 1 && num <= 27 ? num : 'ALL';
+  });
   const [direction, setDirection] = useState<QuizDirection>(
     (savedSession?.direction as QuizDirection) || 'kanji-to-meaning'
   );
@@ -81,10 +89,40 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
   const [detailModalOpen, setDetailModalOpen] = useState<boolean>(false);
   const [activeKanjiDetail, setActiveKanjiDetail] = useState<KanjiDetailsData | null>(null);
 
+  const kanjiByChar = useMemo(() => {
+    const map = new Map<string, MasterKanjiItem>();
+    for (const k of ALL_JLPT_KANJI_DATABASE) {
+      map.set(k.char, k);
+    }
+    return map;
+  }, []);
+
   const sourcePool = useMemo<MasterKanjiItem[]>(() => {
+    if (selectedDay !== 'ALL') {
+      const dayEntry = KANJI_WORKBOOK_DAYS.find((d) => d.day === selectedDay);
+      if (dayEntry) {
+        const dayItems: MasterKanjiItem[] = dayEntry.kanji.map((wk, idx) => {
+          const existing = kanjiByChar.get(wk.char);
+          if (existing) return existing;
+          return {
+            id: `wb-${selectedDay}-${idx}`,
+            char: wk.char,
+            meaning: wk.meaning,
+            onyomi: [],
+            kunyomi: wk.reading ? [wk.reading] : [],
+            strokes: 0,
+            jlpt: wk.level,
+            radical: wk.char,
+            mnemonic: `Workbook Day ${selectedDay}: ${wk.word} (${wk.reading}) — ${wk.meaning}`,
+            sentences: [],
+          } as MasterKanjiItem;
+        });
+        return level === 'ALL' ? dayItems : dayItems.filter((k) => k.jlpt === level);
+      }
+    }
     if (level === 'ALL') return ALL_JLPT_KANJI_DATABASE;
     return ALL_JLPT_KANJI_DATABASE.filter((k) => k.jlpt === level);
-  }, [level]);
+  }, [level, selectedDay, kanjiByChar]);
 
   const byLevel = useMemo<Record<'N5' | 'N4' | 'N3', MasterKanjiItem[]>>(() => {
     return {
@@ -171,7 +209,7 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
   useEffect(() => {
     if (questions.length === 0) return;
     profileStore.saveQuizState<KanjiQuestionItem, MasterKanjiItem>(profileId, 'kanji', {
-      filter: level,
+      filter: `${level}|${selectedDay}`,
       direction,
       questions,
       initialTotal,
@@ -183,6 +221,7 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
   }, [
     profileId,
     level,
+    selectedDay,
     direction,
     questions,
     initialTotal,
@@ -454,7 +493,7 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
             filtersOpen ? 'flex' : 'hidden sm:flex'
           }`}
         >
-          {/* JLPT Level Filter */}
+          {/* JLPT Level & Workbook Day Filter */}
           <div className="flex flex-wrap items-center gap-1.5">
             {(['ALL', 'N5', 'N4', 'N3'] as LevelFilter[]).map((lvl) => (
               <button
@@ -463,9 +502,10 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
                 onClick={() => {
                   audio.playClick();
                   setLevel(lvl);
+                  setSelectedDay('ALL');
                 }}
                 className={`px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-semibold border transition cursor-pointer ${
-                  level === lvl
+                  level === lvl && selectedDay === 'ALL'
                     ? 'bg-[#FF5E3A] text-white border-[#FF5E3A]'
                     : pillInactive
                 }`}
@@ -473,6 +513,29 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
                 {lvl === 'ALL' ? `All (${ALL_JLPT_KANJI_DATABASE.length})` : `JLPT ${lvl}`}
               </button>
             ))}
+
+            <select
+              aria-label="Workbook Day Filter"
+              value={selectedDay}
+              onChange={(e) => {
+                audio.playClick();
+                const v = e.target.value;
+                setSelectedDay(v === 'ALL' ? 'ALL' : Number(v));
+                if (v !== 'ALL') setLevel('ALL');
+              }}
+              className={`px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-semibold border outline-none cursor-pointer ${
+                selectedDay !== 'ALL'
+                  ? 'bg-[#FF5E3A] text-white border-[#FF5E3A]'
+                  : pillInactive
+              }`}
+            >
+              <option value="ALL">All Days (Workbook)</option>
+              {KANJI_WORKBOOK_DAYS.map((d) => (
+                <option key={d.day} value={d.day}>
+                  Day {d.day} ({d.range})
+                </option>
+              ))}
+            </select>
           </div>
 
           {/* Direction Toggle */}

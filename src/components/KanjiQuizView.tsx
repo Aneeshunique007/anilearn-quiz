@@ -200,7 +200,9 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
 
   useEffect(() => {
     if (autoPlayAudio && currentQuestion && !quizFinished && !isAnswered) {
-      audio.speak(currentQuestion.char);
+      audio.speak(
+        currentQuestion.kunyomi[0] || currentQuestion.onyomi[0] || currentQuestion.char
+      );
     }
   }, [autoPlayAudio, currentQuestion, quizFinished, isAnswered]);
 
@@ -654,7 +656,13 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
               <div className="flex items-center gap-2">
                 <button
                   type="button"
-                  onClick={() => audio.speak(currentQuestion.char)}
+                  onClick={() =>
+                    audio.speak(
+                      currentQuestion.kunyomi[0] ||
+                        currentQuestion.onyomi[0] ||
+                        currentQuestion.char
+                    )
+                  }
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-[#FF5E3A]/10 text-[#FF5E3A] hover:bg-[#FF5E3A]/20 transition cursor-pointer"
                 >
                   <Volume2 className="w-3.5 h-3.5" />

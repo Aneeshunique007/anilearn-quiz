@@ -4,6 +4,7 @@ import { QuizLayout, QuizTab } from './components/QuizLayout';
 import { KanaQuizView } from './components/KanaQuizView';
 import { KanjiQuizView } from './components/KanjiQuizView';
 import { WordsQuizView } from './components/WordsQuizView';
+import { RetrainHubView } from './components/RetrainHubView';
 import { ProfileModal } from './components/ProfileModal';
 import { profileStore, QuizProfile } from './utils/profileStore';
 import { quizSupabase } from './utils/supabaseClient';
@@ -19,6 +20,7 @@ export function App() {
     profileStore.getActiveProfile()
   );
   const [profileModalOpen, setProfileModalOpen] = useState<boolean>(false);
+  const [retrainOpen, setRetrainOpen] = useState<boolean>(false);
   const [cloudUser, setCloudUser] = useState<User | null>(null);
   const [syncVersion, setSyncVersion] = useState<number>(0);
 
@@ -98,45 +100,62 @@ export function App() {
   return (
     <QuizLayout
       activeTab={activeTab}
-      onSelectTab={setActiveTab}
+      onSelectTab={(tab) => {
+        setRetrainOpen(false);
+        setActiveTab(tab);
+      }}
       theme={theme}
       onToggleTheme={handleToggleTheme}
       activeProfile={activeProfile}
       onOpenProfileModal={() => setProfileModalOpen(true)}
+      isRetrainOpen={retrainOpen}
+      onToggleRetrain={() => setRetrainOpen((prev) => !prev)}
     >
-      {activeTab === 'hiragana' && (
-        <KanaQuizView
-          key={`hiragana-${activeProfile.id}-${syncVersion}`}
-          script="hiragana"
-          theme={theme}
+      {retrainOpen ? (
+        <RetrainHubView
+          key={`retrain-${activeProfile.id}-${syncVersion}`}
           profileId={activeProfile.id}
+          theme={theme}
+          onBack={() => setRetrainOpen(false)}
           onAddXp={handleAddXp}
         />
-      )}
-      {activeTab === 'katakana' && (
-        <KanaQuizView
-          key={`katakana-${activeProfile.id}-${syncVersion}`}
-          script="katakana"
-          theme={theme}
-          profileId={activeProfile.id}
-          onAddXp={handleAddXp}
-        />
-      )}
-      {activeTab === 'kanji' && (
-        <KanjiQuizView
-          key={`kanji-${activeProfile.id}-${syncVersion}`}
-          theme={theme}
-          profileId={activeProfile.id}
-          onAddXp={handleAddXp}
-        />
-      )}
-      {activeTab === 'words' && (
-        <WordsQuizView
-          key={`words-${activeProfile.id}-${syncVersion}`}
-          theme={theme}
-          profileId={activeProfile.id}
-          onAddXp={handleAddXp}
-        />
+      ) : (
+        <>
+          {activeTab === 'hiragana' && (
+            <KanaQuizView
+              key={`hiragana-${activeProfile.id}-${syncVersion}`}
+              script="hiragana"
+              theme={theme}
+              profileId={activeProfile.id}
+              onAddXp={handleAddXp}
+            />
+          )}
+          {activeTab === 'katakana' && (
+            <KanaQuizView
+              key={`katakana-${activeProfile.id}-${syncVersion}`}
+              script="katakana"
+              theme={theme}
+              profileId={activeProfile.id}
+              onAddXp={handleAddXp}
+            />
+          )}
+          {activeTab === 'kanji' && (
+            <KanjiQuizView
+              key={`kanji-${activeProfile.id}-${syncVersion}`}
+              theme={theme}
+              profileId={activeProfile.id}
+              onAddXp={handleAddXp}
+            />
+          )}
+          {activeTab === 'words' && (
+            <WordsQuizView
+              key={`words-${activeProfile.id}-${syncVersion}`}
+              theme={theme}
+              profileId={activeProfile.id}
+              onAddXp={handleAddXp}
+            />
+          )}
+        </>
       )}
 
       <ProfileModal

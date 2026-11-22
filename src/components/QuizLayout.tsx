@@ -116,8 +116,8 @@ export const QuizLayout: React.FC<QuizLayoutProps> = ({
               }}
               className={`w-9 h-9 rounded-full border-2 flex items-center justify-center transition cursor-pointer ${
                 isRetrainOpen
-                  ? 'bg-emerald-500 text-white border-emerald-500 shadow-md shadow-emerald-500/25'
-                  : 'border-emerald-500/60 bg-emerald-500/10 text-emerald-500 hover:bg-emerald-500/20'
+                  ? 'bg-[#FF5E3A] text-white border-[#FF5E3A] shadow-md shadow-orange-500/25'
+                  : 'border-[#FF5E3A]/60 bg-[#FF5E3A]/10 text-[#FF5E3A] hover:bg-[#FF5E3A]/20'
               }`}
               title="Open Retrain Hub"
               aria-label="Open Retrain Hub"

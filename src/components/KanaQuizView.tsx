@@ -101,8 +101,16 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({
   }, [categorizedPool, category]);
 
   const buildQuestions = useCallback(
-    (itemsPool: CategorizedKana[]) => {
-      const shuffled = [...itemsPool].sort(() => 0.5 - Math.random());
+    (itemsPool: CategorizedKana[], ignoreLearned = false) => {
+      const learnedSet = new Set(profileStore.getLearnedList(profileId, script));
+      const alreadyMastered = ignoreLearned
+        ? []
+        : itemsPool.filter((k) => learnedSet.has(k.char)).map((k) => k.char);
+      const targetPool = ignoreLearned
+        ? itemsPool
+        : itemsPool.filter((k) => !learnedSet.has(k.char));
+
+      const shuffled = [...targetPool].sort(() => 0.5 - Math.random());
 
       const items: QuestionItem[] = shuffled.map((item) => {
         const mode: 'kana-to-romaji' | 'romaji-to-kana' =
@@ -145,16 +153,16 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({
       });
 
       setQuestions(items);
-      setInitialTotal(items.length);
-      setMasteredKeys([]);
+      setInitialTotal(itemsPool.length);
+      setMasteredKeys(alreadyMastered);
       setRepeatCounts({});
       setMissedItems([]);
       setCurrentIndex(0);
       setSelectedOption(null);
       setIsAnswered(false);
-      setQuizFinished(false);
+      setQuizFinished(items.length === 0 && itemsPool.length > 0);
     },
-    [categorizedPool, sourcePool, direction, script]
+    [categorizedPool, sourcePool, direction, script, profileId]
   );
 
   const generateQuestions = useCallback(() => {
@@ -312,10 +320,11 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({
       setMasteredKeys((prev) =>
         prev.includes(currentQuestion.char) ? prev : [...prev, currentQuestion.char]
       );
+      profileStore.markItemLearned(profileId, script, currentQuestion.char);
       onAddXp(10);
       advanceOrFinish(questions.length, currentIndex);
     }
-  }, [currentQuestion, repeatCounts, questions, currentIndex, scheduleRepeat, advanceOrFinish, onAddXp]);
+  }, [currentQuestion, repeatCounts, questions, currentIndex, scheduleRepeat, advanceOrFinish, onAddXp, profileId, script]);
 
   const handlePrevious = useCallback(() => {
     if (currentIndex <= 0) return;
@@ -563,7 +572,7 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({
                 type="button"
                 onClick={() => {
                   audio.playClick();
-                  buildQuestions(missedItems);
+                  buildQuestions(missedItems, true);
                 }}
                 className={`inline-flex items-center gap-2 px-5 py-3 rounded-xl border font-bold text-sm transition cursor-pointer ${pillInactive}`}
               >
@@ -574,12 +583,23 @@ export const KanaQuizView: React.FC<KanaQuizViewProps> = ({
               type="button"
               onClick={() => {
                 audio.playClick();
-                generateQuestions();
+                buildQuestions(sourcePool, true);
               }}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#FF5E3A] hover:bg-[#E84E29] text-white font-bold text-sm shadow-md shadow-orange-500/20 transition cursor-pointer"
             >
               <RotateCcw className="w-4 h-4" />
-              Practice Again
+              Practice All Again
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                audio.playClick();
+                profileStore.clearLearnedList(profileId, script);
+                generateQuestions();
+              }}
+              className={`inline-flex items-center gap-2 px-4 py-3 rounded-xl border font-bold text-sm transition cursor-pointer ${pillInactive}`}
+            >
+              Reset Learned
             </button>
           </div>
         </div>

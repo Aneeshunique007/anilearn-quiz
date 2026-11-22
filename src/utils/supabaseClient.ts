@@ -167,8 +167,13 @@ class QuizSupabaseService {
         const cloudObj = cloudState as {
           questions?: unknown[];
           masteredKeys?: string[];
+          learnedKeys?: string[];
           updatedAt?: string;
         };
+        // Additive merge of cumulative learned items
+        for (const k of cloudObj.learnedKeys || cloudObj.masteredKeys || []) {
+          profileStore.markItemLearned(localProfileId, key, k);
+        }
         const localObj = profileStore.loadQuizState(localProfileId, key);
 
         if (!localObj) {
@@ -200,15 +205,21 @@ class QuizSupabaseService {
     const profiles = profileStore.getProfiles();
     const active = profiles.find((p) => p.id === localProfileId);
 
+    const buildStatePayload = (key: 'hiragana' | 'katakana' | 'kanji' | 'words') => {
+      const s = profileStore.loadQuizState(localProfileId, key);
+      const learnedKeys = profileStore.getLearnedList(localProfileId, key);
+      return s ? { ...s, learnedKeys } : learnedKeys.length > 0 ? { learnedKeys } : null;
+    };
+
     const payload: CloudQuizProgressRow = {
       user_id: user.id,
       display_name:
         (user.user_metadata?.display_name as string) || active?.name || user.email || 'Learner',
       xp: active?.xp || 0,
-      hiragana_state: profileStore.loadQuizState(localProfileId, 'hiragana'),
-      katakana_state: profileStore.loadQuizState(localProfileId, 'katakana'),
-      kanji_state: profileStore.loadQuizState(localProfileId, 'kanji'),
-      words_state: profileStore.loadQuizState(localProfileId, 'words'),
+      hiragana_state: buildStatePayload('hiragana'),
+      katakana_state: buildStatePayload('katakana'),
+      kanji_state: buildStatePayload('kanji'),
+      words_state: buildStatePayload('words'),
       updated_at: new Date().toISOString(),
     };
 

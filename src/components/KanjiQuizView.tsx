@@ -133,8 +133,16 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
   }, []);
 
   const buildQuestions = useCallback(
-    (itemsPool: MasterKanjiItem[]) => {
-      const shuffled = [...itemsPool].sort(() => 0.5 - Math.random());
+    (itemsPool: MasterKanjiItem[], ignoreLearned = false) => {
+      const learnedSet = new Set(profileStore.getLearnedList(profileId, 'kanji'));
+      const alreadyMastered = ignoreLearned
+        ? []
+        : itemsPool.filter((k) => learnedSet.has(k.char)).map((k) => k.char);
+      const targetPool = ignoreLearned
+        ? itemsPool
+        : itemsPool.filter((k) => !learnedSet.has(k.char));
+
+      const shuffled = [...targetPool].sort(() => 0.5 - Math.random());
 
       const items: KanjiQuestionItem[] = shuffled.map((item) => {
         const mode: 'kanji-to-meaning' | 'meaning-to-kanji' =
@@ -181,16 +189,16 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
       });
 
       setQuestions(items);
-      setInitialTotal(items.length);
-      setMasteredKeys([]);
+      setInitialTotal(itemsPool.length);
+      setMasteredKeys(alreadyMastered);
       setRepeatCounts({});
       setMissedItems([]);
       setCurrentIndex(0);
       setSelectedOption(null);
       setIsAnswered(false);
-      setQuizFinished(false);
+      setQuizFinished(items.length === 0 && itemsPool.length > 0);
     },
-    [byLevel, direction]
+    [byLevel, direction, profileId]
   );
 
   const generateQuestions = useCallback(() => {
@@ -332,10 +340,11 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
       setMasteredKeys((prev) =>
         prev.includes(currentQuestion.char) ? prev : [...prev, currentQuestion.char]
       );
+      profileStore.markItemLearned(profileId, 'kanji', currentQuestion.char);
       onAddXp(15);
       advanceOrFinish(questions.length, currentIndex);
     }
-  }, [currentQuestion, repeatCounts, questions, currentIndex, scheduleRepeat, advanceOrFinish, onAddXp]);
+  }, [currentQuestion, repeatCounts, questions, currentIndex, scheduleRepeat, advanceOrFinish, onAddXp, profileId]);
 
   const handlePrevious = useCallback(() => {
     if (currentIndex <= 0) return;
@@ -620,7 +629,7 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
                 type="button"
                 onClick={() => {
                   audio.playClick();
-                  buildQuestions(missedItems);
+                  buildQuestions(missedItems, true);
                 }}
                 className={`inline-flex items-center gap-2 px-5 py-3 rounded-xl border font-bold text-sm transition cursor-pointer ${pillInactive}`}
               >
@@ -631,12 +640,23 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
               type="button"
               onClick={() => {
                 audio.playClick();
-                generateQuestions();
+                buildQuestions(sourcePool, true);
               }}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#FF5E3A] hover:bg-[#E84E29] text-white font-bold text-sm shadow-md shadow-orange-500/20 transition cursor-pointer"
             >
               <RotateCcw className="w-4 h-4" />
-              Practice Again
+              Practice All Again
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                audio.playClick();
+                profileStore.clearLearnedList(profileId, 'kanji');
+                generateQuestions();
+              }}
+              className={`inline-flex items-center gap-2 px-4 py-3 rounded-xl border font-bold text-sm transition cursor-pointer ${pillInactive}`}
+            >
+              Reset Learned
             </button>
           </div>
         </div>

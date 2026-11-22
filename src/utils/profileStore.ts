@@ -22,6 +22,7 @@ export interface SavedQuizSession<TQuestion, TMissed> {
 const PROFILES_KEY = 'anilearn_quiz_profiles';
 const ACTIVE_PROFILE_KEY = 'anilearn_quiz_active_profile_id';
 const PROGRESS_PREFIX = 'anilearn_quiz_progress_';
+const LEARNED_PREFIX = 'anilearn_quiz_learned_';
 
 export const AVATAR_OPTIONS = ['あ', 'カ', '漢', '語', '学', '道', '力', '光'];
 
@@ -98,6 +99,7 @@ export const profileStore = {
     try {
       for (const quizKey of ['hiragana', 'katakana', 'kanji', 'words']) {
         localStorage.removeItem(`${PROGRESS_PREFIX}${id}_${quizKey}`);
+        localStorage.removeItem(`${LEARNED_PREFIX}${id}_${quizKey}`);
       }
     } catch {}
 
@@ -169,6 +171,50 @@ export const profileStore = {
     } catch {}
   },
 
+  getLearnedList(
+    profileId: string,
+    quizKey: 'hiragana' | 'katakana' | 'kanji' | 'words'
+  ): string[] {
+    try {
+      const raw = localStorage.getItem(`${LEARNED_PREFIX}${profileId}_${quizKey}`);
+      if (!raw) return [];
+      const parsed = JSON.parse(raw);
+      return Array.isArray(parsed) ? parsed : [];
+    } catch {
+      return [];
+    }
+  },
+
+  markItemLearned(
+    profileId: string,
+    quizKey: 'hiragana' | 'katakana' | 'kanji' | 'words',
+    itemKey: string
+  ): string[] {
+    const current = this.getLearnedList(profileId, quizKey);
+    if (current.includes(itemKey)) return current;
+    const updated = [...current, itemKey];
+    try {
+      localStorage.setItem(`${LEARNED_PREFIX}${profileId}_${quizKey}`, JSON.stringify(updated));
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('anilearn_quiz_progress_saved'));
+      }
+    } catch {}
+    return updated;
+  },
+
+  clearLearnedList(
+    profileId: string,
+    quizKey: 'hiragana' | 'katakana' | 'kanji' | 'words'
+  ): void {
+    try {
+      localStorage.removeItem(`${LEARNED_PREFIX}${profileId}_${quizKey}`);
+      localStorage.removeItem(`${PROGRESS_PREFIX}${profileId}_${quizKey}`);
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('anilearn_quiz_progress_saved'));
+      }
+    } catch {}
+  },
+
   getProfileMasteredSummary(profileId: string): Record<'hiragana' | 'katakana' | 'kanji' | 'words', number> {
     const summary: Record<'hiragana' | 'katakana' | 'kanji' | 'words', number> = {
       hiragana: 0,
@@ -177,10 +223,9 @@ export const profileStore = {
       words: 0,
     };
     for (const key of ['hiragana', 'katakana', 'kanji', 'words'] as const) {
+      const learned = this.getLearnedList(profileId, key);
       const saved = this.loadQuizState(profileId, key);
-      if (saved && Array.isArray(saved.masteredKeys)) {
-        summary[key] = saved.masteredKeys.length;
-      }
+      summary[key] = Math.max(learned.length, saved?.masteredKeys?.length || 0);
     }
     return summary;
   },

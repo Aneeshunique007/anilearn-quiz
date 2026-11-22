@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Sun, Moon, Menu, X, GraduationCap } from 'lucide-react';
+import { Sun, Moon, Menu, X, GraduationCap, RotateCcw } from 'lucide-react';
 import audio from '../utils/audio';
 import { QuizProfile } from '../utils/profileStore';
 
@@ -14,6 +14,8 @@ interface QuizLayoutProps {
   onOpenProfileModal: () => void;
   isRetrainOpen: boolean;
   onToggleRetrain: () => void;
+  isReviewOpen: boolean;
+  onToggleReview: () => void;
   children: React.ReactNode;
 }
 
@@ -33,6 +35,8 @@ export const QuizLayout: React.FC<QuizLayoutProps> = ({
   onOpenProfileModal,
   isRetrainOpen,
   onToggleRetrain,
+  isReviewOpen,
+  onToggleReview,
   children,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -123,6 +127,23 @@ export const QuizLayout: React.FC<QuizLayoutProps> = ({
               aria-label="Open Retrain Hub"
             >
               <GraduationCap className="w-4 h-4" />
+            </button>
+
+            <button
+              type="button"
+              onClick={() => {
+                audio.playClick();
+                onToggleReview();
+              }}
+              className={`w-9 h-9 rounded-full border-2 flex items-center justify-center transition cursor-pointer ${
+                isReviewOpen
+                  ? 'bg-[#FF5E3A] text-white border-[#FF5E3A] shadow-md shadow-orange-500/25'
+                  : 'border-[#FF5E3A]/60 bg-[#FF5E3A]/10 text-[#FF5E3A] hover:bg-[#FF5E3A]/20'
+              }`}
+              title="Open Review Page (3-Repeat Queue)"
+              aria-label="Open Review Page"
+            >
+              <RotateCcw className="w-4 h-4" />
             </button>
 
             <button

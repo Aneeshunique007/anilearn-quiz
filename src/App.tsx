@@ -5,6 +5,7 @@ import { KanaQuizView } from './components/KanaQuizView';
 import { KanjiQuizView } from './components/KanjiQuizView';
 import { WordsQuizView } from './components/WordsQuizView';
 import { RetrainHubView } from './components/RetrainHubView';
+import { ReviewPageView } from './components/ReviewPageView';
 import { ProfileModal } from './components/ProfileModal';
 import { profileStore, QuizProfile } from './utils/profileStore';
 import { quizSupabase } from './utils/supabaseClient';
@@ -21,6 +22,7 @@ export function App() {
   );
   const [profileModalOpen, setProfileModalOpen] = useState<boolean>(false);
   const [retrainOpen, setRetrainOpen] = useState<boolean>(false);
+  const [reviewOpen, setReviewOpen] = useState<boolean>(false);
   const [cloudUser, setCloudUser] = useState<User | null>(null);
   const [syncVersion, setSyncVersion] = useState<number>(0);
 
@@ -102,6 +104,7 @@ export function App() {
       activeTab={activeTab}
       onSelectTab={(tab) => {
         setRetrainOpen(false);
+        setReviewOpen(false);
         setActiveTab(tab);
       }}
       theme={theme}
@@ -109,9 +112,25 @@ export function App() {
       activeProfile={activeProfile}
       onOpenProfileModal={() => setProfileModalOpen(true)}
       isRetrainOpen={retrainOpen}
-      onToggleRetrain={() => setRetrainOpen((prev) => !prev)}
+      onToggleRetrain={() => {
+        setReviewOpen(false);
+        setRetrainOpen((prev) => !prev);
+      }}
+      isReviewOpen={reviewOpen}
+      onToggleReview={() => {
+        setRetrainOpen(false);
+        setReviewOpen((prev) => !prev);
+      }}
     >
-      {retrainOpen ? (
+      {reviewOpen ? (
+        <ReviewPageView
+          key={`review-${activeProfile.id}-${syncVersion}`}
+          profileId={activeProfile.id}
+          theme={theme}
+          onBack={() => setReviewOpen(false)}
+          onAddXp={handleAddXp}
+        />
+      ) : retrainOpen ? (
         <RetrainHubView
           key={`retrain-${activeProfile.id}-${syncVersion}`}
           profileId={activeProfile.id}

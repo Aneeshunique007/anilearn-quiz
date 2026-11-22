@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Sun, Moon, Menu, X, GraduationCap, RotateCcw } from 'lucide-react';
+import React from 'react';
+import { Sun, Moon, GraduationCap, RotateCcw } from 'lucide-react';
 import audio from '../utils/audio';
 import { QuizProfile } from '../utils/profileStore';
 
@@ -39,13 +39,12 @@ export const QuizLayout: React.FC<QuizLayoutProps> = ({
   onToggleReview,
   children,
 }) => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   const handleTabClick = (tab: QuizTab) => {
     audio.playClick();
     onSelectTab(tab);
-    setMobileMenuOpen(false);
   };
+
+  const profileInitial = (activeProfile.name?.trim()?.[0] || activeProfile.avatar || 'A').toUpperCase();
 
   return (
     <div
@@ -65,53 +64,69 @@ export const QuizLayout: React.FC<QuizLayoutProps> = ({
         }`}
       >
         <div className="w-full max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-2.5 flex items-center justify-between gap-3">
-          {/* Left: Brand Logo */}
-          <button
-            type="button"
-            onClick={() => handleTabClick('hiragana')}
-            className="flex items-center gap-2.5 cursor-pointer select-none group shrink-0 text-left"
-          >
-            <div className="w-9 h-9 rounded-xl bg-[#FF5E3A] flex items-center justify-center text-white shadow-md shadow-orange-500/20 group-hover:scale-105 transition-transform">
-              <span className="font-black text-base font-jp tracking-tighter">あ</span>
-            </div>
-            <span className="text-lg sm:text-xl font-extrabold tracking-tight font-heading group-hover:text-[#FF5E3A] transition-colors">
-              AniLearn Quiz{' '}
-              <span className="text-[#FF5E3A] text-[10px] sm:text-xs font-semibold uppercase ml-0.5 tracking-wider hidden sm:inline">
-                日本語
+          {/* Left: Brand Logo + 4-Tab Pill (Desktop) */}
+          <div className="flex items-center gap-3 min-w-0">
+            <button
+              type="button"
+              onClick={() => handleTabClick('hiragana')}
+              className="flex items-center gap-2 cursor-pointer select-none group shrink-0 text-left"
+              title="AniLearn Quiz"
+            >
+              <div className="w-9 h-9 rounded-full bg-[#FF5E3A] flex items-center justify-center text-white shadow-md shadow-orange-500/20 group-hover:scale-105 transition-transform">
+                <span className="font-black text-base font-jp tracking-tighter">あ</span>
+              </div>
+              <span className="text-base sm:text-lg font-extrabold tracking-tight font-heading group-hover:text-[#FF5E3A] transition-colors lg:hidden xl:inline">
+                AniLearn Quiz
               </span>
-            </span>
-          </button>
+            </button>
 
-          {/* Center: 4 Quiz Headings Only (Desktop) */}
-          <nav
-            aria-label="Quiz Navigation"
-            className={`hidden md:flex items-center p-1 rounded-full border text-xs sm:text-sm font-semibold shadow-xs gap-1 ${
-              theme === 'dark'
-                ? 'bg-[#17171C]/90 border-slate-800'
-                : 'bg-white/90 border-slate-200/80 shadow-2xs'
-            }`}
-          >
-            {NAV_ITEMS.map((item) => {
-              const isActive = activeTab === item.id;
-              return (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={() => handleTabClick(item.id)}
-                  className={`px-4 py-1.5 rounded-full transition cursor-pointer whitespace-nowrap ${
-                    isActive
-                      ? 'bg-[#FF5E3A] text-white shadow-sm shadow-orange-500/25 font-bold'
-                      : 'text-slate-600 dark:text-slate-300 hover:text-[#FF5E3A] hover:bg-orange-500/10'
-                  }`}
-                >
-                  {item.label}
-                </button>
-              );
-            })}
-          </nav>
+            <nav
+              aria-label="Quiz Navigation"
+              className={`hidden md:flex items-center p-1 rounded-full border text-xs font-semibold shadow-xs gap-0.5 ${
+                theme === 'dark'
+                  ? 'bg-[#17171C]/90 border-slate-800'
+                  : 'bg-white/90 border-slate-200/80 shadow-2xs'
+              }`}
+            >
+              {NAV_ITEMS.map((item) => {
+                const isActive = activeTab === item.id && !isRetrainOpen && !isReviewOpen;
+                return (
+                  <button
+                    key={item.id}
+                    type="button"
+                    onClick={() => handleTabClick(item.id)}
+                    className={`px-3.5 py-1.5 rounded-full transition cursor-pointer whitespace-nowrap ${
+                      isActive
+                        ? 'bg-[#FF5E3A] text-white shadow-sm shadow-orange-500/25 font-bold'
+                        : 'text-slate-600 dark:text-slate-300 hover:text-[#FF5E3A] hover:bg-orange-500/10'
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                );
+              })}
+            </nav>
+          </div>
 
-          {/* Right: Retrain Button + Profile Pill + Theme Toggle + Mobile Menu Button */}
-          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+          {/* Right: Circular Icon Actions (Theme, Retrain, Review, Profile) */}
+          <div className="flex items-center gap-2 shrink-0">
+            <button
+              type="button"
+              onClick={() => {
+                audio.playClick();
+                onToggleTheme();
+              }}
+              aria-label="Toggle theme"
+              className={`w-9 h-9 rounded-full border flex items-center justify-center transition cursor-pointer ${
+                theme === 'dark'
+                  ? 'bg-[#17171C] border-slate-800 text-amber-400 hover:border-slate-700'
+                  : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300'
+              }`}
+              title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+            >
+              {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            </button>
+
             <button
               type="button"
               onClick={() => {
@@ -152,48 +167,11 @@ export const QuizLayout: React.FC<QuizLayoutProps> = ({
                 audio.playClick();
                 onOpenProfileModal();
               }}
-              className={`inline-flex items-center gap-2 px-2.5 sm:px-3 py-1.5 rounded-xl border text-xs font-bold transition cursor-pointer ${
-                theme === 'dark'
-                  ? 'bg-[#17171C] border-slate-800 text-slate-100 hover:border-[#FF5E3A]/60'
-                  : 'bg-white border-slate-200 text-[#1A1A1F] hover:border-[#FF5E3A]/60'
-              }`}
-              title="Switch or create learner profile"
+              className="w-9 h-9 rounded-full bg-gradient-to-br from-[#FF5E3A] to-[#FF8A65] text-white font-extrabold text-sm flex items-center justify-center shadow-md shadow-orange-500/25 hover:scale-105 transition-transform cursor-pointer"
+              title={`${activeProfile.name} (${activeProfile.xp || 0} XP) — Switch / Sync Account`}
+              aria-label="Open Account & Profiles"
             >
-              <span className="text-sm leading-none">{activeProfile.avatar}</span>
-              <span className="max-w-[80px] sm:max-w-[110px] truncate">{activeProfile.name}</span>
-              <span className="px-1.5 py-0.5 rounded-md text-[10px] font-extrabold bg-[#FF5E3A]/15 text-[#FF5E3A]">
-                {activeProfile.xp || 0} XP
-              </span>
-            </button>
-
-            <button
-              type="button"
-              onClick={() => {
-                audio.playClick();
-                onToggleTheme();
-              }}
-              aria-label="Toggle theme"
-              className={`p-2 rounded-xl border transition cursor-pointer ${
-                theme === 'dark'
-                  ? 'bg-[#17171C] border-slate-800 text-amber-400 hover:border-slate-700'
-                  : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300'
-              }`}
-              title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-            >
-              {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-            </button>
-
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen((prev) => !prev)}
-              aria-label="Toggle navigation menu"
-              className={`md:hidden p-2 rounded-xl border transition cursor-pointer ${
-                theme === 'dark'
-                  ? 'bg-[#17171C] border-slate-800 text-slate-200'
-                  : 'bg-white border-slate-200 text-slate-700'
-              }`}
-            >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {profileInitial}
             </button>
           </div>
         </div>
@@ -208,7 +186,7 @@ export const QuizLayout: React.FC<QuizLayoutProps> = ({
           }`}
         >
           {NAV_ITEMS.map((item) => {
-            const isActive = activeTab === item.id;
+            const isActive = activeTab === item.id && !isRetrainOpen && !isReviewOpen;
             return (
               <button
                 key={item.id}
@@ -227,35 +205,6 @@ export const QuizLayout: React.FC<QuizLayoutProps> = ({
             );
           })}
         </nav>
-
-        {/* Mobile Dropdown Menu (4 Quiz Headings Only) */}
-        {mobileMenuOpen && (
-          <div
-            className={`md:hidden border-t px-4 py-3 flex flex-col gap-1.5 ${
-              theme === 'dark'
-                ? 'bg-[#17171C] border-slate-800'
-                : 'bg-white border-slate-200'
-            }`}
-          >
-            {NAV_ITEMS.map((item) => {
-              const isActive = activeTab === item.id;
-              return (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={() => handleTabClick(item.id)}
-                  className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-semibold transition cursor-pointer ${
-                    isActive
-                      ? 'bg-[#FF5E3A] text-white font-bold shadow-sm'
-                      : 'text-slate-700 dark:text-slate-200 hover:bg-orange-500/10 hover:text-[#FF5E3A]'
-                  }`}
-                >
-                  {item.label}
-                </button>
-              );
-            })}
-          </div>
-        )}
       </header>
 
       {/* MAIN CONTENT */}

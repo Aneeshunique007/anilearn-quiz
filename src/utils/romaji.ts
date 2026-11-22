@@ -514,3 +514,22 @@ export function kanaToRomaji(input: string): string {
   }
   return out;
 }
+
+/**
+ * Formats a Kanji reading (whether stored as Romaji or Kana) into both Hiragana and Romaji.
+ */
+export function formatKanjiReading(rawReading: string): { hiragana: string; romaji: string } {
+  const trimmed = (rawReading || '').trim();
+  if (!trimmed) return { hiragana: '', romaji: '' };
+  if (/[a-zA-Z]/.test(trimmed)) {
+    const cleanRomaji = trimmed.toLowerCase();
+    return {
+      hiragana: romajiToHiragana(cleanRomaji),
+      romaji: cleanRomaji,
+    };
+  }
+  return {
+    hiragana: trimmed,
+    romaji: kanaToRomaji(trimmed),
+  };
+}

@@ -20,7 +20,7 @@ import { KanjiDetailsData } from '../types';
 import { KanjiDetailModal } from './KanjiDetailModal';
 import audio from '../utils/audio';
 import { profileStore } from '../utils/profileStore';
-import { kanaToRomaji } from '../utils/romaji';
+import { formatKanjiReading } from '../utils/romaji';
 
 interface KanjiQuizViewProps {
   theme: 'dark' | 'light';
@@ -248,9 +248,9 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
 
   useEffect(() => {
     if (autoPlayAudio && currentQuestion && !quizFinished && !isAnswered) {
-      audio.speak(
-        currentQuestion.kunyomi[0] || currentQuestion.onyomi[0] || currentQuestion.char
-      );
+      const raw = currentQuestion.kunyomi[0] || currentQuestion.onyomi[0] || '';
+      const spoken = raw ? formatKanjiReading(raw).hiragana : currentQuestion.char;
+      audio.speak(spoken || currentQuestion.char);
     }
   }, [autoPlayAudio, currentQuestion, quizFinished, isAnswered]);
 
@@ -722,37 +722,27 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
                 </div>
               )}
 
-              {(showReadings || isAnswered) && (
-                <div className="flex flex-wrap items-center justify-center gap-2 text-xs font-jp">
-                  {currentQuestion.onyomi.length > 0 && (
-                    <span className="px-2.5 py-1 rounded-lg bg-orange-500/10 text-[#FF5E3A] font-semibold">
-                      On:{' '}
-                      {currentQuestion.onyomi
-                        .map((r) => `${r} (${kanaToRomaji(r)})`)
-                        .join('・')}
+              {(showReadings || isAnswered) && (() => {
+                const raw = currentQuestion.kunyomi[0] || currentQuestion.onyomi[0];
+                if (!raw) return null;
+                const { hiragana, romaji } = formatKanjiReading(raw);
+                return (
+                  <div className="flex items-center justify-center text-xs font-jp">
+                    <span className="px-3 py-1 rounded-lg bg-orange-500/10 text-[#FF5E3A] font-semibold">
+                      {hiragana} <span className="font-sans opacity-85">({romaji})</span>
                     </span>
-                  )}
-                  {currentQuestion.kunyomi.length > 0 && (
-                    <span className="px-2.5 py-1 rounded-lg bg-slate-500/10 text-slate-600 dark:text-slate-300 font-semibold">
-                      Kun:{' '}
-                      {currentQuestion.kunyomi
-                        .map((r) => `${r} (${kanaToRomaji(r)})`)
-                        .join('・')}
-                    </span>
-                  )}
-                </div>
-              )}
+                  </div>
+                );
+              })()}
 
               <div className="flex items-center gap-2">
                 <button
                   type="button"
-                  onClick={() =>
-                    audio.speak(
-                      currentQuestion.kunyomi[0] ||
-                        currentQuestion.onyomi[0] ||
-                        currentQuestion.char
-                    )
-                  }
+                  onClick={() => {
+                    const raw = currentQuestion.kunyomi[0] || currentQuestion.onyomi[0] || '';
+                    const spoken = raw ? formatKanjiReading(raw).hiragana : currentQuestion.char;
+                    audio.speak(spoken || currentQuestion.char);
+                  }}
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-[#FF5E3A]/10 text-[#FF5E3A] hover:bg-[#FF5E3A]/20 transition cursor-pointer"
                 >
                   <Volume2 className="w-3.5 h-3.5" />

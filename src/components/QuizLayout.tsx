@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Sun, Moon, Menu, X, RotateCcw } from 'lucide-react';
+import { Sun, Moon, Menu, X, GraduationCap } from 'lucide-react';
 import audio from '../utils/audio';
 import { QuizProfile } from '../utils/profileStore';
 
@@ -114,17 +114,15 @@ export const QuizLayout: React.FC<QuizLayoutProps> = ({
                 audio.playClick();
                 onToggleRetrain();
               }}
-              className={`inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl border text-xs font-bold transition cursor-pointer ${
+              className={`w-9 h-9 rounded-full border-2 flex items-center justify-center transition cursor-pointer ${
                 isRetrainOpen
-                  ? 'bg-[#FF5E3A] text-white border-[#FF5E3A]'
-                  : theme === 'dark'
-                    ? 'bg-[#17171C] border-slate-800 text-slate-200 hover:border-[#FF5E3A]/60'
-                    : 'bg-white border-slate-200 text-[#1A1A1F] hover:border-[#FF5E3A]/60'
+                  ? 'bg-emerald-500 text-white border-emerald-500 shadow-md shadow-emerald-500/25'
+                  : 'border-emerald-500/60 bg-emerald-500/10 text-emerald-500 hover:bg-emerald-500/20'
               }`}
               title="Open Retrain Hub"
+              aria-label="Open Retrain Hub"
             >
-              <RotateCcw className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">Retrain</span>
+              <GraduationCap className="w-4 h-4" />
             </button>
 
             <button

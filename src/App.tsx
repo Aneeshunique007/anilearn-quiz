@@ -19,10 +19,12 @@ export function App() {
   const [activeProfile, setActiveProfile] = useState<QuizProfile>(() =>
     profileStore.getActiveProfile()
   );
-  const [profileModalOpen, setProfileModalOpen] = useState<boolean>(false);
+  const [cloudUser, setCloudUser] = useState<CloudAccountUser | null>(() => quizSupabase.getUser());
+  const [profileModalOpen, setProfileModalOpen] = useState<boolean>(
+    () => !quizSupabase.getUser()
+  );
   const [retrainOpen, setRetrainOpen] = useState<boolean>(false);
   const [reviewOpen, setReviewOpen] = useState<boolean>(false);
-  const [cloudUser, setCloudUser] = useState<CloudAccountUser | null>(() => quizSupabase.getUser());
   const [syncVersion, setSyncVersion] = useState<number>(0);
 
   useEffect(() => {

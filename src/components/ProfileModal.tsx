@@ -84,10 +84,12 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
         const user = await quizSupabase.signUp(email, password, displayName);
         await onCloudAuthSuccess(user);
         setAuthInfo('Account created and synced!');
+        onClose();
       } else {
         const user = await quizSupabase.signIn(email, password);
         await onCloudAuthSuccess(user);
         setAuthInfo('Signed in and progress synced!');
+        onClose();
       }
     } catch (err: unknown) {
       setAuthError(err instanceof Error ? err.message : 'Authentication failed.');

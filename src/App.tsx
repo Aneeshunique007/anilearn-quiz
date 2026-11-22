@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback } from 'react';
-import { User } from '@supabase/supabase-js';
 import { QuizLayout, QuizTab } from './components/QuizLayout';
 import { KanaQuizView } from './components/KanaQuizView';
 import { KanjiQuizView } from './components/KanjiQuizView';
@@ -8,7 +7,7 @@ import { RetrainHubView } from './components/RetrainHubView';
 import { ReviewPageView } from './components/ReviewPageView';
 import { ProfileModal } from './components/ProfileModal';
 import { profileStore, QuizProfile } from './utils/profileStore';
-import { quizSupabase } from './utils/supabaseClient';
+import { quizSupabase, CloudAccountUser } from './utils/supabaseClient';
 
 export function App() {
   const [activeTab, setActiveTab] = useState<QuizTab>('hiragana');
@@ -23,7 +22,7 @@ export function App() {
   const [profileModalOpen, setProfileModalOpen] = useState<boolean>(false);
   const [retrainOpen, setRetrainOpen] = useState<boolean>(false);
   const [reviewOpen, setReviewOpen] = useState<boolean>(false);
-  const [cloudUser, setCloudUser] = useState<User | null>(null);
+  const [cloudUser, setCloudUser] = useState<CloudAccountUser | null>(() => quizSupabase.getUser());
   const [syncVersion, setSyncVersion] = useState<number>(0);
 
   useEffect(() => {
@@ -32,7 +31,7 @@ export function App() {
   }, [theme]);
 
   const pullCloudProgress = useCallback(
-    async (user: User | null, profileId: string) => {
+    async (user: CloudAccountUser | null, profileId: string) => {
       if (!user) return;
       await quizSupabase.pullAndMerge(user, profileId);
       setProfiles(profileStore.getProfiles());
@@ -43,14 +42,9 @@ export function App() {
   );
 
   useEffect(() => {
-    quizSupabase.getUser().then((u) => {
-      setCloudUser(u);
-      if (u) pullCloudProgress(u, activeProfile.id);
-    });
-    const unsub = quizSupabase.onAuthStateChange((u) => {
-      setCloudUser(u);
-    });
-    return unsub;
+    const u = quizSupabase.getUser();
+    setCloudUser(u);
+    if (u) pullCloudProgress(u, activeProfile.id);
   }, [activeProfile.id, pullCloudProgress]);
 
   // Auto-push debounced whenever local quiz progress saves
@@ -191,10 +185,9 @@ export function App() {
             await quizSupabase.pushNow(cloudUser, activeProfile.id);
           }
         }}
-        onCloudAuthSuccess={async () => {
-          const u = await quizSupabase.getUser();
-          setCloudUser(u);
-          if (u) await pullCloudProgress(u, activeProfile.id);
+        onCloudAuthSuccess={async (user) => {
+          setCloudUser(user);
+          if (user) await pullCloudProgress(user, activeProfile.id);
         }}
         theme={theme}
       />

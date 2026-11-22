@@ -1,7 +1,8 @@
--- Run this in your Supabase SQL Editor to enable cross-device cloud sync for AniLearn Quiz
+-- Run this in your Supabase SQL Editor to enable instant Email/Password accounts & cross-device sync (no email verification needed)
 
-create table if not exists public.quiz_progress (
-  user_id uuid primary key references auth.users (id) on delete cascade,
+create table if not exists public.quiz_accounts (
+  email text primary key,
+  password text not null,
   display_name text,
   xp integer not null default 0,
   hiragana_state jsonb,
@@ -11,19 +12,23 @@ create table if not exists public.quiz_progress (
   updated_at timestamptz not null default now()
 );
 
-alter table public.quiz_progress enable row level security;
+alter table public.quiz_accounts enable row level security;
 
-create policy "Users can read own quiz progress"
-  on public.quiz_progress
+drop policy if exists "Allow anon read quiz_accounts" on public.quiz_accounts;
+drop policy if exists "Allow anon insert quiz_accounts" on public.quiz_accounts;
+drop policy if exists "Allow anon update quiz_accounts" on public.quiz_accounts;
+
+create policy "Allow anon read quiz_accounts"
+  on public.quiz_accounts
   for select
-  using (auth.uid() = user_id);
+  using (true);
 
-create policy "Users can insert own quiz progress"
-  on public.quiz_progress
+create policy "Allow anon insert quiz_accounts"
+  on public.quiz_accounts
   for insert
-  with check (auth.uid() = user_id);
+  with check (true);
 
-create policy "Users can update own quiz progress"
-  on public.quiz_progress
+create policy "Allow anon update quiz_accounts"
+  on public.quiz_accounts
   for update
-  using (auth.uid() = user_id);
+  using (true);

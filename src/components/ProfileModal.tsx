@@ -11,9 +11,8 @@ import {
   Mail,
   Lock,
 } from 'lucide-react';
-import { User } from '@supabase/supabase-js';
 import { QuizProfile, AVATAR_OPTIONS, profileStore } from '../utils/profileStore';
-import { quizSupabase } from '../utils/supabaseClient';
+import { quizSupabase, CloudAccountUser } from '../utils/supabaseClient';
 import audio from '../utils/audio';
 
 interface ProfileModalProps {
@@ -24,9 +23,9 @@ interface ProfileModalProps {
   onSelectProfile: (id: string) => void;
   onCreateProfile: (name: string, avatar: string, targetLevel: 'N5' | 'N4' | 'N3') => void;
   onDeleteProfile: (id: string) => void;
-  cloudUser: User | null;
+  cloudUser: CloudAccountUser | null;
   onSyncNow: () => Promise<void>;
-  onCloudAuthSuccess: () => Promise<void>;
+  onCloudAuthSuccess: (user: CloudAccountUser | null) => Promise<void>;
   theme: 'dark' | 'light';
 }
 
@@ -82,16 +81,12 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
     setAuthLoading(true);
     try {
       if (authMode === 'signup') {
-        const res = await quizSupabase.signUp(email, password, displayName);
-        if (res.session) {
-          await onCloudAuthSuccess();
-          setAuthInfo('Account created and signed in!');
-        } else {
-          setAuthInfo('Account created! Please check your email to confirm, then sign in.');
-        }
+        const user = await quizSupabase.signUp(email, password, displayName);
+        await onCloudAuthSuccess(user);
+        setAuthInfo('Account created and synced!');
       } else {
-        await quizSupabase.signIn(email, password);
-        await onCloudAuthSuccess();
+        const user = await quizSupabase.signIn(email, password);
+        await onCloudAuthSuccess(user);
         setAuthInfo('Signed in and progress synced!');
       }
     } catch (err: unknown) {
@@ -262,7 +257,8 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({
                   <button
                     type="button"
                     onClick={async () => {
-                      await quizSupabase.signOut();
+                      quizSupabase.signOut();
+                      await onCloudAuthSuccess(null);
                       setAuthInfo('Signed out.');
                     }}
                     className={`py-2.5 px-4 rounded-xl border font-bold text-xs flex items-center justify-center gap-1.5 transition cursor-pointer ${inputBg}`}

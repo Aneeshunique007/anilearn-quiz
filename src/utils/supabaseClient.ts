@@ -1,7 +1,8 @@
-import { createClient, SupabaseClient, User } from '@supabase/supabase-js';
+import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { profileStore } from './profileStore';
 
 const SUPABASE_CONFIG_KEY = 'anilearn_quiz_supabase_config';
+const CLOUD_USER_KEY = 'anilearn_quiz_cloud_user';
 
 const getEnvVar = (key: string): string => {
   if (typeof import.meta !== 'undefined' && (import.meta as unknown as { env?: Record<string, string> }).env) {
@@ -10,8 +11,14 @@ const getEnvVar = (key: string): string => {
   return '';
 };
 
-export interface CloudQuizProgressRow {
-  user_id: string;
+export interface CloudAccountUser {
+  email: string;
+  displayName: string;
+}
+
+export interface CloudQuizAccountRow {
+  email: string;
+  password?: string;
   display_name: string | null;
   xp: number;
   hiragana_state: unknown;
@@ -47,14 +54,7 @@ class QuizSupabaseService {
 
     if (this.url && this.anonKey) {
       try {
-        this.client = createClient(this.url, this.anonKey, {
-          auth: {
-            persistSession: true,
-            autoRefreshToken: true,
-            detectSessionInUrl: true,
-            storageKey: 'anilearn_quiz_sb_auth',
-          },
-        });
+        this.client = createClient(this.url, this.anonKey);
       } catch (err) {
         console.warn('[Supabase] Init failed:', err);
         this.client = null;
@@ -81,54 +81,93 @@ class QuizSupabaseService {
     return this.isConfigured();
   }
 
-  public async getUser(): Promise<User | null> {
-    if (!this.client) return null;
-    const { data } = await this.client.auth.getUser();
-    return data.user || null;
+  public getUser(): CloudAccountUser | null {
+    try {
+      const raw = localStorage.getItem(CLOUD_USER_KEY);
+      return raw ? (JSON.parse(raw) as CloudAccountUser) : null;
+    } catch {
+      return null;
+    }
   }
 
-  public onAuthStateChange(cb: (user: User | null) => void): () => void {
-    if (!this.client) return () => {};
-    const { data } = this.client.auth.onAuthStateChange((_event, session) => {
-      cb(session?.user || null);
-    });
-    return () => data.subscription.unsubscribe();
+  private setUser(user: CloudAccountUser | null) {
+    try {
+      if (user) {
+        localStorage.setItem(CLOUD_USER_KEY, JSON.stringify(user));
+      } else {
+        localStorage.removeItem(CLOUD_USER_KEY);
+      }
+    } catch {}
   }
 
-  public async signUp(email: string, password: string, displayName: string) {
+  public async signUp(email: string, password: string, displayName: string): Promise<CloudAccountUser> {
     if (!this.client) throw new Error('Supabase is not configured.');
-    const { data, error } = await this.client.auth.signUp({
-      email: email.trim(),
-      password,
-      options: {
-        data: { display_name: displayName.trim() || email.split('@')[0] },
+    const cleanEmail = email.trim().toLowerCase();
+    const cleanName = displayName.trim() || cleanEmail.split('@')[0];
+
+    const { data: existing, error: checkError } = await this.client
+      .from('quiz_accounts')
+      .select('email')
+      .eq('email', cleanEmail)
+      .maybeSingle();
+
+    if (checkError) throw new Error(checkError.message);
+    if (existing) {
+      throw new Error('An account with this email already exists. Please log in.');
+    }
+
+    const { error: insertError } = await this.client.from('quiz_accounts').insert([
+      {
+        email: cleanEmail,
+        password,
+        display_name: cleanName,
+        xp: 0,
+        updated_at: new Date().toISOString(),
       },
-    });
-    if (error) throw error;
-    return data;
+    ]);
+
+    if (insertError) throw new Error(insertError.message);
+
+    const user: CloudAccountUser = { email: cleanEmail, displayName: cleanName };
+    this.setUser(user);
+    return user;
   }
 
-  public async signIn(email: string, password: string) {
+  public async signIn(email: string, password: string): Promise<CloudAccountUser> {
     if (!this.client) throw new Error('Supabase is not configured.');
-    const { data, error } = await this.client.auth.signInWithPassword({
-      email: email.trim(),
-      password,
-    });
-    if (error) throw error;
-    return data;
+    const cleanEmail = email.trim().toLowerCase();
+
+    const { data, error } = await this.client
+      .from('quiz_accounts')
+      .select('email, password, display_name')
+      .eq('email', cleanEmail)
+      .maybeSingle();
+
+    if (error) throw new Error(error.message);
+    if (!data) throw new Error('No account found with this email. Please create an account first.');
+    if (data.password !== password) throw new Error('Incorrect password.');
+
+    const user: CloudAccountUser = {
+      email: data.email,
+      displayName: data.display_name || cleanEmail.split('@')[0],
+    };
+    this.setUser(user);
+    return user;
   }
 
-  public async signOut() {
-    if (!this.client) return;
-    await this.client.auth.signOut();
+  public signOut() {
+    this.setUser(null);
   }
 
-  public async pullAndMerge(user: User, localProfileId: string): Promise<{ xp: number } | null> {
+  public async pullAndMerge(
+    user: CloudAccountUser,
+    localProfileId: string
+  ): Promise<{ xp: number } | null> {
     if (!this.client) return null;
     const { data, error } = await this.client
-      .from('quiz_progress')
+      .from('quiz_accounts')
       .select('*')
-      .eq('user_id', user.id)
+      .eq('email', user.email)
       .maybeSingle();
 
     if (error) {
@@ -137,12 +176,11 @@ class QuizSupabaseService {
     }
 
     if (!data) {
-      // First time on cloud: push current local progress up
       await this.pushNow(user, localProfileId);
       return null;
     }
 
-    const row = data as CloudQuizProgressRow;
+    const row = data as CloudQuizAccountRow;
     const profiles = profileStore.getProfiles();
     const localProfile = profiles.find((p) => p.id === localProfileId);
     const localXp = localProfile?.xp || 0;
@@ -170,7 +208,6 @@ class QuizSupabaseService {
           learnedKeys?: string[];
           updatedAt?: string;
         };
-        // Additive merge of cumulative learned items
         for (const k of cloudObj.learnedKeys || cloudObj.masteredKeys || []) {
           profileStore.markItemLearned(localProfileId, key, k);
         }
@@ -181,7 +218,6 @@ class QuizSupabaseService {
             profileStore.saveQuizState(localProfileId, key, cloudObj as never);
           }
         } else {
-          // Keep whichever has more mastered items (or newer timestamp on tie)
           const localMastered = localObj.masteredKeys?.length || 0;
           const cloudMastered = cloudObj.masteredKeys?.length || 0;
           if (
@@ -200,7 +236,7 @@ class QuizSupabaseService {
     return { xp: mergedXp };
   }
 
-  public async pushNow(user: User, localProfileId: string): Promise<boolean> {
+  public async pushNow(user: CloudAccountUser, localProfileId: string): Promise<boolean> {
     if (!this.client) return false;
     const profiles = profileStore.getProfiles();
     const active = profiles.find((p) => p.id === localProfileId);
@@ -211,10 +247,8 @@ class QuizSupabaseService {
       return s ? { ...s, learnedKeys } : learnedKeys.length > 0 ? { learnedKeys } : null;
     };
 
-    const payload: CloudQuizProgressRow = {
-      user_id: user.id,
-      display_name:
-        (user.user_metadata?.display_name as string) || active?.name || user.email || 'Learner',
+    const payload = {
+      display_name: user.displayName || active?.name || user.email,
       xp: active?.xp || 0,
       hiragana_state: buildStatePayload('hiragana'),
       katakana_state: buildStatePayload('katakana'),
@@ -224,8 +258,9 @@ class QuizSupabaseService {
     };
 
     const { error } = await this.client
-      .from('quiz_progress')
-      .upsert(payload, { onConflict: 'user_id' });
+      .from('quiz_accounts')
+      .update(payload)
+      .eq('email', user.email);
 
     if (error) {
       console.warn('[Supabase] Push failed:', error.message);
@@ -234,7 +269,7 @@ class QuizSupabaseService {
     return true;
   }
 
-  public schedulePush(user: User | null, localProfileId: string) {
+  public schedulePush(user: CloudAccountUser | null, localProfileId: string) {
     if (!this.client || !user) return;
     if (this.syncTimer) clearTimeout(this.syncTimer);
     this.syncTimer = setTimeout(() => {

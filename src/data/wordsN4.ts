@@ -6672,7 +6672,7 @@ export const WORDS_N4_LIST: WordItem[] = [
     "word": "研究室",
     "reading": "けんきゅうしつ",
     "romaji": "kenkyuushitsu",
-    "meaning": "Laboratory's office / Seminar room",
+    "meaning": "Laboratory",
     "pos": "noun",
     "posLabel": "Noun",
     "jlpt": "N4",

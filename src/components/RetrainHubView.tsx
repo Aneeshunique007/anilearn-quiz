@@ -42,7 +42,7 @@ interface RetrainHubViewProps {
   onAddXp: (xp: number) => void;
 }
 
-const SET_SIZE = 100;
+const SET_SIZE = 25;
 
 export const RetrainHubView: React.FC<RetrainHubViewProps> = ({
   profileId,
@@ -459,7 +459,7 @@ export const RetrainHubView: React.FC<RetrainHubViewProps> = ({
             Retrain Hub
           </h1>
           <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5">
-            Mastered items organized into modular 100-item retention sets.
+            Mastered items organized into modular 25-item retention sets.
           </p>
         </div>
         <button
@@ -525,8 +525,8 @@ export const RetrainHubView: React.FC<RetrainHubViewProps> = ({
                 </div>
                 <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-1">
                   {setCount === 0
-                    ? '0 Sets (100 Qs)'
-                    : `${setCount} Set${setCount > 1 ? 's' : ''} (100 Qs)`}
+                    ? '0 Sets (25 Qs)'
+                    : `${setCount} Set${setCount > 1 ? 's' : ''} (25 Qs)`}
                 </div>
               </div>
             </button>
@@ -542,7 +542,7 @@ export const RetrainHubView: React.FC<RetrainHubViewProps> = ({
               No learned {selectedCategory} items yet.
             </p>
             <p className="text-xs text-slate-500 dark:text-slate-400">
-              Mark items as <strong>Easy</strong> in the {selectedCategory} quiz to unlock 100-item
+              Mark items as <strong>Easy</strong> in the {selectedCategory} quiz to unlock 25-item
               retrain sets here.
             </p>
           </div>

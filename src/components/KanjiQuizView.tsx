@@ -20,6 +20,7 @@ import { KanjiDetailsData } from '../types';
 import { KanjiDetailModal } from './KanjiDetailModal';
 import audio from '../utils/audio';
 import { profileStore } from '../utils/profileStore';
+import { kanaToRomaji } from '../utils/romaji';
 
 interface KanjiQuizViewProps {
   theme: 'dark' | 'light';
@@ -725,12 +726,18 @@ export const KanjiQuizView: React.FC<KanjiQuizViewProps> = ({
                 <div className="flex flex-wrap items-center justify-center gap-2 text-xs font-jp">
                   {currentQuestion.onyomi.length > 0 && (
                     <span className="px-2.5 py-1 rounded-lg bg-orange-500/10 text-[#FF5E3A] font-semibold">
-                      On: {currentQuestion.onyomi.join('・')}
+                      On:{' '}
+                      {currentQuestion.onyomi
+                        .map((r) => `${r} (${kanaToRomaji(r)})`)
+                        .join('・')}
                     </span>
                   )}
                   {currentQuestion.kunyomi.length > 0 && (
                     <span className="px-2.5 py-1 rounded-lg bg-slate-500/10 text-slate-600 dark:text-slate-300 font-semibold">
-                      Kun: {currentQuestion.kunyomi.join('・')}
+                      Kun:{' '}
+                      {currentQuestion.kunyomi
+                        .map((r) => `${r} (${kanaToRomaji(r)})`)
+                        .join('・')}
                     </span>
                   )}
                 </div>
